@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "conpicks-dev",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["/Users/joshua/Desktop/conpicks/scripts/dev.sh"],
+      "port": 3000
+    }
+  ]
+}
