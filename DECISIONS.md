@@ -113,3 +113,25 @@ deviation. Newest at the bottom of each phase.
   MY-tab UI lands in Phase 4.
 - **D23. Reviewer console** is its own route tree (`/reviewer`) with its own
   chrome + a role gate in `layout.tsx` (reviewer|admin), mirroring `/admin`.
+
+---
+
+## Phase 4 — 커뮤니티 & MY
+
+- **D24. Post categories are role-gated on write.** `공지` → admin only,
+  `크리에이터 라운지` → creator/admin only (enforced in `POST /api/posts` and
+  hidden in `WriteForm`). `전체` is a list filter, never a stored value.
+- **D25. Teaser attach ("너 이거 봤어?")** — `WriteForm` has a debounced
+  search against `GET /api/teasers?q=`; the chosen teaser id is stored in
+  `posts.attached_teaser_id` and rendered as an embedded card (thumbnail +
+  live rank) in the list and detail.
+- **D26. MY is one server page, `?tab=` switched.** Data-bearing tabs
+  (saved / liked / comments / funding / works / notifications) render on the
+  server; only the profile-edit dialog and settings toggles are client. The
+  7-day/30-day trend graph in 내 작품 is stubbed with a text line (charting
+  lib deferred — not in the locked stack).
+- **D27. Markdown-lite** community bodies are rendered as pre-wrapped plain
+  text for now (no MD parser in the locked stack); the field name and
+  `WriteForm` hint keep the contract for a later `react-markdown` swap.
+- **D28. creator→viewer** downgrade blocked while any `published` teaser
+  exists (`switchToViewer`), per spec §2.0.
