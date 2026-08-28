@@ -50,10 +50,6 @@ const hoursAgo = (h: number) =>
 
 const avatar = (seed: string) =>
   `https://api.dicebear.com/9.x/thumbs/svg?seed=${encodeURIComponent(seed)}`;
-const poster = (seed: string) =>
-  `https://picsum.photos/seed/${encodeURIComponent(seed)}/600/900`;
-const thumb = (seed: string) =>
-  `https://picsum.photos/seed/${encodeURIComponent(seed)}/960/540`;
 
 const SAMPLE_VIDEOS = [
   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
@@ -139,31 +135,36 @@ export const seedSeasons: Season[] = [
 // ------------------------------------------------------------------
 //  Teasers  (24)
 // ------------------------------------------------------------------
-const TITLES: [string, string, Genre[]][] = [
-  ["마지막 정거장", "지구를 떠난 마지막 열차, 그 안의 낯선 승객.", ["SF", "스릴러"]],
-  ["의뢰인", "완벽한 알리바이를 파는 남자에게 걸려온 전화.", ["스릴러"]],
-  ["여름의 잔상", "헤어진 그날로 계속 돌아오는 8월.", ["로맨스", "판타지"]],
-  ["문 너머의 정원", "매일 밤 자라나는 문, 그 안엔 죽은 자들의 정원.", ["판타지", "공포"]],
-  ["13번째 관객", "빈 극장에 늘 앉아 있는 누군가.", ["공포"]],
-  ["아버지의 언어", "치매에 걸린 아버지가 갑자기 쓰는 낯선 말.", ["드라마"]],
-  ["로봇이 꾼 꿈", "폐기 전날, 안드로이드가 처음으로 꿈을 꾼다.", ["SF", "애니메이션"]],
-  ["소각로 도시", "쓰레기를 태워 빛을 만드는 도시의 비밀.", ["SF", "다큐"]],
-  ["연애 시뮬레이터 v9", "AI 연인이 이별을 거부하기 시작했다.", ["로맨스", "SF"]],
-  ["붉은 방", "온라인에 떠도는 그 영상을 끝까지 본 사람들.", ["공포", "스릴러"]],
-  ["할머니의 냉장고", "열 때마다 다른 계절이 들어 있는 냉장고.", ["판타지", "드라마"]],
-  ["궤도 이탈", "우주 정거장에 홀로 남은 정비공의 72시간.", ["SF", "스릴러"]],
-  ["춤추는 그림자", "가로등 아래에서만 살아나는 그림자 극단.", ["판타지", "애니메이션"]],
-  ["소음", "옆집에서 나는 소리가 내 목소리와 똑같다.", ["공포"]],
-  ["재회 알고리즘", "죽은 연인을 복원해 주는 스타트업의 첫 고객.", ["로맨스", "SF"]],
-  ["백야 다이어리", "해가 지지 않는 도시에서 잠들지 못하는 형사.", ["스릴러", "드라마"]],
-  ["종이 비행기 부대", "전쟁을 멈추려는 아이들의 비밀 편대.", ["애니메이션", "드라마"]],
-  ["심해 우편함", "6천 미터 아래로 편지를 보내는 우체국.", ["판타지", "다큐"]],
-  ["복제된 오후", "같은 오후를 100번 사는 카페 알바생.", ["SF", "로맨스"]],
-  ["가면 무도회 살인", "얼굴을 바꿔주는 가면이 등장한 파티.", ["스릴러", "판타지"]],
-  ["엄마의 유튜브", "돌아가신 엄마 채널에 새 영상이 올라왔다.", ["공포", "드라마"]],
-  ["화성 세탁소", "화성 이주민의 옷을 대신 빨아주는 노부부.", ["드라마", "SF"]],
-  ["춘몽", "조선의 화공이 그린 그림 속으로 걸어 들어가다.", ["판타지", "로맨스"]],
-  ["라스트 테이크", "AI 배우가 감독을 협박하며 시작된 촬영.", ["스릴러", "SF"]],
+/** [title, logline, genres, coverFile] — cover lives in /public/covers.
+ *  Portrait covers (poster-N) fill 2:3 natively; landscape covers (thumb-N)
+ *  fill 16:9 natively. The other orientation is object-cover cropped. */
+const TITLES: [string, string, Genre[], string][] = [
+  // --- 공개작 (t_01 ~ t_19) ---
+  ["재회 알고리즘", "죽은 연인을 손바닥만 한 큐브에 복원해 주는 스타트업, 그 첫 고객.", ["SF", "로맨스"], "thumb-7"],
+  ["디지즈 X", "탈출이 시작되는 순간, 인류의 시간은 끝난다.", ["스릴러", "공포"], "thumb-4"],
+  ["달이 정한 연(緣)", "달이 짝지어 준 두 사람, 그러나 서로의 이름을 부르면 사라진다.", ["로맨스", "판타지"], "thumb-6"],
+  ["더 글리치", "폐기 전날 밤, 안드로이드가 처음으로 꿈을 꾼다.", ["SF", "애니메이션"], "poster-11"],
+  ["빛의 정원", "물 위로 열리는 문, 그 너머엔 빛으로 자란 정원이 있다.", ["판타지", "드라마"], "thumb-3"],
+  ["무명(無名)", "울주의 등잔불을 지킨, 이름 없는 사람들의 기록.", ["드라마", "다큐"], "poster-5"],
+  ["한복 입은 남자", "장영실, 별을 접어 다빈치를 만나러 간다.", ["판타지", "SF"], "poster-10"],
+  ["선과 악", "선을 저울질하던 천사에게 처음으로 감정이 생겼다.", ["판타지"], "poster-8"],
+  ["폴링 인투 파라다이스", "천국으로 오르는 계단 아래, 무언가가 오래 기다리고 있었다.", ["공포", "판타지"], "thumb-8"],
+  ["타임 워", "같은 전투를 백 번 되풀이하는 소녀 병사의 마지막 72시간.", ["SF", "스릴러"], "thumb-10"],
+  ["시간을 넘어", "헌책방에서 주운 이어폰에, 1919년의 목소리가 흐른다.", ["드라마", "SF"], "poster-6"],
+  ["역병: 붉은 징조", "눈 내리는 조선의 마을, 붉은 깃털이 떨어진 집마다 사람이 사라진다.", ["공포", "스릴러"], "thumb-11"],
+  ["어제의 무게", "매일 아침 지하철에서, 지우지 못한 어제가 머리 위로 쌓인다.", ["드라마"], "thumb-12"],
+  ["백야 다이어리", "해가 지지 않는 도시에서 잠들지 못하는 형사.", ["스릴러", "드라마"], "poster-2"],
+  ["연애 시뮬레이터 v9", "AI 연인이 이별을 거부하기 시작했다.", ["로맨스", "SF"], "poster-3"],
+  ["플레이 위드 나스", "말 한마디 통하지 않는 반려견과 남겨진 서른 날.", ["드라마"], "poster-7"],
+  ["정원의 문장가", "정원에 앉아, 남의 마지막 문장을 대신 써 주는 남자.", ["드라마", "다큐"], "thumb-5"],
+  ["도씨(DOSSY)", "모두가 잠든 호텔, 5층의 불 꺼지지 않는 방.", ["스릴러", "드라마"], "thumb-1"],
+  ["끝까지 지킨다", "AI 편대장과 인간 파일럿의 마지막 출격.", ["SF", "스릴러"], "poster-9"],
+  // --- 심사 파이프라인 (t_20 ~ t_24) ---
+  ["커튼콜", "무대에 오르는 순간에만 목소리가 나오는 배우.", ["드라마"], "thumb-2"],
+  ["오늘도 택배", "택배 회사 최고 배송왕은, 사실 카피바라였다.", ["드라마", "애니메이션"], "poster-4"],
+  ["은밀한 계절", "옆방에서 시작된 관계, 그리고 사라진 투숙객.", ["로맨스"], "poster-1"],
+  ["흰파리", "아무도 초대하지 않은 잔칫상에 매일 나타나는 사내.", ["드라마"], "poster-12"],
+  ["사위의 자격", "따님을 사랑합니다. 그리고 6년째 통장을 모으고 있습니다.", ["드라마"], "thumb-9"],
 ];
 
 const STATUS_PLAN: Teaser["status"][] = [
@@ -175,11 +176,12 @@ const STATUS_PLAN: Teaser["status"][] = [
   "approved",
 ];
 
-export const seedTeasers: Teaser[] = TITLES.map(([title, logline, genres], i) => {
+export const seedTeasers: Teaser[] = TITLES.map(([title, logline, genres, cover], i) => {
   const status = STATUS_PLAN[i];
   const creator = creators[i % creators.length];
   const publishedHoursAgo = int(2, 24 * 30);
   const isPublished = status === "published";
+  const coverUrl = `/covers/${cover}.png`;
   return {
     id: `t_${String(i + 1).padStart(2, "0")}`,
     slug: `${slugify(title)}-${i + 1}`,
@@ -194,8 +196,8 @@ export const seedTeasers: Teaser[] = TITLES.map(([title, logline, genres], i) =>
     video_provider: "mock",
     video_id: `sample_${i % SAMPLE_VIDEOS.length}`,
     playback_url: SAMPLE_VIDEOS[i % SAMPLE_VIDEOS.length],
-    poster_url: poster(`${title}-poster`),
-    thumbnail_url: thumb(`${title}-thumb`),
+    poster_url: coverUrl,
+    thumbnail_url: coverUrl,
     ai_tools: [pick(AI_TOOLS), pick(AI_TOOLS)],
     credits: `연출·편집 ${creator.nickname} · 음악 Suno`,
     status,
@@ -415,24 +417,25 @@ export function seedRankDelta(teaserId: string): number | null {
 export const seedReviews: Review[] = [
   {
     id: "rv_01",
-    teaser_id: "t_24", // 라스트 테이크 — approved (1 approval so far, needs 2)
+    teaser_id: "t_24", // 사위의 자격 — approved (승인 1 / 2, 공개 대기)
     reviewer_id: seedReviewer.id,
     decision: "approve",
     reason: null,
     score_story: 4,
-    score_visual: 5,
-    score_polish: 4,
+    score_visual: 4,
+    score_polish: 5,
     created_at: hoursAgo(12),
   },
   {
     id: "rv_02",
-    teaser_id: "t_23", // 춘몽 — rejected
+    teaser_id: "t_23", // 흰파리 — rejected
     reviewer_id: seedReviewer.id,
     decision: "reject",
-    reason: "저작권 확인 필요 — 배경음악 라이선스 증빙을 첨부해 재제출 바랍니다.",
+    reason:
+      "제목·썸네일의 표현 수위가 커뮤니티 가이드라인 경계에 있습니다. 문구를 순화해 재제출 바랍니다.",
     score_story: 3,
-    score_visual: 3,
-    score_polish: 2,
+    score_visual: 4,
+    score_polish: 3,
     created_at: hoursAgo(30),
   },
 ];
@@ -460,10 +463,10 @@ export const seedPosts: Post[] = [
     id: "p_02",
     author_id: creators[0].id,
     category: "크리에이터 라운지",
-    title: "'마지막 정거장' 제작기 — 열차 내부는 어떻게 만들었나",
+    title: "'재회 알고리즘' 제작기 — 큐브 속 인물은 어떻게 합성했나",
     body_md:
-      "레퍼런스 → 콘티 → 샷 생성 → 리타이밍 순서로 작업했습니다. 질문 환영!",
-    images: [thumb("making-of-1")],
+      "레퍼런스 → 콘티 → 샷 생성 → 리타이밍 순서로 작업했습니다. 큐브 반사/굴절은 후반에 따로 합성. 질문 환영!",
+    images: ["/covers/thumb-7.png"],
     attached_teaser_id: "t_01",
     like_count: 96,
     comment_count: 12,
@@ -475,10 +478,10 @@ export const seedPosts: Post[] = [
     id: "p_03",
     author_id: seedProfiles[6].id,
     category: "작품 토론",
-    title: "너 이거 봤어? '13번째 관객' 결말 해석 좀",
-    body_md: "마지막 컷의 빈 좌석… 관객이 곧 우리라는 뜻인가?",
+    title: "너 이거 봤어? '역병: 붉은 징조' 그 붉은 깃털의 의미",
+    body_md: "집집마다 떨어지는 붉은 깃털… 예고편만 보고도 소름. 결말 예측 가보자.",
     images: [],
-    attached_teaser_id: "t_05",
+    attached_teaser_id: "t_12",
     like_count: 143,
     comment_count: 27,
     is_pinned: false,

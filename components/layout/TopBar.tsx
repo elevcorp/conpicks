@@ -22,7 +22,7 @@ export function TopBar({ user }: { user: Profile | null }) {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-bg-base/80 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center gap-6 px-4">
-        <Logo className="text-lg" />
+        <Logo className="h-7" priority />
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((n) => (
             <Link

@@ -29,7 +29,7 @@ export default async function AdminLayout({
     <div className="min-h-dvh bg-bg-base md:flex">
       <aside className="border-b border-border md:w-52 md:shrink-0 md:border-r md:border-b-0">
         <div className="flex h-14 items-center gap-2 px-4">
-          <Logo className="text-base" />
+          <Logo className="h-5" />
           <span className="text-xs font-semibold text-text-muted">Admin</span>
         </div>
         <nav className="no-scrollbar flex gap-1 overflow-x-auto px-2 pb-2 md:flex-col md:overflow-visible md:pb-4">

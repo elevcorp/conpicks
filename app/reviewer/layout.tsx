@@ -17,7 +17,7 @@ export default async function ReviewerLayout({
     <div className="min-h-dvh bg-bg-base">
       <header className="sticky top-0 z-40 flex h-14 items-center justify-between border-b border-border bg-bg-base/90 px-4 backdrop-blur">
         <div className="flex items-center gap-2">
-          <Logo className="text-base" />
+          <Logo className="h-5" />
           <span className="text-sm font-semibold text-text-secondary">
             1차 심사 콘솔
           </span>

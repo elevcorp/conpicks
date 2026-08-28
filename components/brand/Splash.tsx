@@ -34,7 +34,7 @@ export function Splash() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <Logo as="span" className="text-4xl" />
+            <Logo as="span" className="h-10 md:h-12" priority />
           </motion.div>
         </motion.div>
       )}

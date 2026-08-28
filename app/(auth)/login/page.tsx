@@ -17,7 +17,7 @@ export default async function LoginPage({
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <Logo as="span" className="text-3xl" />
+        <Logo as="span" className="h-9" priority />
         <p className="mt-3 text-sm text-text-secondary">
           AI 영화를 발견하고, 흥행을 결정하세요.
         </p>

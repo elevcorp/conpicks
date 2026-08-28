@@ -164,3 +164,23 @@ deviation. Newest at the bottom of each phase.
   green. `npm run e2e`.
 - **D35. `GET /api/home`** added (spec §7) returning the row bundle;
   page-level `revalidate = 60`.
+
+---
+
+## Post-launch — 브랜딩 & 커버 아트
+
+- **D36. Real brand assets.** `Conpicks_favicon.png` → `app/icon.png` +
+  `app/apple-icon.png` (Next file-based metadata icons; old
+  `app/favicon.ico` removed). `Main_Conpicks_logo.png` →
+  `public/brand/conpicks-logo.png`; `<Logo>` now renders that image via
+  `next/image` and callers pass a height class (`h-5`…`h-12`) instead of a
+  text size. PWA manifest icon → `public/pwa-icon.png`.
+- **D37. Teaser covers.** 24 supplied stills (`public/covers/poster-1..12`,
+  `thumb-1..12`) replace the picsum placeholders. `lib/data/seed.ts` `TITLES`
+  is rewritten so every teaser's title / logline / genre matches its cover
+  (e.g. THE GLITCH→"더 글리치", GOOD & EVIL→"선과 악", DISEASE X→"디지즈 X",
+  무명·시간을 넘어·역병:붉은 징조·한복 입은 남자·달이 정한 연 keep their
+  on-poster titles). Each teaser uses one image for both `poster_url` (2:3)
+  and `thumbnail_url` (16:9); `object-cover` crops the off-orientation.
+  Genre spread still covers all 8 home rows. Community seed posts + review
+  seed rows updated to the new titles.
