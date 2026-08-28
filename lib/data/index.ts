@@ -389,6 +389,14 @@ export async function addComment(input: {
   };
   store.comments.push(c);
   syncStats(input.teaserId);
+  const t = store.teasers.find((x) => x.id === input.teaserId);
+  if (t && t.creator_id !== input.userId) {
+    pushNotification(t.creator_id, "comment", {
+      teaserId: t.id,
+      commentId: c.id,
+      preview: c.body.slice(0, 40),
+    });
+  }
   return c;
 }
 export async function toggleCommentLike(commentId: string, userId: string) {
@@ -553,9 +561,14 @@ export async function recomputeRanking(opts: { rotatePrevRank?: boolean } = {}) 
   );
   for (const r of ranked) {
     const s = r.item;
+    const wasOutsideTop10 = !s.rank || s.rank > 10;
     if (opts.rotatePrevRank) s.prev_rank = s.rank || null;
     s.rank = r.rank;
     s.updated_at = new Date().toISOString();
+    if (wasOutsideTop10 && r.rank <= 10) {
+      const t = store.teasers.find((x) => x.id === s.teaser_id);
+      if (t) pushNotification(t.creator_id, "rank_enter", { teaserId: t.id, rank: r.rank });
+    }
   }
   return { season: season.id, ranked: ranked.length };
 }

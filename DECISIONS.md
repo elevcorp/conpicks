@@ -59,3 +59,57 @@ deviation. Newest at the bottom of each phase.
 - **D13. npm audit.** 2 advisories remain, both from `postcss` bundled inside
   `next@15`. Not fixable without upgrading to `next@16` (spec locks 15). Dev
   build-time only; accepted.
+
+---
+
+## Phase 2 — 시청 경험
+
+- **D14. Teaser detail is a full page, not a Next intercepting route.** The
+  spec asks for a mobile bottom sheet with an identical deep-link render.
+  Intercepting routes across a route-group boundary (`app/(public)/@modal`
+  → `app/t/[slug]`) are fragile. Instead `/t/[slug]` is always a full page
+  whose chrome (`SheetChrome`) renders as a slide-up sheet on mobile and a
+  centered card on desktop — identical render, deep-link safe, one code path.
+- **D15. Seed reactions are real rows.** Earlier the seed fabricated large
+  `like_count`s with only a few join rows, so the first `recompute_ranking`
+  (which counts rows) collapsed every score. Now `lib/data/seed.ts` emits
+  actual `likes/saves/shares/comments/view_events` rows (synthetic voter ids
+  `sv_NNNN` for volume) and every stat is derived from them — store, cron and
+  `syncStats` stay consistent indefinitely. Volumes kept modest (~25–180
+  likes/teaser).
+- **D16. Korean slugs.** `getTeaserBySlug` matches both the raw and
+  `decodeURIComponent`-ed param so Hangul deep links resolve regardless of
+  how the client encodes them.
+- **D17. Ranking cron.** `GET|POST /api/cron/recompute-ranking` guarded by
+  `CRON_SECRET` (bearer or `?secret=`). `?rotatePrev=1` (daily 00:00)
+  snapshots `prev_rank`. `vercel.json` schedules both; pg_cron equivalents
+  are in `0004_ranking.sql`.
+- **D18. Comment likes** persist via `comment_likes` (added
+  `/api/comments/[id]/like` + `toggleCommentLike`).
+
+---
+
+## Phase 3 — 창작 & 심사
+
+- **D19. Upload duration is checked twice.** Client reads `HTMLVideoElement.
+  duration` from the picked file and blocks "다음" outside 90–240s; the
+  server re-validates in `submitTeaser` against `app_settings`
+  (`TEASER_MIN/MAX_DURATION_SEC`). Nothing about the limit is hard-coded.
+- **D20. Mock upload.** In `mock` video mode the wizard shows a simulated
+  progress bar and `POST /api/video/upload-url` returns a sample playback
+  URL; poster/thumbnail default to deterministic `picsum` URLs seeded by
+  the title (real poster upload is a Phase-later polish). `cloudflare` /
+  `supabase` providers return real direct-upload targets.
+- **D21. Review auto-publish.** `decideReview` recomputes status on every
+  decision: ≥1 reject → `rejected`; approvals ≥ `REVIEW_APPROVALS_REQUIRED`
+  → `published` + `published_at` set + creator notified + stats initialised;
+  otherwise `in_review`. Decisions are upserted per `(teaser, reviewer)` so
+  the same reviewer can't stack approvals — reaching the threshold needs
+  distinct reviewers (admins count).
+- **D22. Notifications** are generated in the data layer:
+  `review_approved` / `review_rejected` (decideReview), `comment` (addComment,
+  not for self), `rank_enter` (recomputeRanking, on first entry into Top 10),
+  `funding` (pledge). Read/consume via `GET|POST /api/my/notifications`; the
+  MY-tab UI lands in Phase 4.
+- **D23. Reviewer console** is its own route tree (`/reviewer`) with its own
+  chrome + a role gate in `layout.tsx` (reviewer|admin), mirroring `/admin`.
