@@ -31,7 +31,14 @@ export const env = {
   tossClientKey: process.env.NEXT_PUBLIC_TOSS_CLIENT_KEY ?? "",
   tossSecretKey: process.env.TOSS_SECRET_KEY ?? "",
 
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  // Explicit override wins; otherwise use Vercel's deploy URL; else localhost.
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000"),
 };
 
 /** True when a real Supabase project is configured and enabled. */
