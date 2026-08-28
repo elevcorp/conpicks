@@ -245,72 +245,85 @@ const COMMENT_BODIES = [
   "포스터부터 극장 걸릴 각",
   "세계관 더 보고 싶다",
   "이 감독 다음 작품 기다림",
+  "친구한테 바로 공유함",
+  "이번 시즌 다크호스",
 ];
+
+/** Synthetic voters — real join rows, so counts survive recompute. */
+const syntheticVoters = Array.from(
+  { length: 260 },
+  (_, i) => `sv_${String(i + 1).padStart(4, "0")}`,
+);
+const realVoters = seedProfiles.slice(0, 10).map((p) => p.id);
 
 let commentSeq = 0;
 let shareSeq = 0;
 let viewSeq = 0;
 
 for (const t of seedTeasers) {
-  const popularity = rnd(); // 0..1 base popularity for this teaser
-  const base = t.status === "published" ? 1 : 0.15;
-  const nLikes = Math.round(base * popularity * 900 + int(0, 40));
+  const popularity = rnd(); // 0..1 base popularity
+  const base = t.status === "published" ? 1 : 0.12;
+  const nLikes = Math.round(base * (25 + popularity * popularity * 150));
   const nSaves = Math.round(nLikes * (0.3 + rnd() * 0.3));
-  const nShares = Math.round(nLikes * (0.05 + rnd() * 0.15));
-  const nComments = Math.round(nLikes * (0.04 + rnd() * 0.08));
+  const nShares = Math.round(nLikes * (0.06 + rnd() * 0.16));
+  const nComments = Math.min(14, Math.round(nLikes * (0.05 + rnd() * 0.08)));
   const nStart = Math.round(nLikes * (2 + rnd() * 3));
   const nHalf = Math.round(nStart * (0.55 + rnd() * 0.2));
   const nComplete = Math.round(nHalf * (0.45 + rnd() * 0.25));
 
-  // A handful of real join rows for the first users (enough for "my/liked" etc.)
-  seedProfiles.slice(0, 10).forEach((u, idx) => {
-    if (idx / 10 < popularity && u.id !== t.creator_id) {
-      seedLikes.push({ user_id: u.id, teaser_id: t.id, created_at: hoursAgo(int(1, 200)) });
-      if (rnd() < 0.5)
-        seedSaves.push({ user_id: u.id, teaser_id: t.id, created_at: hoursAgo(int(1, 200)) });
-    }
-  });
+  const voters = [...realVoters, ...syntheticVoters].filter(
+    (v) => v !== t.creator_id,
+  );
 
-  for (let c = 0; c < Math.min(nComments, 6); c++) {
-    const u = pick(seedProfiles.slice(0, 10));
-    if (u.id === t.creator_id) continue;
-    seedComments.push({
-      id: `c_${String(++commentSeq).padStart(4, "0")}`,
+  for (let i = 0; i < Math.min(nLikes, voters.length); i++) {
+    seedLikes.push({
+      user_id: voters[i],
       teaser_id: t.id,
-      user_id: u.id,
-      parent_id: null,
-      body: pick(COMMENT_BODIES),
-      like_count: int(0, 25),
-      is_hidden: false,
       created_at: hoursAgo(int(1, 240)),
     });
   }
-  for (let s = 0; s < Math.min(nShares, 3); s++) {
+  for (let i = 0; i < Math.min(nSaves, voters.length); i++) {
+    seedSaves.push({
+      user_id: voters[i],
+      teaser_id: t.id,
+      created_at: hoursAgo(int(1, 240)),
+    });
+  }
+  for (let i = 0; i < nShares; i++) {
     seedShares.push({
       id: `sh_${String(++shareSeq).padStart(4, "0")}`,
-      user_id: pick(seedProfiles).id,
+      user_id: voters[i % voters.length],
       teaser_id: t.id,
       channel: pick(["kakao", "link", "x", "instagram"]),
       created_at: hoursAgo(int(1, 200)),
     });
   }
-  seedViewEvents.push({
-    id: `v_${String(++viewSeq).padStart(5, "0")}`,
-    user_id: null,
-    session_id: "seed",
-    teaser_id: t.id,
-    event: "start",
-    created_at: hoursAgo(int(1, 100)),
-  });
-
-  // stash aggregate targets on the teaser object for stats build below
-  (t as unknown as Record<string, number>).__nLikes = nLikes;
-  (t as unknown as Record<string, number>).__nSaves = nSaves;
-  (t as unknown as Record<string, number>).__nShares = nShares;
-  (t as unknown as Record<string, number>).__nComments = nComments;
-  (t as unknown as Record<string, number>).__nStart = nStart;
-  (t as unknown as Record<string, number>).__nHalf = nHalf;
-  (t as unknown as Record<string, number>).__nComplete = nComplete;
+  for (let c = 0; c < nComments; c++) {
+    seedComments.push({
+      id: `c_${String(++commentSeq).padStart(4, "0")}`,
+      teaser_id: t.id,
+      user_id: realVoters[c % realVoters.length],
+      parent_id: null,
+      body: COMMENT_BODIES[c % COMMENT_BODIES.length],
+      like_count: int(0, 25),
+      is_hidden: false,
+      created_at: hoursAgo(int(1, 240)),
+    });
+  }
+  const pushViews = (n: number, event: "start" | "half" | "complete") => {
+    for (let i = 0; i < n; i++)
+      seedViewEvents.push({
+        id: `v_${String(++viewSeq).padStart(6, "0")}`,
+        user_id: null,
+        session_id: `seed_${viewSeq}`,
+        teaser_id: t.id,
+        event,
+        created_at: hoursAgo(int(1, 120)),
+      });
+  };
+  pushViews(nStart, "start");
+  pushViews(nHalf, "half");
+  pushViews(nComplete, "complete");
 }
 
 export const seedRankingConfig: RankingConfig = {
@@ -321,15 +334,26 @@ export const seedRankingConfig: RankingConfig = {
   updated_at: hoursAgo(48),
 };
 
+const countBy = <T extends { teaser_id: string }>(
+  rows: T[],
+  id: string,
+  pred: (r: T) => boolean = () => true,
+) => rows.filter((r) => r.teaser_id === id && pred(r)).length;
+
+/** Derive a stat row purely from the seeded reaction rows (same math
+ *  as lib/data syncStats), so store + cron stay consistent. */
 function statFor(t: Teaser): TeaserStats {
-  const g = t as unknown as Record<string, number>;
-  const like_count = g.__nLikes ?? 0;
-  const comment_count = g.__nComments ?? 0;
-  const share_count = g.__nShares ?? 0;
-  const save_count = g.__nSaves ?? 0;
-  const view_start = g.__nStart ?? 0;
-  const view_half = g.__nHalf ?? 0;
-  const view_complete = g.__nComplete ?? 0;
+  const like_count = countBy(seedLikes, t.id);
+  const save_count = countBy(seedSaves, t.id);
+  const share_count = countBy(seedShares, t.id);
+  const comment_count = countBy(seedComments, t.id, (c) => !c.is_hidden);
+  const view_start = countBy(seedViewEvents, t.id, (v) => v.event === "start");
+  const view_half = countBy(seedViewEvents, t.id, (v) => v.event === "half");
+  const view_complete = countBy(
+    seedViewEvents,
+    t.id,
+    (v) => v.event === "complete",
+  );
   const score = computeScore(
     {
       like_count,

@@ -215,7 +215,13 @@ export async function listTeasers(
 
 export async function getTeaserBySlug(slug: string) {
   assertSeed("getTeaserBySlug");
-  const t = store.teasers.find((x) => x.slug === slug);
+  const candidates = new Set([slug]);
+  try {
+    candidates.add(decodeURIComponent(slug));
+  } catch {
+    /* malformed % sequence */
+  }
+  const t = store.teasers.find((x) => candidates.has(x.slug));
   if (!t) return null;
   return buildDetail(t);
 }
@@ -385,6 +391,23 @@ export async function addComment(input: {
   syncStats(input.teaserId);
   return c;
 }
+export async function toggleCommentLike(commentId: string, userId: string) {
+  assertSeed("toggleCommentLike");
+  const c = store.comments.find((x) => x.id === commentId);
+  if (!c) throw new Error("comment not found");
+  const i = store.commentLikes.findIndex(
+    (l) => l.comment_id === commentId && l.user_id === userId,
+  );
+  if (i >= 0) {
+    store.commentLikes.splice(i, 1);
+    c.like_count = Math.max(0, c.like_count - 1);
+    return { liked: false, count: c.like_count };
+  }
+  store.commentLikes.push({ comment_id: commentId, user_id: userId });
+  c.like_count += 1;
+  return { liked: true, count: c.like_count };
+}
+
 export async function deleteComment(id: string, userId: string) {
   assertSeed("deleteComment");
   const c = store.comments.find((x) => x.id === id);
