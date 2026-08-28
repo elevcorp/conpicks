@@ -42,3 +42,6 @@ next-env.d.ts
 
 # CONPICKS
 /scripts/dev.sh
+
+test-results/
+playwright-report/

@@ -135,3 +135,32 @@ deviation. Newest at the bottom of each phase.
   `WriteForm` hint keep the contract for a later `react-markdown` swap.
 - **D28. creator→viewer** downgrade blocked while any `published` teaser
   exists (`switchToViewer`), per spec §2.0.
+
+---
+
+## Phase 5 — 관리자 & 펀딩
+
+- **D29. Admin is its own route tree** (`/admin/*`) with a sidebar layout +
+  `role === "admin"` gate. Sections: dashboard, 작품관리 (status / 지무비 리뷰
+  URL), 시즌관리 (create / activate / close-with-snapshot / winner), 랭킹설정
+  (weights + "지금 재계산"), 펀딩관리 (campaign CRUD + status flow), 정산
+  (revenue → share% → auto payouts → mark-paid → CSV), 심사위원, 커뮤니티
+  (report queue + hide/pin), 유저 (role + ban).
+- **D30. Season close** freezes the ranking (`recomputeRanking`), writes an
+  immutable `ranking_snapshots` row, and sets `winner_teaser_id` to rank #1.
+- **D31. Settlement math.** `generatePayouts(campaign, sharePct)` = pool
+  `floor(totalRevenue · pct/100)`, split pro-rata by pledge amount across
+  non-refunded pledges. Payouts are regenerated (not appended) on each run.
+  CSV export is client-side (`Blob`).
+- **D32. Pledge = intent, not payment.** `POST /api/funding/pledge` creates a
+  `pending` pledge and bumps `raised_krw` immediately (MVP: admin confirms
+  deposit → `confirmed`). Toss Payments is interface-only for now.
+- **D33. Revenue-share legal caveat** is surfaced in the UI (campaign detail
+  page) and carried in `funding_campaigns.type` + seed terms — the
+  reward/revenue-share split lets the legal review be isolated later.
+- **D34. E2E.** Playwright, chromium, 3 specs (`e2e/`), run serially against
+  the dev server in seed mode: (a) upload→2-approval→publish, (b)
+  reactions→recompute→rank rises, (c) pledge→settlement→payout in MY. All
+  green. `npm run e2e`.
+- **D35. `GET /api/home`** added (spec §7) returning the row bundle;
+  page-level `revalidate = 60`.

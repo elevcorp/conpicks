@@ -62,6 +62,12 @@ interface Store {
   settings: AppSetting[];
   collections: { id: string; title: string; teaser_ids: string[] }[];
   notifications: import("@/lib/types").AppNotification[];
+  snapshots: {
+    id: string;
+    season_id: string;
+    taken_at: string;
+    payload: unknown;
+  }[];
   seq: number;
 }
 
@@ -99,6 +105,7 @@ function build(): Store {
     settings: clone(seed.seedAppSettings),
     collections: clone(seed.seedCollections),
     notifications: [],
+    snapshots: [],
     seq: 1,
   };
 }

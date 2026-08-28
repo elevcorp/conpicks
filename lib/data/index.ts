@@ -1153,6 +1153,154 @@ function slugify(s: string): string {
   );
 }
 
+// ------------------------------------------------------------------
+//  Admin: seasons lifecycle
+// ------------------------------------------------------------------
+export async function createSeason(input: {
+  name: string;
+  startsAt: string;
+  endsAt: string;
+  prizeKrw: number;
+  rulesMd: string;
+}) {
+  assertSeed("createSeason");
+  const s: Season = {
+    id: nextId("s"),
+    name: input.name,
+    starts_at: input.startsAt,
+    ends_at: input.endsAt,
+    prize_krw: input.prizeKrw,
+    rules_md: input.rulesMd,
+    status: "draft",
+    winner_teaser_id: null,
+  };
+  store.seasons.push(s);
+  return s;
+}
+export async function setSeasonStatus(id: string, status: Season["status"]) {
+  assertSeed("setSeasonStatus");
+  const s = store.seasons.find((x) => x.id === id);
+  if (!s) throw new Error("season not found");
+  if (status === "active")
+    store.seasons.forEach((x) => {
+      if (x.status === "active") x.status = "closed";
+    });
+  s.status = status;
+  return s;
+}
+/** Close a season: freeze ranking, snapshot, mark #1 as winner. */
+export async function closeSeason(id: string) {
+  assertSeed("closeSeason");
+  const s = store.seasons.find((x) => x.id === id);
+  if (!s) throw new Error("season not found");
+  await recomputeRanking();
+  const ranked = store.teasers
+    .filter((t) => t.season_id === id && t.status === "published")
+    .map((t) => ({ id: t.id, ...statOf(t.id) }))
+    .sort((a, b) => a.rank - b.rank);
+  s.winner_teaser_id = ranked[0]?.teaser_id ?? null;
+  s.status = "closed";
+  store.snapshots.push({
+    id: nextId("snap"),
+    season_id: id,
+    taken_at: new Date().toISOString(),
+    payload: ranked.map((r) => ({
+      teaser_id: r.teaser_id,
+      rank: r.rank,
+      score: r.score,
+    })),
+  });
+  return { winner: s.winner_teaser_id, entries: ranked.length };
+}
+export async function setSeasonWinner(seasonId: string, teaserId: string) {
+  assertSeed("setSeasonWinner");
+  const s = store.seasons.find((x) => x.id === seasonId);
+  if (s) s.winner_teaser_id = teaserId;
+  return s;
+}
+
+// ------------------------------------------------------------------
+//  Admin: funding campaigns
+// ------------------------------------------------------------------
+export async function createCampaign(input: {
+  teaserId: string;
+  type: FundingCampaign["type"];
+  goalKrw: number;
+  startsAt: string;
+  endsAt: string;
+  termsMd: string;
+}) {
+  assertSeed("createCampaign");
+  const c: FundingCampaign = {
+    id: nextId("fc"),
+    teaser_id: input.teaserId,
+    type: input.type,
+    goal_krw: input.goalKrw,
+    raised_krw: 0,
+    starts_at: input.startsAt,
+    ends_at: input.endsAt,
+    status: "draft",
+    terms_md: input.termsMd,
+  };
+  store.campaigns.push(c);
+  return c;
+}
+export async function updateCampaign(
+  id: string,
+  patch: Partial<FundingCampaign>,
+) {
+  assertSeed("updateCampaign");
+  const c = store.campaigns.find((x) => x.id === id);
+  if (!c) throw new Error("campaign not found");
+  Object.assign(c, patch);
+  return c;
+}
+export async function confirmPledge(pledgeId: string) {
+  assertSeed("confirmPledge");
+  const p = store.pledges.find((x) => x.id === pledgeId);
+  if (p) p.status = "confirmed";
+  return p;
+}
+
+// ------------------------------------------------------------------
+//  Admin: community moderation
+// ------------------------------------------------------------------
+export async function listReports(status?: string) {
+  assertSeed("listReports");
+  return store.notifications
+    .filter((n) => n.type === "funding" && (n.payload as { kind?: string }).kind === "report")
+    .map((n) => ({ id: n.id, ...n.payload, created_at: n.created_at, status: "open" }))
+    .filter((r) => !status || r.status === status);
+}
+export async function setPostFlags(
+  id: string,
+  flags: { is_hidden?: boolean; is_pinned?: boolean },
+) {
+  assertSeed("setPostFlags");
+  const p = store.posts.find((x) => x.id === id);
+  if (!p) throw new Error("post not found");
+  if (flags.is_hidden != null) p.is_hidden = flags.is_hidden;
+  if (flags.is_pinned != null) p.is_pinned = flags.is_pinned;
+  return p;
+}
+export async function listAllPostsAdmin() {
+  assertSeed("listAllPostsAdmin");
+  return store.posts
+    .slice()
+    .sort(byNewest)
+    .map((p) => ({ post: p, author: creatorOf(p.author_id) }));
+}
+
+// ------------------------------------------------------------------
+//  Admin: users
+// ------------------------------------------------------------------
+export async function setUserBanned(userId: string, banned: boolean) {
+  assertSeed("setUserBanned");
+  const p = store.profiles.find((x) => x.id === userId);
+  if (p) (p as unknown as { banned?: boolean }).banned = banned;
+  return p;
+}
+
 /** Seed profiles offered as one-tap logins in mock mode. */
 export async function getMockLoginProfiles() {
   const order: Record<string, number> = { admin: 0, reviewer: 1, creator: 2, viewer: 3 };
