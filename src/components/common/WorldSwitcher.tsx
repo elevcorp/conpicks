@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useWorld } from "@/store/world";
 import { useWorldNav } from "./useWorldNav";
+import { useCurrentWorld } from "./useCurrentWorld";
 import { cn } from "@/lib/cn";
 import type { World } from "@/lib/types";
 
@@ -12,7 +13,9 @@ const TABS: { key: World; label: string; href: string }[] = [
 
 /** Kurly-style capsule toggle — the signature of the mockup. */
 export function WorldSwitcher({ className, onDark }: { className?: string; onDark?: boolean }) {
-  const world = useWorld((s) => s.transitionTo ?? s.world);
+  // Route-derived world (not the persisted store) so the pill is right on first paint.
+  const current = useCurrentWorld();
+  const world = useWorld((s) => s.transitionTo) ?? current;
   const go = useWorldNav();
   return (
     <div
