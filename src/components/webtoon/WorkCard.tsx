@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Heart, Share2, Bookmark, Star, Eye } from "lucide-react";
-import { WorkCover } from "@/components/common/Covers";
+import { WorkCover, hasRealCover } from "@/components/common/Covers";
 import { Badge, CardBadges } from "@/components/common/Badge";
 import { RankDelta } from "@/components/common/RankDelta";
 import { compact } from "@/lib/format";
@@ -9,20 +9,25 @@ import { pastel, deepTone } from "@/lib/color";
 import { cn } from "@/lib/cn";
 import type { RankChange, Webtoon } from "@/lib/types";
 
+export const needsTitleOverlay = (w: Pick<Webtoon, "id" | "coverTitle">) => !hasRealCover(w.id) || w.coverTitle === false;
+
 /** Kakao-style tall card: cover, badges top-left, title/author over a bottom gradient. Hover → preview. */
 export function WorkCard({ work, className, href, reviewBadge, sizes, priority, hideAuthor }: {
   work: Webtoon; className?: string; href?: string; reviewBadge?: boolean; sizes?: string; priority?: boolean; hideAuthor?: boolean;
 }) {
   return (
     <Link href={href ?? `/work/${work.id}`} className={cn("group/card block", className)}>
-      <div className="relative aspect-[3/4] overflow-hidden rounded-[6px] bg-elev transition-transform duration-300 md:group-hover/card:z-10 md:group-hover/card:scale-[1.04] md:group-hover/card:shadow-[0_18px_40px_rgba(0,0,0,0.45)]">
+      <div className="relative aspect-[3/5] overflow-hidden rounded-[6px] bg-elev transition-transform duration-300 md:group-hover/card:z-10 md:group-hover/card:scale-[1.04] md:group-hover/card:shadow-[0_18px_40px_rgba(0,0,0,0.45)]">
         <WorkCover work={work} className="absolute inset-0" sizes={sizes ?? "(max-width: 768px) 34vw, 200px"} priority={priority} />
         <CardBadges badges={work.badges} className="absolute left-1.5 top-1.5 z-[1]" />
         {reviewBadge && <Badge label="지무비 리뷰" className="absolute right-1.5 top-1.5 z-[1]" />}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent px-2 pb-2 pt-12">
-          <p className="line-clamp-2 text-[14px] font-bold leading-tight text-white md:text-[15px]">{work.title}</p>
-          {!hideAuthor && <p className="mt-0.5 truncate text-[11.5px] text-white/65">{work.writer}</p>}
-        </div>
+        {/* real covers carry their title logo in the art — overlay only when they don't */}
+        {needsTitleOverlay(work) && (
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent px-2 pb-2 pt-12">
+            <p className="line-clamp-2 text-[14px] font-bold leading-tight text-white md:text-[15px]">{work.title}</p>
+            {!hideAuthor && <p className="mt-0.5 truncate text-[11.5px] text-white/65">{work.writer}</p>}
+          </div>
+        )}
         {/* desktop hover preview */}
         <div className="absolute inset-0 hidden flex-col justify-end bg-black/75 p-3 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 md:flex md:group-hover/card:opacity-100">
           <p className="text-[15px] font-bold leading-tight text-white">{work.title}</p>
@@ -92,7 +97,7 @@ export function NewWorkCard({ work }: { work: Webtoon }) {
         <p className="line-clamp-2 text-[17px] font-extrabold leading-tight">{work.title}</p>
         <p className="mt-1.5 line-clamp-2 text-[12.5px] leading-snug opacity-75">{work.tagline}</p>
       </div>
-      <div className="relative my-3 mr-3 aspect-[3/4] shrink-0 overflow-hidden rounded-lg shadow-lg">
+      <div className="relative my-3 mr-3 aspect-[3/5] shrink-0 overflow-hidden rounded-lg shadow-lg">
         <WorkCover work={work} className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" sizes="100px" />
       </div>
     </Link>

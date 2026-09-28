@@ -9,11 +9,11 @@ import { EmptyState } from "./EmptyState";
 import { films, webtoons } from "@/lib/catalog";
 import { cn } from "@/lib/cn";
 
-const POPULAR = ["달빛 아래 계약자", "회귀", "붉은 징조", "힐링물", "무협", "재회 알고리즘", "지무비", "로판", "카피바라", "신작 리그"];
+const POPULAR = ["템빨", "북부 대공", "대환영", "회귀", "무협", "역병", "스트리밍", "로판", "지무비", "Eddington"];
 
 export function SearchPanel() {
   const [q, setQ] = useState("");
-  const [recent, setRecent] = useState<string[]>(["달빛", "심야식당", "SF"]);
+  const [recent, setRecent] = useState<string[]>(["북부", "대환영", "SF"]);
   const sync = useCallback((p: URLSearchParams) => setQ(p.get("q") ?? ""), []);
   const term = q.trim().toLowerCase();
 
@@ -100,7 +100,7 @@ export function SearchPanel() {
                   {results.wt.map((w) => (
                     <li key={w.id}>
                       <Link href={`/work/${w.id}`} className="flex items-center gap-3 rounded-xl py-2 hover:bg-chip">
-                        <div className="relative aspect-[3/4] w-14 shrink-0 overflow-hidden rounded-md"><WorkCover work={w} className="absolute inset-0" sizes="56px" /></div>
+                        <div className="relative aspect-[3/5] w-14 shrink-0 overflow-hidden rounded-md"><WorkCover work={w} className="absolute inset-0" sizes="56px" /></div>
                         <div className="min-w-0">
                           <p className="truncate text-[15px] font-bold">{w.title}</p>
                           <p className="truncate text-[12.5px] text-fg-3">{w.author} · {w.genre} · {w.league === "league" ? "신작 리그" : "정식 연재"}</p>

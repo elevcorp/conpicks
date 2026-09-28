@@ -12,7 +12,7 @@ import { cn } from "@/lib/cn";
 import type { Webtoon } from "@/lib/types";
 
 const SORTS = ["조회순", "업데이트순", "별점순"] as const;
-const UPDATED: Record<string, string> = { wt_18: "12분 전", wt_19: "1시간 전", wt_20: "3시간 전", wt_21: "어제", wt_22: "38분 전", wt_23: "2일 전", wt_24: "2시간 전" };
+const UPDATED: Record<string, string> = { wt_25: "12분 전", wt_26: "어제", wt_27: "1시간 전", wt_28: "3시간 전", wt_29: "38분 전", wt_30: "2시간 전", wt_31: "2일 전" };
 const viewsNum = (v: string) => parseFloat(v) * (v.includes("만") ? 10000 : 1);
 
 export function LeagueBoard({ works }: { works: Webtoon[] }) {
@@ -99,7 +99,7 @@ export function LeagueBoard({ works }: { works: Webtoon[] }) {
         {list.map((w) => (
           <li key={w.id}>
             <Link href={`/work/${w.id}`} className="group flex gap-3.5 border-b border-line px-4 py-4 transition-colors hover:bg-chip md:rounded-xl md:border-none md:px-3">
-              <div className="relative aspect-[3/4] w-[88px] shrink-0 overflow-hidden rounded-lg">
+              <div className="relative aspect-[3/5] w-[88px] shrink-0 overflow-hidden rounded-lg">
                 <WorkCover work={w} className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" sizes="90px" />
               </div>
               <div className="min-w-0 flex-1">

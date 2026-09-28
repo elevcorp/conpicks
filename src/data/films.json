@@ -1,26 +1,1051 @@
 [
-  { "id": "fm_01", "title": "역병: 붉은 징조", "creator": "홍월 필름", "genre": "스릴러", "genres": ["스릴러", "공포"], "runtime": "2:48", "logline": "눈 내리는 조선의 마을, 붉은 깃털이 떨어진 집마다 사람이 사라진다.", "rank": 1, "rankChange": 0, "season": 1, "stats": { "views": 2840000, "likes": 186000, "comments": 12400, "shares": 94000, "saves": 71000 }, "jimovieReview": { "views": "256만", "title": "K-사극 스릴러의 새로운 기준, 벌써 영화화 확정?", "duration": "16:40" }, "originWebtoonId": "wt_06", "tool": "Veo 4 · Runway Gen-5", "funding": true },
-  { "id": "fm_02", "title": "달이 정한 연(緣)", "creator": "스튜디오 백야", "genre": "로맨스", "genres": ["로맨스", "판타지"], "runtime": "2:31", "logline": "달이 짝지어 준 두 사람, 그러나 서로의 이름을 부르면 사라진다.", "rank": 2, "rankChange": 1, "season": 1, "stats": { "views": 2310000, "likes": 171000, "comments": 10900, "shares": 72000, "saves": 83000 }, "jimovieReview": { "views": "132만", "title": "눈물 버튼 주의, 올해 가장 아름다운 동양풍", "duration": "12:51" }, "originWebtoonId": "wt_07", "tool": "Kling 3 · Midjourney" },
-  { "id": "fm_03", "title": "재회 알고리즘", "creator": "픽셀무드", "genre": "SF", "genres": ["SF", "로맨스"], "runtime": "2:34", "logline": "죽은 연인을 손바닥만 한 큐브에 복원해 주는 스타트업, 그 첫 고객.", "rank": 3, "rankChange": -1, "season": 1, "stats": { "views": 1980000, "likes": 142000, "comments": 9800, "shares": 68000, "saves": 59000 }, "jimovieReview": { "views": "97만", "title": "블랙미러 좋아하면 이 티저 꼭 보세요", "duration": "09:47" }, "originWebtoonId": "wt_08", "tool": "Sora 2 · ElevenLabs" },
-  { "id": "fm_04", "title": "도씨(DOSSY)", "creator": "김도현", "genre": "스릴러", "genres": ["스릴러", "드라마"], "runtime": "2:12", "logline": "모두가 잠든 호텔, 5층의 불 꺼지지 않는 방.", "rank": 4, "rankChange": 2, "season": 1, "stats": { "views": 1520000, "likes": 118000, "comments": 7600, "shares": 51000, "saves": 42000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Runway Gen-5" },
-  { "id": "fm_05", "title": "타임 워", "creator": "크로노스 랩", "genre": "SF", "genres": ["SF", "액션"], "runtime": "2:55", "logline": "같은 전투를 백 번 되풀이하는 소녀 병사의 마지막 72시간.", "rank": 5, "rankChange": 0, "season": 1, "stats": { "views": 1410000, "likes": 104000, "comments": 6900, "shares": 44000, "saves": 39000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Veo 4" },
-  { "id": "fm_06", "title": "빛의 정원", "creator": "이소라", "genre": "판타지", "genres": ["판타지", "드라마"], "runtime": "2:20", "logline": "물 위로 열리는 문, 그 너머엔 빛으로 자란 정원이 있다.", "rank": 6, "rankChange": 3, "season": 1, "stats": { "views": 1180000, "likes": 97000, "comments": 5400, "shares": 38000, "saves": 46000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Kling 3" },
-  { "id": "fm_07", "title": "오늘도 택배", "creator": "누룽지 스튜디오", "genre": "드라마", "genres": ["드라마", "코미디"], "runtime": "2:05", "logline": "택배 회사 최고 배송왕은, 사실 카피바라였다.", "rank": 7, "rankChange": 3, "season": 1, "stats": { "views": 1640000, "likes": 132000, "comments": 8800, "shares": 97000, "saves": 38000 }, "jimovieReview": { "views": "88만", "title": "이 카피바라 때문에 회사 그만 못 둡니다", "duration": "07:26" }, "originWebtoonId": "wt_09", "tool": "Veo 4 · Suno" },
-  { "id": "fm_08", "title": "백야 다이어리", "creator": "노와르", "genre": "스릴러", "genres": ["스릴러", "드라마"], "runtime": "2:42", "logline": "해가 지지 않는 도시에서 잠들지 못하는 형사.", "rank": 8, "rankChange": -2, "season": 1, "stats": { "views": 980000, "likes": 81000, "comments": 5100, "shares": 29000, "saves": 33000 }, "jimovieReview": { "views": "76만", "title": "한국형 노르딕 누아르의 탄생", "duration": "10:12" }, "originWebtoonId": "wt_10", "tool": "Runway Gen-5" },
-  { "id": "fm_09", "title": "더 글리치", "creator": "오류코드", "genre": "SF", "genres": ["SF", "애니메이션"], "runtime": "2:18", "logline": "폐기 전날 밤, 안드로이드가 처음으로 꿈을 꾼다.", "rank": 9, "rankChange": -1, "season": 1, "stats": { "views": 870000, "likes": 72000, "comments": 4300, "shares": 26000, "saves": 29000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Sora 2" },
-  { "id": "fm_10", "title": "디지즈 X", "creator": "바이러스 필름", "genre": "스릴러", "genres": ["스릴러", "공포"], "runtime": "2:37", "logline": "탈출이 시작되는 순간, 인류의 시간은 끝난다.", "rank": 10, "rankChange": "NEW", "season": 1, "stats": { "views": 760000, "likes": 64000, "comments": 3900, "shares": 24000, "saves": 21000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Veo 4" },
-  { "id": "fm_11", "title": "커튼콜", "creator": "무대뒤", "genre": "드라마", "genres": ["드라마"], "runtime": "2:26", "logline": "무대에 오르는 순간에만 목소리가 나오는 배우.", "rank": 11, "rankChange": 1, "season": 1, "stats": { "views": 690000, "likes": 58000, "comments": 3600, "shares": 19000, "saves": 24000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Kling 3" },
-  { "id": "fm_12", "title": "폴링 인투 파라다이스", "creator": "심연", "genre": "판타지", "genres": ["판타지", "공포"], "runtime": "2:50", "logline": "천국으로 오르는 계단 아래, 무언가가 오래 기다리고 있었다.", "rank": 12, "rankChange": -3, "season": 1, "stats": { "views": 640000, "likes": 51000, "comments": 3200, "shares": 17000, "saves": 20000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Runway Gen-5" },
-  { "id": "fm_13", "title": "연애 시뮬레이터 v9", "creator": "러브버그", "genre": "로맨스", "genres": ["로맨스", "SF"], "runtime": "2:14", "logline": "AI 연인이 이별을 거부하기 시작했다.", "rank": 13, "rankChange": 2, "season": 1, "stats": { "views": 590000, "likes": 48000, "comments": 3500, "shares": 16000, "saves": 19000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Sora 2" },
-  { "id": "fm_14", "title": "시간을 넘어", "creator": "1919 프로젝트", "genre": "드라마", "genres": ["드라마", "SF"], "runtime": "2:59", "logline": "헌책방에서 주운 이어폰에, 1919년의 목소리가 흐른다.", "rank": 14, "rankChange": "NEW", "season": 1, "stats": { "views": 520000, "likes": 45000, "comments": 2900, "shares": 15000, "saves": 18000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Veo 4" },
-  { "id": "fm_15", "title": "선과 악", "creator": "에덴웍스", "genre": "판타지", "genres": ["판타지"], "runtime": "2:22", "logline": "선을 저울질하던 천사에게 처음으로 감정이 생겼다.", "rank": 15, "rankChange": -1, "season": 1, "stats": { "views": 470000, "likes": 39000, "comments": 2400, "shares": 12000, "saves": 15000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Midjourney · Kling 3" },
-  { "id": "fm_16", "title": "끝까지 지킨다", "creator": "에어로 필름", "genre": "SF", "genres": ["SF", "액션"], "runtime": "2:46", "logline": "AI 편대장과 인간 파일럿의 마지막 출격.", "rank": 16, "rankChange": 0, "season": 1, "stats": { "views": 430000, "likes": 36000, "comments": 2100, "shares": 11000, "saves": 13000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Runway Gen-5" },
-  { "id": "fm_17", "title": "한복 입은 남자", "creator": "별접기", "genre": "판타지", "genres": ["판타지", "SF"], "runtime": "2:38", "logline": "장영실, 별을 접어 다빈치를 만나러 간다.", "rank": 17, "rankChange": 4, "season": 1, "stats": { "views": 410000, "likes": 34000, "comments": 2600, "shares": 13000, "saves": 12000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Veo 4" },
-  { "id": "fm_18", "title": "어제의 무게", "creator": "출근길", "genre": "드라마", "genres": ["드라마"], "runtime": "2:09", "logline": "매일 아침 지하철에서, 지우지 못한 어제가 머리 위로 쌓인다.", "rank": 18, "rankChange": -2, "season": 1, "stats": { "views": 360000, "likes": 31000, "comments": 1900, "shares": 9800, "saves": 11000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Kling 3" },
-  { "id": "fm_19", "title": "은밀한 계절", "creator": "세컨드룸", "genre": "로맨스", "genres": ["로맨스", "스릴러"], "runtime": "2:28", "logline": "옆방에서 시작된 관계, 그리고 사라진 투숙객.", "rank": 19, "rankChange": 1, "season": 1, "stats": { "views": 330000, "likes": 28000, "comments": 1700, "shares": 8600, "saves": 10000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Sora 2" },
-  { "id": "fm_20", "title": "사위의 자격", "creator": "통장요정", "genre": "드라마", "genres": ["드라마", "코미디"], "runtime": "2:17", "logline": "따님을 사랑합니다. 그리고 6년째 통장을 모으고 있습니다.", "rank": 20, "rankChange": "NEW", "season": 1, "stats": { "views": 290000, "likes": 26000, "comments": 2200, "shares": 9100, "saves": 7800 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Veo 4" },
-  { "id": "fm_21", "title": "무명(無名)", "creator": "등잔불", "genre": "드라마", "genres": ["드라마", "다큐"], "runtime": "2:58", "logline": "울주의 등잔불을 지킨, 이름 없는 사람들의 기록.", "rank": 1, "rankChange": 0, "season": 0, "award": "프리시즌 대상", "stats": { "views": 3120000, "likes": 214000, "comments": 15800, "shares": 121000, "saves": 96000 }, "jimovieReview": { "views": "301만", "title": "AI로 만든 다큐가 사람을 울릴 수 있을까", "duration": "18:05" }, "originWebtoonId": null, "tool": "Veo 3 · Runway Gen-4" },
-  { "id": "fm_22", "title": "플레이 위드 나스", "creator": "산책가", "genre": "드라마", "genres": ["드라마"], "runtime": "2:33", "logline": "말 한마디 통하지 않는 반려견과 남겨진 서른 날.", "rank": 2, "rankChange": 0, "season": 0, "award": "프리시즌 관객상", "stats": { "views": 2470000, "likes": 198000, "comments": 13200, "shares": 142000, "saves": 71000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Kling 2" },
-  { "id": "fm_23", "title": "흰파리", "creator": "잔칫집", "genre": "스릴러", "genres": ["스릴러", "드라마"], "runtime": "2:44", "logline": "아무도 초대하지 않은 잔칫상에 매일 나타나는 사내.", "rank": 3, "rankChange": 0, "season": 0, "award": "프리시즌 연출상", "stats": { "views": 1830000, "likes": 139000, "comments": 9400, "shares": 61000, "saves": 52000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Runway Gen-4" },
-  { "id": "fm_24", "title": "정원의 문장가", "creator": "마지막문장", "genre": "드라마", "genres": ["드라마", "다큐"], "runtime": "2:21", "logline": "정원에 앉아, 남의 마지막 문장을 대신 써 주는 남자.", "rank": 4, "rankChange": 0, "season": 0, "award": "프리시즌 각본상", "stats": { "views": 1260000, "likes": 101000, "comments": 7100, "shares": 43000, "saves": 48000 }, "jimovieReview": null, "originWebtoonId": null, "tool": "Sora 1" }
+ {
+  "id": "fm_01",
+  "title": "역병: 붉은 징조",
+  "creator": "홍월 필름",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "공포"
+  ],
+  "runtime": "2:48",
+  "logline": "눈 내리는 조선의 마을, 붉은 깃털이 떨어진 집마다 사람이 사라진다.",
+  "rank": 1,
+  "rankChange": 0,
+  "season": 1,
+  "stats": {
+   "views": 2840000,
+   "likes": 186000,
+   "comments": 12400,
+   "shares": 94000,
+   "saves": 71000
+  },
+  "jimovieReview": {
+   "views": "256만",
+   "title": "K-사극 스릴러의 새로운 기준, 벌써 영화화 확정?",
+   "duration": "16:40"
+  },
+  "originWebtoonId": "wt_06",
+  "tool": "Veo 4 · Runway Gen-5",
+  "funding": true
+ },
+ {
+  "id": "fm_02",
+  "title": "달이 정한 연(緣)",
+  "creator": "스튜디오 백야",
+  "genre": "로맨스",
+  "genres": [
+   "로맨스",
+   "판타지"
+  ],
+  "runtime": "2:31",
+  "logline": "달이 짝지어 준 두 사람, 그러나 서로의 이름을 부르면 사라진다.",
+  "rank": 2,
+  "rankChange": 1,
+  "season": 1,
+  "stats": {
+   "views": 2276093,
+   "likes": 167318,
+   "comments": 11633,
+   "shares": 53831,
+   "saves": 62091
+  },
+  "jimovieReview": {
+   "views": "132만",
+   "title": "눈물 버튼 주의, 올해 가장 아름다운 동양풍",
+   "duration": "12:51"
+  },
+  "originWebtoonId": "wt_07",
+  "tool": "Kling 3 · Midjourney"
+ },
+ {
+  "id": "fm_03",
+  "title": "재회 알고리즘",
+  "creator": "픽셀무드",
+  "genre": "SF",
+  "genres": [
+   "SF",
+   "로맨스"
+  ],
+  "runtime": "2:34",
+  "logline": "죽은 연인을 손바닥만 한 큐브에 복원해 주는 스타트업, 그 첫 고객.",
+  "rank": 3,
+  "rankChange": -1,
+  "season": 1,
+  "stats": {
+   "views": 2081750,
+   "likes": 157327,
+   "comments": 10261,
+   "shares": 48967,
+   "saves": 55649
+  },
+  "jimovieReview": {
+   "views": "97만",
+   "title": "블랙미러 좋아하면 이 티저 꼭 보세요",
+   "duration": "09:47"
+  },
+  "originWebtoonId": "wt_08",
+  "tool": "Sora 2 · ElevenLabs"
+ },
+ {
+  "id": "fm_04",
+  "title": "도씨(DOSSY)",
+  "creator": "김도현",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "드라마"
+  ],
+  "runtime": "2:12",
+  "logline": "모두가 잠든 호텔, 5층의 불 꺼지지 않는 방.",
+  "rank": 5,
+  "rankChange": 2,
+  "season": 1,
+  "stats": {
+   "views": 2092371,
+   "likes": 134907,
+   "comments": 10580,
+   "shares": 63828,
+   "saves": 46871
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Runway Gen-5"
+ },
+ {
+  "id": "fm_05",
+  "title": "타임 워",
+  "creator": "크로노스 랩",
+  "genre": "SF",
+  "genres": [
+   "SF",
+   "액션"
+  ],
+  "runtime": "2:55",
+  "logline": "같은 전투를 백 번 되풀이하는 소녀 병사의 마지막 72시간.",
+  "rank": 8,
+  "rankChange": 0,
+  "season": 1,
+  "stats": {
+   "views": 1688790,
+   "likes": 116552,
+   "comments": 7742,
+   "shares": 37161,
+   "saves": 33815
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_06",
+  "title": "빛의 정원",
+  "creator": "이소라",
+  "genre": "판타지",
+  "genres": [
+   "판타지",
+   "드라마"
+  ],
+  "runtime": "2:20",
+  "logline": "물 위로 열리는 문, 그 너머엔 빛으로 자란 정원이 있다.",
+  "rank": 10,
+  "rankChange": 3,
+  "season": 1,
+  "stats": {
+   "views": 1411955,
+   "likes": 99440,
+   "comments": 7341,
+   "shares": 50684,
+   "saves": 31969
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3"
+ },
+ {
+  "id": "fm_07",
+  "title": "오늘도 택배",
+  "creator": "누룽지 스튜디오",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "코미디"
+  ],
+  "runtime": "2:05",
+  "logline": "택배 회사 최고 배송왕은, 사실 카피바라였다.",
+  "rank": 7,
+  "rankChange": 3,
+  "season": 1,
+  "stats": {
+   "views": 1654480,
+   "likes": 116235,
+   "comments": 8657,
+   "shares": 83689,
+   "saves": 44038
+  },
+  "jimovieReview": {
+   "views": "88만",
+   "title": "이 카피바라 때문에 회사 그만 못 둡니다",
+   "duration": "07:26"
+  },
+  "originWebtoonId": "wt_09",
+  "tool": "Veo 4 · Suno"
+ },
+ {
+  "id": "fm_08",
+  "title": "백야 다이어리",
+  "creator": "노와르",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "드라마"
+  ],
+  "runtime": "2:42",
+  "logline": "해가 지지 않는 도시에서 잠들지 못하는 형사.",
+  "rank": 12,
+  "rankChange": -2,
+  "season": 1,
+  "stats": {
+   "views": 1253149,
+   "likes": 93017,
+   "comments": 5817,
+   "shares": 49033,
+   "saves": 28448
+  },
+  "jimovieReview": {
+   "views": "76만",
+   "title": "한국형 노르딕 누아르의 탄생",
+   "duration": "10:12"
+  },
+  "originWebtoonId": "wt_10",
+  "tool": "Runway Gen-5"
+ },
+ {
+  "id": "fm_09",
+  "title": "더 글리치",
+  "creator": "오류코드",
+  "genre": "SF",
+  "genres": [
+   "SF",
+   "애니메이션"
+  ],
+  "runtime": "2:18",
+  "logline": "폐기 전날 밤, 안드로이드가 처음으로 꿈을 꾼다.",
+  "rank": 14,
+  "rankChange": -1,
+  "season": 1,
+  "stats": {
+   "views": 1144119,
+   "likes": 80261,
+   "comments": 5687,
+   "shares": 38389,
+   "saves": 30385
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 2"
+ },
+ {
+  "id": "fm_10",
+  "title": "디지즈 X",
+  "creator": "바이러스 필름",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "공포"
+  ],
+  "runtime": "2:37",
+  "logline": "탈출이 시작되는 순간, 인류의 시간은 끝난다.",
+  "rank": 16,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 995412,
+   "likes": 62977,
+   "comments": 4371,
+   "shares": 37655,
+   "saves": 26433
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_11",
+  "title": "커튼콜",
+  "creator": "무대뒤",
+  "genre": "드라마",
+  "genres": [
+   "드라마"
+  ],
+  "runtime": "2:26",
+  "logline": "무대에 오르는 순간에만 목소리가 나오는 배우.",
+  "rank": 19,
+  "rankChange": 1,
+  "season": 1,
+  "stats": {
+   "views": 769332,
+   "likes": 52825,
+   "comments": 4022,
+   "shares": 17124,
+   "saves": 18824
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3"
+ },
+ {
+  "id": "fm_12",
+  "title": "폴링 인투 파라다이스",
+  "creator": "심연",
+  "genre": "판타지",
+  "genres": [
+   "판타지",
+   "공포"
+  ],
+  "runtime": "2:50",
+  "logline": "천국으로 오르는 계단 아래, 무언가가 오래 기다리고 있었다.",
+  "rank": 21,
+  "rankChange": -3,
+  "season": 1,
+  "stats": {
+   "views": 681884,
+   "likes": 47238,
+   "comments": 3614,
+   "shares": 27743,
+   "saves": 14438
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Runway Gen-5"
+ },
+ {
+  "id": "fm_13",
+  "title": "연애 시뮬레이터 v9",
+  "creator": "러브버그",
+  "genre": "로맨스",
+  "genres": [
+   "로맨스",
+   "SF"
+  ],
+  "runtime": "2:14",
+  "logline": "AI 연인이 이별을 거부하기 시작했다.",
+  "rank": 23,
+  "rankChange": 2,
+  "season": 1,
+  "stats": {
+   "views": 526590,
+   "likes": 40456,
+   "comments": 2531,
+   "shares": 16618,
+   "saves": 15222
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 2"
+ },
+ {
+  "id": "fm_14",
+  "title": "시간을 넘어",
+  "creator": "1919 프로젝트",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "SF"
+  ],
+  "runtime": "2:59",
+  "logline": "헌책방에서 주운 이어폰에, 1919년의 목소리가 흐른다.",
+  "rank": 26,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 491196,
+   "likes": 33653,
+   "comments": 1787,
+   "shares": 16499,
+   "saves": 9778
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_15",
+  "title": "선과 악",
+  "creator": "에덴웍스",
+  "genre": "판타지",
+  "genres": [
+   "판타지"
+  ],
+  "runtime": "2:22",
+  "logline": "선을 저울질하던 천사에게 처음으로 감정이 생겼다.",
+  "rank": 28,
+  "rankChange": -1,
+  "season": 1,
+  "stats": {
+   "views": 379241,
+   "likes": 27875,
+   "comments": 1478,
+   "shares": 11403,
+   "saves": 7925
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Midjourney · Kling 3"
+ },
+ {
+  "id": "fm_16",
+  "title": "끝까지 지킨다",
+  "creator": "에어로 필름",
+  "genre": "SF",
+  "genres": [
+   "SF",
+   "액션"
+  ],
+  "runtime": "2:46",
+  "logline": "AI 편대장과 인간 파일럿의 마지막 출격.",
+  "rank": 30,
+  "rankChange": 0,
+  "season": 1,
+  "stats": {
+   "views": 345675,
+   "likes": 25622,
+   "comments": 1933,
+   "shares": 15320,
+   "saves": 9203
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Runway Gen-5"
+ },
+ {
+  "id": "fm_17",
+  "title": "한복 입은 남자",
+  "creator": "별접기",
+  "genre": "판타지",
+  "genres": [
+   "판타지",
+   "SF"
+  ],
+  "runtime": "2:38",
+  "logline": "장영실, 별을 접어 다빈치를 만나러 간다.",
+  "rank": 32,
+  "rankChange": 4,
+  "season": 1,
+  "stats": {
+   "views": 324755,
+   "likes": 23799,
+   "comments": 1206,
+   "shares": 13929,
+   "saves": 8800
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_18",
+  "title": "어제의 무게",
+  "creator": "출근길",
+  "genre": "드라마",
+  "genres": [
+   "드라마"
+  ],
+  "runtime": "2:09",
+  "logline": "매일 아침 지하철에서, 지우지 못한 어제가 머리 위로 쌓인다.",
+  "rank": 34,
+  "rankChange": -2,
+  "season": 1,
+  "stats": {
+   "views": 329838,
+   "likes": 20896,
+   "comments": 1208,
+   "shares": 8567,
+   "saves": 6444
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3"
+ },
+ {
+  "id": "fm_19",
+  "title": "은밀한 계절",
+  "creator": "세컨드룸",
+  "genre": "로맨스",
+  "genres": [
+   "로맨스",
+   "스릴러"
+  ],
+  "runtime": "2:28",
+  "logline": "옆방에서 시작된 관계, 그리고 사라진 투숙객.",
+  "rank": 36,
+  "rankChange": 1,
+  "season": 1,
+  "stats": {
+   "views": 307438,
+   "likes": 18149,
+   "comments": 1371,
+   "shares": 9833,
+   "saves": 7606
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 2"
+ },
+ {
+  "id": "fm_20",
+  "title": "사위의 자격",
+  "creator": "통장요정",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "코미디"
+  ],
+  "runtime": "2:17",
+  "logline": "따님을 사랑합니다. 그리고 6년째 통장을 모으고 있습니다.",
+  "rank": 37,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 233845,
+   "likes": 16815,
+   "comments": 1101,
+   "shares": 6838,
+   "saves": 4791
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_21",
+  "title": "무명(無名)",
+  "creator": "등잔불",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "다큐"
+  ],
+  "runtime": "2:58",
+  "logline": "울주의 등잔불을 지킨, 이름 없는 사람들의 기록.",
+  "rank": 1,
+  "rankChange": 0,
+  "season": 0,
+  "award": "프리시즌 대상",
+  "stats": {
+   "views": 3120000,
+   "likes": 214000,
+   "comments": 15800,
+   "shares": 121000,
+   "saves": 96000
+  },
+  "jimovieReview": {
+   "views": "301만",
+   "title": "AI로 만든 다큐가 사람을 울릴 수 있을까",
+   "duration": "18:05"
+  },
+  "originWebtoonId": null,
+  "tool": "Veo 3 · Runway Gen-4"
+ },
+ {
+  "id": "fm_22",
+  "title": "플레이 위드 나스",
+  "creator": "산책가",
+  "genre": "드라마",
+  "genres": [
+   "드라마"
+  ],
+  "runtime": "2:33",
+  "logline": "말 한마디 통하지 않는 반려견과 남겨진 서른 날.",
+  "rank": 2,
+  "rankChange": 0,
+  "season": 0,
+  "award": "프리시즌 관객상",
+  "stats": {
+   "views": 2470000,
+   "likes": 198000,
+   "comments": 13200,
+   "shares": 142000,
+   "saves": 71000
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 2"
+ },
+ {
+  "id": "fm_23",
+  "title": "흰파리",
+  "creator": "잔칫집",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "드라마"
+  ],
+  "runtime": "2:44",
+  "logline": "아무도 초대하지 않은 잔칫상에 매일 나타나는 사내.",
+  "rank": 3,
+  "rankChange": 0,
+  "season": 0,
+  "award": "프리시즌 연출상",
+  "stats": {
+   "views": 1830000,
+   "likes": 139000,
+   "comments": 9400,
+   "shares": 61000,
+   "saves": 52000
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Runway Gen-4"
+ },
+ {
+  "id": "fm_24",
+  "title": "정원의 문장가",
+  "creator": "마지막문장",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "다큐"
+  ],
+  "runtime": "2:21",
+  "logline": "정원에 앉아, 남의 마지막 문장을 대신 써 주는 남자.",
+  "rank": 4,
+  "rankChange": 0,
+  "season": 0,
+  "award": "프리시즌 각본상",
+  "stats": {
+   "views": 1260000,
+   "likes": 101000,
+   "comments": 7100,
+   "shares": 43000,
+   "saves": 48000
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 1"
+ },
+ {
+  "id": "fm_25",
+  "title": "Eddington",
+  "creator": "Eddington 제작팀",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "SF"
+  ],
+  "runtime": "2:52",
+  "logline": "1919년 개기일식, 빛이 휘어진다는 걸 증명하려는 한 과학자의 마지막 관측.",
+  "rank": 4,
+  "rankChange": 2,
+  "season": 1,
+  "stats": {
+   "views": 1887556,
+   "likes": 141254,
+   "comments": 8861,
+   "shares": 77415,
+   "saves": 42523
+  },
+  "jimovieReview": {
+   "views": "143만",
+   "title": "AI가 만든 시대극, 영화제 8관왕의 이유",
+   "duration": "13:05"
+  },
+  "originWebtoonId": null,
+  "tool": "Midjourney · Runway Gen-5"
+ },
+ {
+  "id": "fm_26",
+  "title": "조선의 아이돌",
+  "creator": "조선의 아이돌 제작팀",
+  "genre": "드라마",
+  "genres": [
+   "드라마",
+   "음악"
+  ],
+  "runtime": "2:41",
+  "logline": "한양 저잣거리의 세 소리꾼, 조선 최초의 아이돌이 되다.",
+  "rank": 6,
+  "rankChange": 3,
+  "season": 1,
+  "stats": {
+   "views": 1834864,
+   "likes": 139149,
+   "comments": 10541,
+   "shares": 53834,
+   "saves": 42374
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3 · Suno"
+ },
+ {
+  "id": "fm_27",
+  "title": "ECHO",
+  "creator": "ECHO 제작팀",
+  "genre": "SF",
+  "genres": [
+   "SF",
+   "판타지"
+  ],
+  "runtime": "2:18",
+  "logline": "마지막 남은 나무의 뿌리가 기억하는 목소리, 그 메아리를 따라서.",
+  "rank": 9,
+  "rankChange": 1,
+  "season": 1,
+  "stats": {
+   "views": 1617139,
+   "likes": 102861,
+   "comments": 6462,
+   "shares": 40552,
+   "saves": 39040
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 2"
+ },
+ {
+  "id": "fm_28",
+  "title": "착한여자 부세미 (티저)",
+  "creator": "착한여자 부세미 제작팀",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "드라마"
+  ],
+  "runtime": "2:26",
+  "logline": "결혼식 날, 가장 착한 여자가 가장 위험한 거짓말을 시작한다.",
+  "rank": 11,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 1426616,
+   "likes": 94473,
+   "comments": 7203,
+   "shares": 49015,
+   "saves": 31076
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_29",
+  "title": "MOLD",
+  "creator": "MOLD 제작팀",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "공포"
+  ],
+  "runtime": "2:33",
+  "logline": "완벽한 얼굴을 찍어내는 틀, 그 틀에서 도망친 소녀.",
+  "rank": 13,
+  "rankChange": 2,
+  "season": 1,
+  "stats": {
+   "views": 1074491,
+   "likes": 81668,
+   "comments": 5720,
+   "shares": 43232,
+   "saves": 30822
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Runway Gen-5"
+ },
+ {
+  "id": "fm_30",
+  "title": "재난소녀",
+  "creator": "재난소녀 제작팀",
+  "genre": "애니메이션",
+  "genres": [
+   "애니메이션",
+   "SF"
+  ],
+  "runtime": "2:47",
+  "logline": "지구 종말 D-30, 재난을 미리 보는 소녀의 마지막 한 달.",
+  "rank": 15,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 1162974,
+   "likes": 71087,
+   "comments": 5568,
+   "shares": 31436,
+   "saves": 27930
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3 · Midjourney"
+ },
+ {
+  "id": "fm_31",
+  "title": "ANT AND BAIT",
+  "creator": "ANT AND BAIT 제작팀",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러"
+  ],
+  "runtime": "2:39",
+  "logline": "미끼를 문 건 개미였을까, 사람이었을까.",
+  "rank": 18,
+  "rankChange": -1,
+  "season": 1,
+  "stats": {
+   "views": 752667,
+   "likes": 55884,
+   "comments": 2893,
+   "shares": 29644,
+   "saves": 16876
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_32",
+  "title": "무릎꿇은 재벌3세",
+  "creator": "무릎꿇은 재벌3세 제작팀",
+  "genre": "코미디",
+  "genres": [
+   "코미디",
+   "드라마"
+  ],
+  "runtime": "2:12",
+  "logline": "전학 첫날, 재벌 3세가 반 전체 앞에서 무릎을 꿇었다.",
+  "rank": 17,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 883206,
+   "likes": 60730,
+   "comments": 4254,
+   "shares": 18630,
+   "saves": 21770
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3"
+ },
+ {
+  "id": "fm_33",
+  "title": "THE SHADOWED",
+  "creator": "THE SHADOWED 제작팀",
+  "genre": "드라마",
+  "genres": [
+   "드라마"
+  ],
+  "runtime": "2:20",
+  "logline": "그림자만 남은 말 한 마리, 사막을 건너는 오래된 기억.",
+  "rank": 33,
+  "rankChange": 0,
+  "season": 1,
+  "stats": {
+   "views": 308475,
+   "likes": 20331,
+   "comments": 1033,
+   "shares": 9320,
+   "saves": 9074
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 2"
+ },
+ {
+  "id": "fm_34",
+  "title": "The Cinema That Never Was",
+  "creator": "The Cinema That Never Was 제작팀",
+  "genre": "드라마",
+  "genres": [
+   "드라마"
+  ],
+  "runtime": "2:55",
+  "logline": "존재한 적 없는 영화관, 그곳에서만 상영되는 단 한 편의 영화.",
+  "rank": 35,
+  "rankChange": 1,
+  "season": 1,
+  "stats": {
+   "views": 292212,
+   "likes": 19313,
+   "comments": 1417,
+   "shares": 7703,
+   "saves": 6139
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Midjourney · Runway Gen-5"
+ },
+ {
+  "id": "fm_35",
+  "title": "VIN's love story",
+  "creator": "VIN's love story 제작팀",
+  "genre": "로맨스",
+  "genres": [
+   "로맨스"
+  ],
+  "runtime": "2:08",
+  "logline": "매주 일요일, 같은 버스 정류장에서 시작되는 두 사람의 계절.",
+  "rank": 24,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 652293,
+   "likes": 41384,
+   "comments": 2709,
+   "shares": 20082,
+   "saves": 16344
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3"
+ },
+ {
+  "id": "fm_36",
+  "title": "개미",
+  "creator": "개미 제작팀",
+  "genre": "스릴러",
+  "genres": [
+   "스릴러",
+   "공포"
+  ],
+  "runtime": "2:31",
+  "logline": "하늘을 뒤덮은 개미떼, 그 아래 홀로 남은 여자.",
+  "rank": 20,
+  "rankChange": 4,
+  "season": 1,
+  "stats": {
+   "views": 850270,
+   "likes": 51427,
+   "comments": 3835,
+   "shares": 28757,
+   "saves": 16833
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4"
+ },
+ {
+  "id": "fm_37",
+  "title": "고요는 바람을 닮았다",
+  "creator": "고요는 바람을 닮았다 제작팀",
+  "genre": "SF",
+  "genres": [
+   "SF",
+   "드라마"
+  ],
+  "runtime": "2:44",
+  "logline": "모두가 숨죽인 도시, 방독면 너머로 처음 들려온 바람 소리.",
+  "rank": 25,
+  "rankChange": 1,
+  "season": 1,
+  "stats": {
+   "views": 570345,
+   "likes": 34362,
+   "comments": 2522,
+   "shares": 19323,
+   "saves": 14282
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Runway Gen-5"
+ },
+ {
+  "id": "fm_38",
+  "title": "대산타실업시대",
+  "creator": "대산타실업시대 제작팀",
+  "genre": "코미디",
+  "genres": [
+   "코미디",
+   "드라마"
+  ],
+  "runtime": "2:15",
+  "logline": "산타 대량 해고의 시대, 일자리를 잃은 산타들의 크리스마스.",
+  "rank": 29,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 452606,
+   "likes": 29283,
+   "comments": 1594,
+   "shares": 11000,
+   "saves": 9928
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Veo 4 · ElevenLabs"
+ },
+ {
+  "id": "fm_39",
+  "title": "말 예쁘게 하는게 도리이구 순리",
+  "creator": "말 예쁘게 하는게 도리이구 순리 제작팀",
+  "genre": "코미디",
+  "genres": [
+   "코미디",
+   "드라마"
+  ],
+  "runtime": "2:05",
+  "logline": "말 한마디로 시작된 대가족 전쟁, 예쁘게 말하면 끝날까.",
+  "rank": 31,
+  "rankChange": -2,
+  "season": 1,
+  "stats": {
+   "views": 324808,
+   "likes": 24342,
+   "comments": 1291,
+   "shares": 9804,
+   "saves": 7911
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3"
+ },
+ {
+  "id": "fm_40",
+  "title": "Luly Couple",
+  "creator": "Luly Couple 제작팀",
+  "genre": "로맨스",
+  "genres": [
+   "로맨스"
+  ],
+  "runtime": "2:10",
+  "logline": "계약 커플로 시작한 두 사람, 숏폼 로맨스 시리즈의 첫 화.",
+  "rank": 22,
+  "rankChange": 2,
+  "season": 1,
+  "stats": {
+   "views": 595526,
+   "likes": 42758,
+   "comments": 2437,
+   "shares": 19048,
+   "saves": 16254
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Sora 2"
+ },
+ {
+  "id": "fm_41",
+  "title": "죽어죽어죽어",
+  "creator": "죽어죽어죽어 제작팀",
+  "genre": "코미디",
+  "genres": [
+   "코미디",
+   "공포"
+  ],
+  "runtime": "2:22",
+  "logline": "무대 위에서 죽어야 사는 아이돌, 그리고 대기실의 귀신.",
+  "rank": 27,
+  "rankChange": "NEW",
+  "season": 1,
+  "stats": {
+   "views": 416379,
+   "likes": 30096,
+   "comments": 1651,
+   "shares": 12099,
+   "saves": 8695
+  },
+  "jimovieReview": null,
+  "originWebtoonId": null,
+  "tool": "Kling 3 · Suno"
+ }
 ]

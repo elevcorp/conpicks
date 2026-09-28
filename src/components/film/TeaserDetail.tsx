@@ -185,7 +185,7 @@ export function TeaserDetail({ film, origin, comments, similar }: { film: Film; 
                 className="group flex w-full items-center gap-4 rounded-2xl p-3 text-left ring-1 ring-white/10 transition hover:ring-brand/60"
                 style={{ background: `linear-gradient(110deg, ${origin.themeColor}55, rgba(255,255,255,0.04) 70%)` }}
               >
-                <div className="relative aspect-[3/4] w-[76px] shrink-0 overflow-hidden rounded-lg shadow-lg">
+                <div className="relative aspect-[3/5] w-[76px] shrink-0 overflow-hidden rounded-lg shadow-lg">
                   <WorkCover work={origin} className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" sizes="80px" />
                 </div>
                 <div className="min-w-0 flex-1">

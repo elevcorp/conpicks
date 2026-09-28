@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useId } from "react";
 import { useWorld } from "@/store/world";
 import { useWorldNav } from "./useWorldNav";
 import { useCurrentWorld } from "./useCurrentWorld";
@@ -17,6 +18,9 @@ export function WorldSwitcher({ className, onDark }: { className?: string; onDar
   const current = useCurrentWorld();
   const world = useWorld((s) => s.transitionTo) ?? current;
   const go = useWorldNav();
+  // Unique per instance: the mobile bar and desktop GNB both mount a switcher, and a shared
+  // layoutId would make the (hidden) one steal the pill.
+  const pillId = `world-pill-${useId()}`;
   return (
     <div
       role="tablist"
@@ -42,7 +46,7 @@ export function WorldSwitcher({ className, onDark }: { className?: string; onDar
           >
             {active && (
               <motion.span
-                layoutId="world-pill"
+                layoutId={pillId}
                 className="absolute inset-0 -z-10 rounded-full bg-white shadow-[0_2px_10px_rgba(0,0,0,0.25)]"
                 transition={{ type: "spring", stiffness: 520, damping: 38 }}
               />

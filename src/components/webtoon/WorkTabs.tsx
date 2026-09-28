@@ -13,10 +13,10 @@ import { RankDelta } from "@/components/common/RankDelta";
 import { Sheet } from "@/components/common/Sheet";
 import { useWorldNav } from "@/components/common/useWorldNav";
 import { useRequireLogin } from "@/components/common/LoginSheet";
-import { EpisodeReader } from "./EpisodeReader";
+import { CoverCrop, EpisodeReader, pagesForEpisode } from "./EpisodeReader";
 import { useUser, isUnlocked } from "@/store/user";
 import { useUI, demoToast } from "@/store/ui";
-import { cutSrc } from "@/lib/assets";
+import { coverSrc } from "@/lib/assets";
 import { compact, won } from "@/lib/format";
 import { cn } from "@/lib/cn";
 import type { Episode, EpisodeSummary, Film as FilmT, RankEntry, Webtoon } from "@/lib/types";
@@ -71,8 +71,14 @@ export function Synopsis({ text, className }: { text: string; className?: string
 }
 
 export function EpThumb({ work, ep }: { work: Webtoon; ep: number }) {
-  const real = cutSrc(work.id, ((ep - 1) % 8) + 1);
-  if (real) return <Image src={real} alt="" fill sizes="200px" className="object-cover" />;
+  // Real pages: frame a panel from this episode's strip. Real cover: a zoomed "shot" of the art.
+  const pages = pagesForEpisode(work.id, ep);
+  if (pages.length) {
+    const src = pages[(ep * 3) % pages.length];
+    return <Image src={src} alt="" fill sizes="200px" className="object-cover" style={{ objectPosition: `50% ${(ep * 37) % 100}%` }} />;
+  }
+  const cover = coverSrc(work.id);
+  if (cover) return <CoverCrop src={cover} seed={`${work.id}-thumb-${ep}`} className="absolute inset-0" sizes="240px" />;
   return <SceneArt seed={`${work.id}-thumb-${ep}`} theme={work.themeColor} genre={work.genreKey} variant="wide" mode={(["scene", "closeup", "scene", "scene", "impact"] as const)[ep % 5]} className="absolute inset-0 h-full w-full" />;
 }
 
@@ -308,7 +314,7 @@ export function InfoTab({ work, others, othersLabel, rank, film }: {
           <div className="snap-row -mx-4 gap-2.5 px-4 md:mx-0 md:px-0">
             {others.map((o) => (
               <Link key={o.id} href={`/work/${o.id}`} className="w-[30vw] max-w-[140px]">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-md">
+                <div className="relative aspect-[3/5] overflow-hidden rounded-md">
                   <WorkCover work={o} className="absolute inset-0" sizes="140px" />
                 </div>
                 <p className="mt-1.5 truncate text-[13px] font-semibold">{o.title}</p>

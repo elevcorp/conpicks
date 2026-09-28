@@ -5,7 +5,7 @@ export function PageSkeleton({ film }: { film?: boolean }) {
       <div className="skeleton mt-8 h-6 w-40 rounded" />
       <div className="mt-4 grid grid-cols-3 gap-2 md:grid-cols-6 md:gap-4">
         {Array.from({ length: 6 }, (_, i) => (
-          <div key={i} className={`skeleton rounded-md ${film ? "aspect-video" : "aspect-[3/4]"}`} />
+          <div key={i} className={`skeleton rounded-md ${film ? "aspect-video" : "aspect-[3/5]"}`} />
         ))}
       </div>
       <div className="skeleton mt-8 h-6 w-52 rounded" />

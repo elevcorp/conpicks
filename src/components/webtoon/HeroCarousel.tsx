@@ -58,8 +58,8 @@ export function HeroCarousel({ works }: { works: Webtoon[] }) {
         >
           <VideoOrCover name={heroKey} muted={muted} alt={i % 2 === 1} className="absolute inset-0">
             {/* mobile: portrait art; desktop: wide art */}
-            <WorkCover work={w} srcKey={heroKey} className="absolute inset-0 md:hidden" sizes="100vw" priority={i === 0} />
-            <WorkCover work={w} srcKey={heroKey} variant="wide" className="absolute inset-0 hidden md:block" sizes="100vw" priority={i === 0} />
+            <WorkCover work={w} srcKey={heroKey} className="absolute inset-0 md:hidden" sizes="100vw" priority={i === 0} focus="50% 0%" />
+            <WorkCover work={w} srcKey={heroKey} variant="wide" portraitFit="blur" className="absolute inset-0 hidden md:block" sizes="100vw" priority={i === 0} />
           </VideoOrCover>
           {/* always-dark scrim behind the white type (light mode included) */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/30 md:bg-gradient-to-r md:from-black/85 md:via-black/35 md:to-transparent" />
@@ -77,7 +77,7 @@ export function HeroCarousel({ works }: { works: Webtoon[] }) {
               animate={{ opacity: 1, y: 0, rotate: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.6 }}
-              className="float-y relative aspect-[3/4] w-[270px] overflow-hidden rounded-xl shadow-[0_30px_80px_rgba(0,0,0,0.6)] ring-1 ring-white/15"
+              className="float-y relative aspect-[3/5] w-[250px] overflow-hidden rounded-xl shadow-[0_30px_80px_rgba(0,0,0,0.6)] ring-1 ring-white/15"
             >
               <WorkCover work={w} showTitle className="absolute inset-0" sizes="270px" />
             </motion.div>

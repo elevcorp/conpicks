@@ -5,7 +5,7 @@ import { chromium } from "@playwright/test";
 const base = process.argv[2] ?? "http://localhost:3000";
 const ROUTES = [
   "/", "/weekly", "/weekly?day=완결", "/ranking", "/ranking?tab=league", "/league", "/work/wt_01", "/work/wt_04?tab=info",
-  "/work/wt_18?tab=comments", "/viewer/wt_04/1", "/viewer/wt_04/6", "/viewer/wt_05/40", "/library", "/my", "/settings", "/search?q=로판",
+  "/work/wt_25?tab=comments", "/work/wt_02?tab=episodes", "/viewer/wt_04/1", "/viewer/wt_02/3", "/viewer/wt_04/6", "/viewer/wt_05/40", "/library", "/my", "/settings", "/search?q=로판",
   "/notifications", "/film", "/film/feed", "/film/ranking", "/film/funding", "/film/work/fm_01", "/film/work/fm_22",
   "/film/collection/jimovie", "/film/collection/SF", "/nope",
 ];

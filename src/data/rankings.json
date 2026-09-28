@@ -33,94 +33,129 @@
     "change": 1
    },
    {
-    "id": "wt_09",
+    "id": "wt_17",
     "rank": 7,
     "change": 0
    },
    {
-    "id": "wt_17",
+    "id": "wt_19",
     "rank": 8,
+    "change": 3
+   },
+   {
+    "id": "wt_09",
+    "rank": 9,
     "change": 0
    },
    {
     "id": "wt_12",
-    "rank": 9,
+    "rank": 10,
     "change": -3
    },
    {
+    "id": "wt_15",
+    "rank": 11,
+    "change": 0
+   },
+   {
     "id": "wt_08",
-    "rank": 10,
+    "rank": 12,
     "change": 3
    },
    {
+    "id": "wt_20",
+    "rank": 13,
+    "change": 0
+   },
+   {
     "id": "wt_16",
-    "rank": 11,
+    "rank": 14,
     "change": -2
    },
    {
+    "id": "wt_22",
+    "rank": 15,
+    "change": 1
+   },
+   {
     "id": "wt_04",
-    "rank": 12,
+    "rank": 16,
     "change": 5
    },
    {
     "id": "wt_13",
-    "rank": 13,
+    "rank": 17,
     "change": 4
    },
    {
     "id": "wt_10",
-    "rank": 14,
+    "rank": 18,
     "change": -1
    },
    {
-    "id": "wt_15",
-    "rank": 15,
-    "change": 0
+    "id": "wt_18",
+    "rank": 19,
+    "change": -1
+   },
+   {
+    "id": "wt_21",
+    "rank": 20,
+    "change": -1
+   },
+   {
+    "id": "wt_23",
+    "rank": 21,
+    "change": 2
    },
    {
     "id": "wt_03",
-    "rank": 16,
+    "rank": 22,
     "change": "NEW"
    },
    {
     "id": "wt_14",
-    "rank": 17,
+    "rank": 23,
+    "change": "NEW"
+   },
+   {
+    "id": "wt_24",
+    "rank": 24,
     "change": "NEW"
    }
   ],
   "league": [
    {
-    "id": "wt_24",
+    "id": "wt_25",
     "rank": 1,
-    "change": 1
-   },
-   {
-    "id": "wt_18",
-    "rank": 2,
     "change": 3
    },
    {
-    "id": "wt_22",
-    "rank": 3,
-    "change": 0
+    "id": "wt_26",
+    "rank": 2,
+    "change": 2
    },
    {
-    "id": "wt_19",
-    "rank": 4,
+    "id": "wt_27",
+    "rank": 3,
     "change": 1
    },
    {
-    "id": "wt_20",
-    "rank": 5,
+    "id": "wt_28",
+    "rank": 4,
     "change": -1
    },
    {
-    "id": "wt_21",
+    "id": "wt_29",
+    "rank": 5,
+    "change": 0
+   },
+   {
+    "id": "wt_30",
     "rank": 6,
     "change": 2
    },
    {
-    "id": "wt_23",
+    "id": "wt_31",
     "rank": 7,
     "change": -2
    }
@@ -133,12 +168,12 @@
      "change": 1
     },
     {
-     "id": "wt_02",
+     "id": "wt_09",
      "rank": 2,
-     "change": 2
+     "change": 0
     },
     {
-     "id": "wt_09",
+     "id": "wt_20",
      "rank": 3,
      "change": 0
     },
@@ -148,38 +183,28 @@
      "change": 5
     },
     {
-     "id": "wt_13",
+     "id": "wt_10",
      "rank": 5,
-     "change": 4
+     "change": -1
     },
     {
-     "id": "wt_10",
+     "id": "wt_18",
      "rank": 6,
      "change": -1
     },
     {
-     "id": "wt_15",
+     "id": "wt_21",
      "rank": 7,
-     "change": 0
+     "change": -1
     },
     {
-     "id": "wt_24",
+     "id": "wt_25",
      "rank": 8,
-     "change": 1
-    },
-    {
-     "id": "wt_18",
-     "rank": 9,
      "change": 3
     },
     {
-     "id": "wt_19",
-     "rank": 10,
-     "change": 1
-    },
-    {
-     "id": "wt_20",
-     "rank": 11,
+     "id": "wt_28",
+     "rank": 9,
      "change": -1
     }
    ],
@@ -200,14 +225,14 @@
      "change": "NEW"
     },
     {
-     "id": "wt_22",
+     "id": "wt_29",
      "rank": 4,
      "change": 0
     }
    ],
    "학원/판타지": [
     {
-     "id": "wt_14",
+     "id": "wt_24",
      "rank": 1,
      "change": "NEW"
     }
@@ -224,40 +249,80 @@
      "change": -2
     },
     {
-     "id": "wt_17",
-     "rank": 3,
-     "change": 0
-    },
-    {
      "id": "wt_12",
-     "rank": 4,
+     "rank": 3,
      "change": -3
     },
     {
-     "id": "wt_21",
+     "id": "wt_26",
+     "rank": 4,
+     "change": 2
+    },
+    {
+     "id": "wt_30",
      "rank": 5,
      "change": 2
     }
    ],
    "액션/무협": [
     {
-     "id": "wt_05",
+     "id": "wt_02",
      "rank": 1,
+     "change": 2
+    },
+    {
+     "id": "wt_05",
+     "rank": 2,
      "change": -1
     },
     {
      "id": "wt_11",
-     "rank": 2,
+     "rank": 3,
      "change": 1
     },
     {
+     "id": "wt_17",
+     "rank": 4,
+     "change": 0
+    },
+    {
+     "id": "wt_19",
+     "rank": 5,
+     "change": 3
+    },
+    {
+     "id": "wt_15",
+     "rank": 6,
+     "change": 0
+    },
+    {
      "id": "wt_16",
-     "rank": 3,
+     "rank": 7,
      "change": -2
     },
     {
+     "id": "wt_22",
+     "rank": 8,
+     "change": 1
+    },
+    {
+     "id": "wt_13",
+     "rank": 9,
+     "change": 4
+    },
+    {
      "id": "wt_23",
-     "rank": 4,
+     "rank": 10,
+     "change": 2
+    },
+    {
+     "id": "wt_27",
+     "rank": 11,
+     "change": 1
+    },
+    {
+     "id": "wt_31",
+     "rank": 12,
      "change": -2
     }
    ]
@@ -265,46 +330,46 @@
  },
  "ageGender": {
   "10대 남자": [
+   "wt_02",
    "wt_11",
-   "wt_05",
-   "wt_14",
-   "wt_16",
-   "wt_02"
+   "wt_20",
+   "wt_19",
+   "wt_05"
   ],
   "10대 여자": [
-   "wt_14",
    "wt_03",
+   "wt_14",
+   "wt_12",
    "wt_01",
-   "wt_07",
-   "wt_17"
+   "wt_24"
   ],
   "20대 남자": [
    "wt_02",
-   "wt_11",
-   "wt_06",
-   "wt_10",
-   "wt_05"
+   "wt_19",
+   "wt_15",
+   "wt_21",
+   "wt_11"
   ],
   "20대 여자": [
    "wt_01",
    "wt_07",
-   "wt_08",
+   "wt_03",
    "wt_04",
    "wt_12"
   ],
   "30대 남자": [
-   "wt_06",
-   "wt_02",
+   "wt_05",
    "wt_16",
-   "wt_10",
-   "wt_09"
+   "wt_17",
+   "wt_22",
+   "wt_06"
   ],
   "30대 여자": [
    "wt_04",
    "wt_01",
+   "wt_18",
    "wt_12",
-   "wt_15",
-   "wt_06"
+   "wt_08"
   ]
  },
  "film": {
@@ -325,17 +390,17 @@
     "change": -1
    },
    {
-    "id": "fm_04",
+    "id": "fm_25",
     "rank": 4,
     "change": 2
    },
    {
-    "id": "fm_05",
+    "id": "fm_04",
     "rank": 5,
-    "change": 0
+    "change": 2
    },
    {
-    "id": "fm_06",
+    "id": "fm_26",
     "rank": 6,
     "change": 3
    },
@@ -345,68 +410,153 @@
     "change": 3
    },
    {
-    "id": "fm_08",
+    "id": "fm_05",
     "rank": 8,
-    "change": -2
+    "change": 0
    },
    {
-    "id": "fm_09",
+    "id": "fm_27",
     "rank": 9,
-    "change": -1
-   },
-   {
-    "id": "fm_10",
-    "rank": 10,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_11",
-    "rank": 11,
     "change": 1
    },
    {
-    "id": "fm_12",
-    "rank": 12,
-    "change": -3
+    "id": "fm_06",
+    "rank": 10,
+    "change": 3
    },
    {
-    "id": "fm_13",
+    "id": "fm_28",
+    "rank": 11,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_08",
+    "rank": 12,
+    "change": -2
+   },
+   {
+    "id": "fm_29",
     "rank": 13,
     "change": 2
    },
    {
-    "id": "fm_14",
+    "id": "fm_09",
     "rank": 14,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_15",
-    "rank": 15,
     "change": -1
    },
    {
-    "id": "fm_16",
+    "id": "fm_30",
+    "rank": 15,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_10",
     "rank": 16,
-    "change": 0
+    "change": "NEW"
    },
    {
-    "id": "fm_17",
+    "id": "fm_32",
     "rank": 17,
-    "change": 4
+    "change": "NEW"
    },
    {
-    "id": "fm_18",
+    "id": "fm_31",
     "rank": 18,
-    "change": -2
+    "change": -1
    },
    {
-    "id": "fm_19",
+    "id": "fm_11",
     "rank": 19,
     "change": 1
    },
    {
-    "id": "fm_20",
+    "id": "fm_36",
     "rank": 20,
+    "change": 4
+   },
+   {
+    "id": "fm_12",
+    "rank": 21,
+    "change": -3
+   },
+   {
+    "id": "fm_40",
+    "rank": 22,
+    "change": 2
+   },
+   {
+    "id": "fm_13",
+    "rank": 23,
+    "change": 2
+   },
+   {
+    "id": "fm_35",
+    "rank": 24,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_37",
+    "rank": 25,
+    "change": 1
+   },
+   {
+    "id": "fm_14",
+    "rank": 26,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_41",
+    "rank": 27,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_15",
+    "rank": 28,
+    "change": -1
+   },
+   {
+    "id": "fm_38",
+    "rank": 29,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_16",
+    "rank": 30,
+    "change": 0
+   },
+   {
+    "id": "fm_39",
+    "rank": 31,
+    "change": -2
+   },
+   {
+    "id": "fm_17",
+    "rank": 32,
+    "change": 4
+   },
+   {
+    "id": "fm_33",
+    "rank": 33,
+    "change": 0
+   },
+   {
+    "id": "fm_18",
+    "rank": 34,
+    "change": -2
+   },
+   {
+    "id": "fm_34",
+    "rank": 35,
+    "change": 1
+   },
+   {
+    "id": "fm_19",
+    "rank": 36,
+    "change": 1
+   },
+   {
+    "id": "fm_20",
+    "rank": 37,
     "change": "NEW"
    }
   ],

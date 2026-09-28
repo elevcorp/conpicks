@@ -17,7 +17,7 @@ const SEASONS = [
 
 export function FilmRanking({ s1, s0 }: { s1: Row[]; s0: Row[] }) {
   const [season, setSeason] = useState<0 | 1>(1);
-  const rows = season === 1 ? s1 : s0;
+  const rows = (season === 1 ? s1 : s0).slice(0, 20); // Top 20
   return (
     <div className="mx-auto max-w-[1200px] px-4 md:px-6">
       <div className="hidden pb-6 pt-10 md:block">

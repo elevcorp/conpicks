@@ -40,6 +40,8 @@ export interface Webtoon {
   filmId?: string;
   episodeCount: number;
   isNew: boolean;
+  /** false when the cover art doesn't carry a legible title (cards overlay it). Default: true for real covers. */
+  coverTitle?: boolean;
 }
 
 export interface Episode {

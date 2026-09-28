@@ -6,7 +6,7 @@ import { filmRanking, films } from "@/lib/data";
 import type { Film } from "@/lib/types";
 
 const COLLECTIONS: Record<string, { title: string; desc: string; pick: () => Film[] }> = {
-  new: { title: "새로 올라온 티저", desc: "이번 주 1차 큐레이션을 통과한 신작", pick: () => { const s = filmRanking(1).map((r) => r.film); return Array.from(new Set([...s.filter((f) => f.rankChange === "NEW"), ...s.slice(12)])); } },
+  new: { title: "새로 올라온 티저", desc: "이번 주 1차 큐레이션을 통과한 신작", pick: () => { const s = filmRanking(1).map((r) => r.film); return Array.from(new Set([...s.filter((f) => f.rankChange === "NEW"), ...s.slice(24)])); } },
   jimovie: { title: "지무비 PICK", desc: "지무비가 직접 리뷰한 AI 영화 티저", pick: () => films.filter((f) => f.jimovieReview) },
   awards: { title: "프리시즌 수상작", desc: "CNPX 프리시즌 결선 수상작 4편", pick: () => films.filter((f) => f.award) },
   SF: { title: "SF", desc: "미래를 먼저 본 티저", pick: () => films.filter((f) => f.genres.includes("SF")) },

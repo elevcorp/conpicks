@@ -10,11 +10,34 @@ const list = (dir) => {
   return existsSync(p) ? readdirSync(p).filter((f) => !f.startsWith(".")) : [];
 };
 
+/** [width, height] from PNG IHDR or JPEG SOF, without image deps. */
+function dims(file) {
+  const b = readFileSync(file);
+  if (b.readUInt32BE(0) === 0x89504e47) return [b.readUInt32BE(16), b.readUInt32BE(20)];
+  if (b[0] === 0xff && b[1] === 0xd8) {
+    let i = 2;
+    while (i < b.length) {
+      const marker = b[i + 1];
+      const len = b.readUInt16BE(i + 2);
+      if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker)) return [b.readUInt16BE(i + 7), b.readUInt16BE(i + 5)];
+      i += 2 + len;
+    }
+  }
+  return null;
+}
+
 const manifest = {
   covers: list("covers"),
   videos: list("videos"),
   cuts: list("cuts"),
+  /** "covers/wt_01.png" → [w, h]; lets components letterbox portrait art in 16:9 slots. */
+  sizes: {},
 };
+for (const dir of ["covers", "cuts"])
+  for (const f of manifest[dir]) {
+    const d = dims(join(root, "public", dir, f));
+    if (d) manifest.sizes[`${dir}/${f}`] = d;
+  }
 
 writeFileSync(join(root, "src/data/assets.generated.json"), JSON.stringify(manifest, null, 2) + "\n");
 

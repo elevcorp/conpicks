@@ -19,7 +19,7 @@ const GENRE_ROWS = [
 export default function FilmHome() {
   const season = filmRanking(1).map((r) => r.film);
   const top3 = season.slice(0, 3);
-  const fresh = Array.from(new Set([...season.filter((f) => f.rankChange === "NEW"), ...season.slice(12)]));
+  const fresh = Array.from(new Set([...season.filter((f) => f.rankChange === "NEW"), ...season.slice(24)]));
   const fundFilm = getFilm(funding.campaign.filmId)!;
 
   return (

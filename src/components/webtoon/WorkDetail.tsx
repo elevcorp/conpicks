@@ -105,10 +105,10 @@ export function WorkDetail(props: WorkDetailProps) {
 
       {/* ---------- mobile hero */}
       <div className="md:hidden">
-        <div ref={heroRef} className="relative h-[min(112vw,560px)] overflow-hidden">
+        <div ref={heroRef} className="relative h-[min(136vw,640px)] overflow-hidden">
           <motion.div className="absolute inset-0" style={{ scale: heroScale, opacity: heroOpacity }}>
             <VideoOrCover name={`cover_${work.id}`} className="absolute inset-0">
-              <WorkCover work={work} className="absolute inset-0" sizes="100vw" priority />
+              <WorkCover work={work} className="absolute inset-0" sizes="100vw" priority focus="50% 0%" />
             </VideoOrCover>
           </motion.div>
           <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/60 to-transparent" />
@@ -125,7 +125,7 @@ export function WorkDetail(props: WorkDetailProps) {
       <div className="mx-auto max-w-[1200px] md:grid md:grid-cols-[280px_minmax(0,1fr)] md:gap-10 md:px-6 md:pt-24 lg:grid-cols-[340px_minmax(0,1fr)] lg:gap-14">
         <aside className="hidden md:block">
           <div className="sticky top-24 pb-10">
-            <div className="relative aspect-[2/3] overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.45)] ring-1 ring-w-line">
+            <div className="relative aspect-[3/5] overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(0,0,0,0.45)] ring-1 ring-w-line">
               <VideoOrCover name={`cover_${work.id}`} className="absolute inset-0">
                 <WorkCover work={work} showTitle className="absolute inset-0" sizes="340px" priority />
               </VideoOrCover>

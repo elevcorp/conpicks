@@ -23,8 +23,457 @@
     "fm_21.png",
     "fm_22.png",
     "fm_23.png",
-    "fm_24.png"
+    "fm_24.png",
+    "fm_25.png",
+    "fm_26.png",
+    "fm_27.png",
+    "fm_28.png",
+    "fm_29.png",
+    "fm_30.png",
+    "fm_30_alt.png",
+    "fm_31.png",
+    "fm_32.png",
+    "fm_33.png",
+    "fm_34.png",
+    "fm_35.png",
+    "fm_36.png",
+    "fm_37.png",
+    "fm_38.png",
+    "fm_39.png",
+    "fm_40.png",
+    "fm_41.png",
+    "wt_01.png",
+    "wt_02.png",
+    "wt_03.png",
+    "wt_04.png",
+    "wt_05.png",
+    "wt_06.png",
+    "wt_07.png",
+    "wt_08.png",
+    "wt_09.png",
+    "wt_10.png",
+    "wt_11.png",
+    "wt_12.png",
+    "wt_13.png",
+    "wt_14.png",
+    "wt_15.png",
+    "wt_16.png",
+    "wt_17.png",
+    "wt_18.png",
+    "wt_19.png",
+    "wt_20.png",
+    "wt_21.png",
+    "wt_22.png",
+    "wt_23.png",
+    "wt_24.png",
+    "wt_25.png",
+    "wt_26.png",
+    "wt_27.png",
+    "wt_28.png",
+    "wt_29.png",
+    "wt_30.png",
+    "wt_31.png"
   ],
   "videos": [],
-  "cuts": []
+  "cuts": [
+    "cut_wt_04_1.png",
+    "cut_wt_04_10.png",
+    "cut_wt_04_11.png",
+    "cut_wt_04_12.png",
+    "cut_wt_04_13.png",
+    "cut_wt_04_14.png",
+    "cut_wt_04_15.png",
+    "cut_wt_04_16.png",
+    "cut_wt_04_17.png",
+    "cut_wt_04_18.png",
+    "cut_wt_04_19.png",
+    "cut_wt_04_2.png",
+    "cut_wt_04_20.png",
+    "cut_wt_04_21.png",
+    "cut_wt_04_3.png",
+    "cut_wt_04_4.png",
+    "cut_wt_04_5.png",
+    "cut_wt_04_6.png",
+    "cut_wt_04_7.png",
+    "cut_wt_04_8.png",
+    "cut_wt_04_9.png"
+  ],
+  "sizes": {
+    "covers/fm_01.png": [
+      614,
+      340
+    ],
+    "covers/fm_02.png": [
+      612,
+      334
+    ],
+    "covers/fm_03.png": [
+      610,
+      340
+    ],
+    "covers/fm_04.png": [
+      604,
+      334
+    ],
+    "covers/fm_05.png": [
+      606,
+      334
+    ],
+    "covers/fm_06.png": [
+      602,
+      324
+    ],
+    "covers/fm_07.png": [
+      420,
+      756
+    ],
+    "covers/fm_08.png": [
+      352,
+      646
+    ],
+    "covers/fm_09.png": [
+      504,
+      760
+    ],
+    "covers/fm_10.png": [
+      602,
+      326
+    ],
+    "covers/fm_11.png": [
+      604,
+      334
+    ],
+    "covers/fm_12.png": [
+      600,
+      328
+    ],
+    "covers/fm_13.png": [
+      414,
+      750
+    ],
+    "covers/fm_14.png": [
+      504,
+      762
+    ],
+    "covers/fm_15.png": [
+      502,
+      756
+    ],
+    "covers/fm_16.png": [
+      506,
+      762
+    ],
+    "covers/fm_17.png": [
+      504,
+      758
+    ],
+    "covers/fm_18.png": [
+      526,
+      300
+    ],
+    "covers/fm_19.png": [
+      418,
+      754
+    ],
+    "covers/fm_20.png": [
+      612,
+      340
+    ],
+    "covers/fm_21.png": [
+      498,
+      760
+    ],
+    "covers/fm_22.png": [
+      502,
+      758
+    ],
+    "covers/fm_23.png": [
+      504,
+      762
+    ],
+    "covers/fm_24.png": [
+      608,
+      330
+    ],
+    "covers/fm_25.png": [
+      434,
+      652
+    ],
+    "covers/fm_26.png": [
+      440,
+      650
+    ],
+    "covers/fm_27.png": [
+      426,
+      646
+    ],
+    "covers/fm_28.png": [
+      428,
+      648
+    ],
+    "covers/fm_29.png": [
+      432,
+      650
+    ],
+    "covers/fm_30.png": [
+      430,
+      648
+    ],
+    "covers/fm_30_alt.png": [
+      430,
+      648
+    ],
+    "covers/fm_31.png": [
+      434,
+      650
+    ],
+    "covers/fm_32.png": [
+      430,
+      650
+    ],
+    "covers/fm_33.png": [
+      430,
+      644
+    ],
+    "covers/fm_34.png": [
+      428,
+      646
+    ],
+    "covers/fm_35.png": [
+      428,
+      652
+    ],
+    "covers/fm_36.png": [
+      430,
+      650
+    ],
+    "covers/fm_37.png": [
+      430,
+      648
+    ],
+    "covers/fm_38.png": [
+      428,
+      644
+    ],
+    "covers/fm_39.png": [
+      434,
+      652
+    ],
+    "covers/fm_40.png": [
+      432,
+      652
+    ],
+    "covers/fm_41.png": [
+      430,
+      644
+    ],
+    "covers/wt_01.png": [
+      522,
+      880
+    ],
+    "covers/wt_02.png": [
+      522,
+      886
+    ],
+    "covers/wt_03.png": [
+      524,
+      884
+    ],
+    "covers/wt_04.png": [
+      600,
+      1000
+    ],
+    "covers/wt_05.png": [
+      526,
+      888
+    ],
+    "covers/wt_06.png": [
+      614,
+      340
+    ],
+    "covers/wt_07.png": [
+      612,
+      334
+    ],
+    "covers/wt_08.png": [
+      610,
+      340
+    ],
+    "covers/wt_09.png": [
+      420,
+      756
+    ],
+    "covers/wt_10.png": [
+      352,
+      646
+    ],
+    "covers/wt_11.png": [
+      392,
+      654
+    ],
+    "covers/wt_12.png": [
+      384,
+      660
+    ],
+    "covers/wt_13.png": [
+      392,
+      658
+    ],
+    "covers/wt_14.png": [
+      526,
+      884
+    ],
+    "covers/wt_15.png": [
+      524,
+      892
+    ],
+    "covers/wt_16.png": [
+      522,
+      872
+    ],
+    "covers/wt_17.png": [
+      516,
+      880
+    ],
+    "covers/wt_18.png": [
+      522,
+      878
+    ],
+    "covers/wt_19.png": [
+      520,
+      886
+    ],
+    "covers/wt_20.png": [
+      524,
+      882
+    ],
+    "covers/wt_21.png": [
+      520,
+      886
+    ],
+    "covers/wt_22.png": [
+      520,
+      878
+    ],
+    "covers/wt_23.png": [
+      392,
+      654
+    ],
+    "covers/wt_24.png": [
+      388,
+      668
+    ],
+    "covers/wt_25.png": [
+      390,
+      660
+    ],
+    "covers/wt_26.png": [
+      522,
+      880
+    ],
+    "covers/wt_27.png": [
+      392,
+      656
+    ],
+    "covers/wt_28.png": [
+      390,
+      664
+    ],
+    "covers/wt_29.png": [
+      390,
+      654
+    ],
+    "covers/wt_30.png": [
+      378,
+      656
+    ],
+    "covers/wt_31.png": [
+      388,
+      660
+    ],
+    "cuts/cut_wt_04_1.png": [
+      584,
+      1738
+    ],
+    "cuts/cut_wt_04_10.png": [
+      630,
+      1710
+    ],
+    "cuts/cut_wt_04_11.png": [
+      634,
+      1400
+    ],
+    "cuts/cut_wt_04_12.png": [
+      530,
+      1596
+    ],
+    "cuts/cut_wt_04_13.png": [
+      636,
+      1756
+    ],
+    "cuts/cut_wt_04_14.png": [
+      476,
+      1384
+    ],
+    "cuts/cut_wt_04_15.png": [
+      478,
+      1664
+    ],
+    "cuts/cut_wt_04_16.png": [
+      496,
+      1390
+    ],
+    "cuts/cut_wt_04_17.png": [
+      522,
+      1406
+    ],
+    "cuts/cut_wt_04_18.png": [
+      480,
+      1292
+    ],
+    "cuts/cut_wt_04_19.png": [
+      532,
+      1764
+    ],
+    "cuts/cut_wt_04_2.png": [
+      552,
+      1662
+    ],
+    "cuts/cut_wt_04_20.png": [
+      514,
+      1330
+    ],
+    "cuts/cut_wt_04_21.png": [
+      478,
+      1344
+    ],
+    "cuts/cut_wt_04_3.png": [
+      484,
+      1648
+    ],
+    "cuts/cut_wt_04_4.png": [
+      524,
+      1482
+    ],
+    "cuts/cut_wt_04_5.png": [
+      498,
+      1520
+    ],
+    "cuts/cut_wt_04_6.png": [
+      604,
+      1554
+    ],
+    "cuts/cut_wt_04_7.png": [
+      548,
+      1556
+    ],
+    "cuts/cut_wt_04_8.png": [
+      536,
+      1614
+    ],
+    "cuts/cut_wt_04_9.png": [
+      606,
+      1160
+    ]
+  }
 }

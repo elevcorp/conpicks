@@ -73,7 +73,7 @@ export function Library() {
                   if (!w) return null;
                   return (
                     <Link key={id} href={`/viewer/${id}/${ep}`} className="group block">
-                      <div className="relative aspect-[3/4] overflow-hidden rounded-md">
+                      <div className="relative aspect-[3/5] overflow-hidden rounded-md">
                         <WorkCover work={w} className="absolute inset-0 transition-transform duration-500 group-hover:scale-105" sizes="200px" />
                         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent px-2 pb-2 pt-8">
                           <p className="text-[12px] font-bold text-white">{ep}화 보는 중</p>
@@ -104,7 +104,7 @@ export function Library() {
               <div className={grid}>
                 {bought.map(({ work, n }) => (
                   <Link key={work.id} href={`/work/${work.id}?tab=episodes`} className="group block">
-                    <div className="relative aspect-[3/4] overflow-hidden rounded-md">
+                    <div className="relative aspect-[3/5] overflow-hidden rounded-md">
                       <WorkCover work={work} className="absolute inset-0 transition-transform duration-500 group-hover:scale-105" sizes="200px" />
                       <span className="absolute left-1.5 top-1.5 rounded bg-brand px-1.5 py-0.5 text-[10.5px] font-bold text-white">대여 {n}화</span>
                     </div>

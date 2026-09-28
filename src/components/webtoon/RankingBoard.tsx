@@ -72,12 +72,18 @@ export function RankingBoard({ official, league, byGenre, updatedAt }: {
             {/* #1 video-style card */}
             <Link href={`/work/${first.work.id}`} className="group relative mx-4 block overflow-hidden rounded-2xl md:mx-0">
               <VideoOrCover name={`cover_${first.work.id}`} muted={muted} className="aspect-[16/10] md:aspect-[21/8]">
-                <WorkCover work={first.work} variant="wide" className="absolute inset-0" sizes="(max-width:768px) 100vw, 1200px" priority />
+                <WorkCover work={first.work} variant="wide" portraitFit="blur" className="absolute inset-0" sizes="(max-width:768px) 100vw, 1200px" priority />
               </VideoOrCover>
+              {/* sharp poster on the right when the art is portrait */}
+              <div className="absolute inset-y-0 right-3 flex items-center md:right-12">
+                <div className="relative aspect-[3/5] h-[86%] overflow-hidden rounded-lg shadow-[0_18px_50px_rgba(0,0,0,0.55)] ring-1 ring-white/15 transition-transform duration-500 group-hover:scale-[1.03]">
+                  <WorkCover work={first.work} className="absolute inset-0" sizes="240px" priority />
+                </div>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:bg-gradient-to-r" />
               <div className="absolute inset-x-0 bottom-0 flex items-end gap-3 p-4 text-white md:inset-y-0 md:items-center md:p-10">
                 <span className="text-[64px] font-black italic leading-none md:text-[120px]">1</span>
-                <div className="min-w-0 pb-1.5">
+                <div className="min-w-0 pb-1.5 pr-[34%] md:pr-0">
                   <div className="flex items-center gap-1.5">
                     <CardBadges badges={first.work.badges} />
                     <RankDelta change={first.change} className="text-white" />
@@ -100,7 +106,7 @@ export function RankingBoard({ official, league, byGenre, updatedAt }: {
             <div className="mt-4 grid grid-cols-3 gap-x-1.5 gap-y-5 px-1.5 md:hidden">
               {rest.map((r) => (
                 <Link key={r.id} href={`/work/${r.work.id}`} className="block">
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-[6px]">
+                  <div className="relative aspect-[3/5] overflow-hidden rounded-[6px]">
                     <WorkCover work={r.work} className="absolute inset-0" sizes="33vw" />
                     <CardBadges badges={r.work.badges} className="absolute left-1 top-1" />
                   </div>
@@ -117,7 +123,7 @@ export function RankingBoard({ official, league, byGenre, updatedAt }: {
               {rest.map((r) => (
                 <Link key={r.id} href={`/work/${r.work.id}`} className="group flex items-center gap-4 rounded-2xl p-2 transition-colors hover:bg-chip">
                   <span className="w-10 text-center text-[28px] font-black italic">{r.rank}</span>
-                  <div className="relative aspect-[3/4] w-[78px] shrink-0 overflow-hidden rounded-lg">
+                  <div className="relative aspect-[3/5] w-[78px] shrink-0 overflow-hidden rounded-lg">
                     <WorkCover work={r.work} className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" sizes="80px" />
                   </div>
                   <div className="min-w-0 flex-1">

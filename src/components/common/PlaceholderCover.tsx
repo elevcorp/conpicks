@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { SceneArt, GENRE_EMOJI, type ArtVariant } from "./SceneArt";
-import { coverSrc } from "@/lib/assets";
+import { coverSrc, isPortrait } from "@/lib/assets";
 import { cn } from "@/lib/cn";
 import type { GenreKey } from "@/lib/types";
 
@@ -18,6 +18,13 @@ interface Props {
   priority?: boolean;
   /** Override image source key (e.g. `hero_wt_01`). */
   srcKey?: string;
+  /**
+   * How portrait art fills a wide slot: "letterbox" (blurred fill + whole poster, default),
+   * "blur" (blurred fill only — for heroes that float the sharp poster separately), or "cover".
+   */
+  portraitFit?: "letterbox" | "blur" | "cover";
+  /** CSS object-position for real art, e.g. "50% 0%" to crop away a bottom title band. */
+  focus?: string;
 }
 
 const SERIF = new Set(["rofan", "murim", "thriller", "fantasy"]);
@@ -26,12 +33,33 @@ const SERIF = new Set(["rofan", "murim", "thriller", "fantasy"]);
  * Real file at /public/covers/{id}.(jpg|png|webp) wins automatically.
  * Otherwise: seeded dark two-tone scene + genre emoji watermark + title type.
  */
-export function PlaceholderCover({ id, title, genre, theme, variant = "poster", showTitle, className, sizes, priority, srcKey }: Props) {
+export function PlaceholderCover({ id, title, genre, theme, variant = "poster", showTitle, className, sizes, priority, srcKey, portraitFit = "letterbox", focus }: Props) {
   const src = coverSrc(srcKey ?? id) ?? (srcKey ? coverSrc(id) : null);
   if (src) {
+    const sz = sizes ?? "(max-width: 768px) 50vw, 240px";
+    if (variant === "wide" && isPortrait(src) && portraitFit !== "cover") {
+      return (
+        <div className={cn("relative overflow-hidden bg-black", className)}>
+          <Image src={src} alt="" aria-hidden fill sizes="160px" className="scale-125 object-cover opacity-70 blur-2xl saturate-150" />
+          <div className="absolute inset-0 bg-black/25" />
+          {portraitFit === "letterbox" && (
+            <Image src={src} alt={title} fill sizes={sz} priority={priority} className="object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.5)]" />
+          )}
+        </div>
+      );
+    }
     return (
       <div className={cn("relative overflow-hidden", className)}>
-        <Image src={src} alt={title} fill sizes={sizes ?? "(max-width: 768px) 50vw, 240px"} priority={priority} className="object-cover" />
+        <Image
+          src={src}
+          alt={title}
+          fill
+          sizes={sz}
+          priority={priority}
+          className="object-cover"
+          // square thumbs of portrait art: keep faces (upper third) in frame
+          style={focus ? { objectPosition: focus } : variant === "square" ? { objectPosition: "50% 22%" } : undefined}
+        />
       </div>
     );
   }
