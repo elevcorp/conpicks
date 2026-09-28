@@ -1,0 +1,415 @@
+{
+ "updatedAt": "2026.09.28 14:00",
+ "webtoon": {
+  "official": [
+   {
+    "id": "wt_01",
+    "rank": 1,
+    "change": 0
+   },
+   {
+    "id": "wt_02",
+    "rank": 2,
+    "change": 2
+   },
+   {
+    "id": "wt_05",
+    "rank": 3,
+    "change": -1
+   },
+   {
+    "id": "wt_11",
+    "rank": 4,
+    "change": 1
+   },
+   {
+    "id": "wt_17",
+    "rank": 5,
+    "change": 0
+   },
+   {
+    "id": "wt_19",
+    "rank": 6,
+    "change": 3
+   },
+   {
+    "id": "wt_12",
+    "rank": 7,
+    "change": -3
+   },
+   {
+    "id": "wt_15",
+    "rank": 8,
+    "change": 0
+   },
+   {
+    "id": "wt_20",
+    "rank": 9,
+    "change": 0
+   },
+   {
+    "id": "wt_16",
+    "rank": 10,
+    "change": -2
+   },
+   {
+    "id": "wt_22",
+    "rank": 11,
+    "change": 1
+   },
+   {
+    "id": "wt_04",
+    "rank": 12,
+    "change": 5
+   },
+   {
+    "id": "wt_13",
+    "rank": 13,
+    "change": 4
+   },
+   {
+    "id": "wt_18",
+    "rank": 14,
+    "change": -1
+   },
+   {
+    "id": "wt_21",
+    "rank": 15,
+    "change": -1
+   },
+   {
+    "id": "wt_23",
+    "rank": 16,
+    "change": 2
+   },
+   {
+    "id": "wt_03",
+    "rank": 17,
+    "change": "NEW"
+   },
+   {
+    "id": "wt_14",
+    "rank": 18,
+    "change": "NEW"
+   },
+   {
+    "id": "wt_24",
+    "rank": 19,
+    "change": "NEW"
+   }
+  ],
+  "league": [
+   {
+    "id": "wt_25",
+    "rank": 1,
+    "change": 3
+   },
+   {
+    "id": "wt_26",
+    "rank": 2,
+    "change": 2
+   },
+   {
+    "id": "wt_27",
+    "rank": 3,
+    "change": 1
+   },
+   {
+    "id": "wt_28",
+    "rank": 4,
+    "change": -1
+   },
+   {
+    "id": "wt_29",
+    "rank": 5,
+    "change": 0
+   },
+   {
+    "id": "wt_30",
+    "rank": 6,
+    "change": 2
+   },
+   {
+    "id": "wt_31",
+    "rank": 7,
+    "change": -2
+   }
+  ],
+  "byGenre": {
+   "판타지 드라마": [
+    {
+     "id": "wt_20",
+     "rank": 1,
+     "change": 0
+    },
+    {
+     "id": "wt_04",
+     "rank": 2,
+     "change": 5
+    },
+    {
+     "id": "wt_18",
+     "rank": 3,
+     "change": -1
+    },
+    {
+     "id": "wt_21",
+     "rank": 4,
+     "change": -1
+    },
+    {
+     "id": "wt_25",
+     "rank": 5,
+     "change": 3
+    },
+    {
+     "id": "wt_28",
+     "rank": 6,
+     "change": -1
+    }
+   ],
+   "로맨스": [
+    {
+     "id": "wt_03",
+     "rank": 1,
+     "change": "NEW"
+    },
+    {
+     "id": "wt_14",
+     "rank": 2,
+     "change": "NEW"
+    },
+    {
+     "id": "wt_29",
+     "rank": 3,
+     "change": 0
+    }
+   ],
+   "학원/판타지": [
+    {
+     "id": "wt_24",
+     "rank": 1,
+     "change": "NEW"
+    }
+   ],
+   "로판": [
+    {
+     "id": "wt_01",
+     "rank": 1,
+     "change": 0
+    },
+    {
+     "id": "wt_12",
+     "rank": 2,
+     "change": -3
+    },
+    {
+     "id": "wt_26",
+     "rank": 3,
+     "change": 2
+    },
+    {
+     "id": "wt_30",
+     "rank": 4,
+     "change": 2
+    }
+   ],
+   "액션/무협": [
+    {
+     "id": "wt_02",
+     "rank": 1,
+     "change": 2
+    },
+    {
+     "id": "wt_05",
+     "rank": 2,
+     "change": -1
+    },
+    {
+     "id": "wt_11",
+     "rank": 3,
+     "change": 1
+    },
+    {
+     "id": "wt_17",
+     "rank": 4,
+     "change": 0
+    },
+    {
+     "id": "wt_19",
+     "rank": 5,
+     "change": 3
+    },
+    {
+     "id": "wt_15",
+     "rank": 6,
+     "change": 0
+    },
+    {
+     "id": "wt_16",
+     "rank": 7,
+     "change": -2
+    },
+    {
+     "id": "wt_22",
+     "rank": 8,
+     "change": 1
+    },
+    {
+     "id": "wt_13",
+     "rank": 9,
+     "change": 4
+    },
+    {
+     "id": "wt_23",
+     "rank": 10,
+     "change": 2
+    },
+    {
+     "id": "wt_27",
+     "rank": 11,
+     "change": 1
+    },
+    {
+     "id": "wt_31",
+     "rank": 12,
+     "change": -2
+    }
+   ]
+  }
+ },
+ "ageGender": {
+  "10대 남자": [
+   "wt_02",
+   "wt_11",
+   "wt_20",
+   "wt_19",
+   "wt_05"
+  ],
+  "10대 여자": [
+   "wt_03",
+   "wt_14",
+   "wt_12",
+   "wt_01",
+   "wt_24"
+  ],
+  "20대 남자": [
+   "wt_02",
+   "wt_19",
+   "wt_15",
+   "wt_21",
+   "wt_11"
+  ],
+  "20대 여자": [
+   "wt_01",
+   "wt_03",
+   "wt_12",
+   "wt_04",
+   "wt_14"
+  ],
+  "30대 남자": [
+   "wt_05",
+   "wt_16",
+   "wt_17",
+   "wt_22",
+   "wt_13"
+  ],
+  "30대 여자": [
+   "wt_04",
+   "wt_01",
+   "wt_18",
+   "wt_12",
+   "wt_17"
+  ]
+ },
+ "film": {
+  "season1": [
+   {
+    "id": "fm_01",
+    "rank": 1,
+    "change": 0
+   },
+   {
+    "id": "fm_02",
+    "rank": 2,
+    "change": 1
+   },
+   {
+    "id": "fm_03",
+    "rank": 3,
+    "change": -1
+   },
+   {
+    "id": "fm_04",
+    "rank": 4,
+    "change": 2
+   },
+   {
+    "id": "fm_05",
+    "rank": 5,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_06",
+    "rank": 6,
+    "change": 1
+   },
+   {
+    "id": "fm_07",
+    "rank": 7,
+    "change": 3
+   },
+   {
+    "id": "fm_08",
+    "rank": 8,
+    "change": -2
+   },
+   {
+    "id": "fm_09",
+    "rank": 9,
+    "change": 4
+   },
+   {
+    "id": "fm_10",
+    "rank": 10,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_11",
+    "rank": 11,
+    "change": 2
+   },
+   {
+    "id": "fm_12",
+    "rank": 12,
+    "change": -1
+   },
+   {
+    "id": "fm_13",
+    "rank": 13,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_14",
+    "rank": 14,
+    "change": "NEW"
+   },
+   {
+    "id": "fm_15",
+    "rank": 15,
+    "change": 0
+   },
+   {
+    "id": "fm_16",
+    "rank": 16,
+    "change": -2
+   },
+   {
+    "id": "fm_17",
+    "rank": 17,
+    "change": 1
+   }
+  ],
+  "season0": []
+ }
+}

@@ -1,186 +1,73 @@
-# DECISIONS
+# DECISIONS — CNPX 목업
 
-Running log of choices made where the 개발지시서 left a gap or reality forced a
-deviation. Newest at the bottom of each phase.
+개발지시서(v1.0)가 비워 둔 부분, 또는 현실적 제약으로 내린 결정을 기록합니다. Phase별 최신 항목이 아래에 추가됩니다.
 
 ---
 
 ## Phase 1 — 기반
 
-### Environment
-- **D1. Node runtime.** The build machine had no Node toolchain. Installed
-  Node v22.23.2 into `~/.local/node` and added it to `PATH` via `~/.zshenv`.
-  `.nvmrc` pins `22` for contributors.
-- **D2. No live Supabase.** No project / keys were available. The app is built
-  to run with **zero external services** via a deterministic in-memory seed
-  adapter (`lib/data/`), switched by `NEXT_PUBLIC_USE_SUPABASE` (default
-  `false`). This matches the 지시서's own "env switch" philosophy (video
-  provider) and keeps every phase demoable + screenshot-able.
+- **D1. 브랜치 & 기존 코드.** 저장소에는 이전 제품(CONPICKS, Supabase 기반 풀스택, 루트 `app/`)이 있었습니다. 지시서는 `/src` 구조의 백엔드 없는 목업을 요구하므로 `cnpx-mockup` 브랜치에서 새로 구축했습니다. 기존 코드는 삭제하지 않고 `legacy/conpicks-v1/`로 `git mv` 보관(빌드·린트·타입체크 대상에서 제외). `main`은 그대로입니다.
+- **D2. 기존 AI 티저 아트 재사용.** 이전 작업의 AI 티저 커버 24장(대표 소유 자산)을 `public/covers/fm_01~24.png`로 복사해 영화 월드 커버로 사용. 제목이 아트에 박혀 있어 **당시 제목을 그대로** 사용했습니다. 원본은 `legacy/conpicks-v1/public/`에 있습니다.
+- **D3. 영화 티저 24편 (지시서 12편).** 랭킹 Top 20 요구를 채우려면 12편으론 부족 → 시즌1 20편 + 프리시즌 수상작 4편(‘수상작’ 브랜드 타일용). 모든 항목에 상세 라우트가 있어 깨진 링크 없음.
+- **D4. Tailwind v4.** 기존 설치본(v4) 사용. `tailwind.config.js` 대신 `globals.css`의 `@theme` + CSS 변수 토큰. 지시서의 HEX 값은 그대로 유지.
+- **D5. 테마 토큰 구조.** `html[data-theme]`(다크/라이트) × `html[data-world]`(webtoon/film). 영화 월드는 테마와 무관하게 항상 다크(지시서 2.2). 첫 페인트 전에 인라인 스크립트가 테마·월드를 복원해 깜빡임이 없습니다.
+- **D6. 작품별 다이나믹 테마.** `workThemeVars()`가 다크·라이트 **두 세트의 변수를 동시에** 인라인으로 주입하고 CSS가 `data-theme`로 고릅니다 → SSR이 테마를 몰라도 하이드레이션 불일치 없음. 다크: 커버색을 명도 24~34%로 낮춘 뒤 하단으로 갈수록 블랙에 블렌딩. 라이트: 커버색 그대로(화이트 12% 믹스) → 하단 18% 어둡게. 텍스트는 WCAG 대비가 높은 쪽(화이트/잉크)을 자동 선택(항상 4.5:1 이상).
+- **D7. 목데이터 생성기.** `webtoons.json`, `films.json`, `funding.json`은 수작업. `episodes.json`(1,192화) · `comments.json`(179개) · `rankings.json` · `community.json`은 `scripts/gen-data.mjs`가 결정적(deterministic)으로 생성(`npm run gen:data`). 대표작(심야식당·달빛 아래 계약자·붉은 징조)의 1화 내레이션은 손으로 썼습니다.
+- **D8. 기다무 계단.** 연재 중인 정식 작품의 최신 5화가 유료(기다무). 가장 오래된 유료 회차 D-5 → 최신화 D-33 (7일 간격). 신작 리그·완결작은 전 회차 무료.
+- **D9. 시연 동선 최적화.** `골목 끝 심야식당`(wt_04)은 총 8화 · 4화부터 유료 → **첫화보기 → 2화 → 3화 → 페이월**까지 30초 안에 BM을 시연할 수 있게 설계.
+- **D10. 플레이스홀더 아트.** `PlaceholderCover`는 단순 그라데이션 대신 장르별 SVG 장면(로판=성·달, 무협=수묵 산, 스릴러=고목·붉은 깃털, 힐링=불 켜진 식당…)을 작품 id 시드로 생성하고, `themeColor`로 팔레트를 정합니다. 뷰어 컷도 같은 엔진(`SceneArt`)에 클로즈업·집중선 구도 + 말풍선을 얹어 “웹툰 문법”을 흉내 냅니다. 실제 파일이 있으면 자동 교체(`scripts/gen-assets.mjs`가 dev/build 전에 `public/` 매니페스트 생성).
+- **D11. 스플래시.** 브라우저 세션당 1회. 서버 렌더 후 사전 스크립트가 `sessionStorage`를 보고 즉시 숨김 → 새로고침 시 깜빡임 없음. 첫 진입이 `/`이고 마지막 월드가 영화면 `/film`으로 복원(지시서 2.1).
+- **D12. 월드 전환 연출.** 목적지 월드의 배경색 커튼(로고 + AI WEBTOON/AI FILM)이 300ms 크로스페이드로 덮은 뒤 라우트 교체 → 걷힘. 크로스링크(영화 ↔ 웹툰)도 같은 `useWorldNav`를 사용. 페이지 전환 애니메이션은 **opacity만** 사용(transform은 `position: fixed` 자식을 깨뜨림).
+- **D13. 공유 라우트.** `/my`, `/settings`, `/search`, `/notifications`는 두 월드 공용이며 마지막 월드의 탭바·톤을 따릅니다.
+- **D14. 사용하지 않는 의존성.** 이전 앱의 패키지(supabase, shadcn 등)는 `package.json`에 남아 있습니다(번들에는 포함되지 않음). 정리는 별도 커밋으로 권장.
 
-### Stack specifics
-- **D3. Tailwind v4.** `create-next-app@15` ships Tailwind v4, which has no
-  `tailwind.config.js`. Design tokens (§5) live in `app/globals.css` under
-  `@theme` + `:root`. All spec hex values preserved exactly.
-- **D4. shadcn `base-nova` style.** `shadcn init` defaulted to the new
-  `@base-ui/react` registry (not Radix). Kept it — it is the current official
-  default. Consequence: `asChild` → not available; we compose with
-  `buttonVariants()` on `<Link>` instead, and use base-ui prop names
-  (`delay` not `delayDuration`, `render` not `asChild`).
-- **D5. Fonts.** Pretendard is not on Google Fonts → loaded as a variable
-  webfont via jsDelivr `@font-face` in `globals.css`; `next/font` provides
-  the Inter Latin fallback. `--font-sans` = Pretendard → Inter → system.
-- **D6. Auth in mock mode.** `cp_uid` cookie names a seed profile; the login
-  screen offers one-tap sign-in as any seed user. Real email/Google/Kakao via
-  Supabase Auth is wired (`OAuthButtons`, `/auth/callback`) and activates when
-  `NEXT_PUBLIC_USE_SUPABASE=true`.
-- **D7. Onboarding gate.** `middleware.ts` redirects authenticated-but-not-
-  onboarded users to `/onboarding/role`. Onboarding state is mirrored to a
-  `cp_onboarded` cookie so middleware stays edge-cheap (no DB call in mock
-  mode). Protected prefixes: `/my /upload /community/write /reviewer /admin
-  /funding`.
-- **D8. Settings not hard-coded.** Approval count, video length limits, funding
-  minimum, "new" window, genre order, recompute interval all live in
-  `app_settings` (seed) / table (Supabase). Ranking weights live in
-  `ranking_config`.
-- **D9. Ranking engine.** `lib/ranking/score.ts` is pure + unit-tested
-  (`score.test.ts`, 10 cases). The same formula is re-implemented in SQL
-  (`0004_ranking.sql` `recompute_ranking()`), driven by cron (spec §4).
-- **D10. Funding campaign `type`.** Added `type ∈ {reward, revenue_share}` to
-  `funding_campaigns` now (spec §6 memo) so the revenue-share legal question
-  can be isolated later. Legal caveat carried as a comment in the seed +
-  campaign terms.
-- **D11. `supabase/seed/seed.sql` is abridged** (12 teasers vs 24) and exists
-  as a reference for provisioned environments. `lib/data/seed.ts` (24 teasers)
-  is authoritative for local/demo.
-- **D12. Data adapter.** Only the seed adapter is implemented. The Supabase
-  read/write adapter throws a descriptive `SupabaseAdapterPending` error until
-  built against the migrations — deferred because it cannot be verified
-  without a live project.
-- **D13. npm audit.** 2 advisories remain, both from `postcss` bundled inside
-  `next@15`. Not fixable without upgrading to `next@16` (spec locks 15). Dev
-  build-time only; accepted.
+## Phase 2 — 웹툰 월드
 
----
+- **D15. 쿼리 파라미터 처리.** `?tab=`, `?day=` 등은 `useSearchParams`를 직접 쓰면 정적 프리렌더 시 트리 전체가 클라이언트 렌더로 밀려납니다. null을 렌더하는 `<ParamSync>` 리프만 Suspense로 감싸 **본문은 SSR 유지**.
+- **D16. 뷰어 정적 생성 범위.** 1,192화 전부를 빌드하면 과도하므로 작품별 1~3화 + 최신 6화만 사전 생성하고 나머지는 첫 요청 시 생성·캐시(`dynamicParams: true`).
+- **D17. 미리보기 결제 흐름.** 로그인 없이 바로 결제 가능(시연 흐름 단순화). 모달은 결제 시점 잔액을 고정해 “1,000 → 700”을 유지한 채 완료 표시 → 토스트 → 다음화 이동. 잔액 부족 시 충전 시트(3종) → 충전은 즉시 반영(시연 모드 토스트)되어 흐름이 막히지 않습니다. 대여권이 있으면 “대여권 1장 사용” 대안 버튼.
+- **D18. 찜 = 관심.** 작품홈의 ♡(관심)와 보관함 ‘찜한 작품’은 같은 목록입니다. 로그인 시 시연용 보관함(찜 5 · 최근 5 · 구매 2)을 채워 빈 화면으로 시연되지 않게 했습니다.
+- **D19. 댓글 작성.** 실제로 목록 상단에 추가됩니다(세션 메모리). 답글·신고는 토스트로 마감.
+- **D20. 추가 화면.** 막다른 버튼 금지 원칙에 따라 `/search`(웹툰+영화 통합 검색), `/notifications`(알림 목록)를 추가했습니다.
+- **D21. 한국어 줄바꿈.** 전역 `word-break: keep-all` — 제목이 음절 단위로 끊기지 않습니다.
+- **D22. 시연 데이터 초기화.** 설정 › 시연 › “시연 데이터 초기화”로 캐시·찜·구매를 즉시 초기 상태로 되돌려 연속 시연이 가능합니다.
+- **D23a. 폰트 자체 호스팅.** 지시된 jsDelivr(gh) Pretendard URL이 404여서 시스템 폰트로 대체되고 있었습니다. `pretendard` npm 패키지의 dynamic-subset CSS를 번들에 포함 → 외부 CDN 없이(오프라인 시연 포함) 항상 Pretendard.
+- **D23. 스크린샷 도구.** `node scripts/screenshots.mjs [baseUrl] [outDir]` — 모바일(390×844 @2x)·PC(1440×900) 주요 화면 일괄 캡처.
 
-## Phase 2 — 시청 경험
+## Phase 3 — 영화 월드
 
-- **D14. Teaser detail is a full page, not a Next intercepting route.** The
-  spec asks for a mobile bottom sheet with an identical deep-link render.
-  Intercepting routes across a route-group boundary (`app/(public)/@modal`
-  → `app/t/[slug]`) are fragile. Instead `/t/[slug]` is always a full page
-  whose chrome (`SheetChrome`) renders as a slide-up sheet on mobile and a
-  centered card on desktop — identical render, deep-link safe, one code path.
-- **D15. Seed reactions are real rows.** Earlier the seed fabricated large
-  `like_count`s with only a few join rows, so the first `recompute_ranking`
-  (which counts rows) collapsed every score. Now `lib/data/seed.ts` emits
-  actual `likes/saves/shares/comments/view_events` rows (synthetic voter ids
-  `sv_NNNN` for volume) and every stat is derived from them — store, cron and
-  `syncStats` stay consistent indefinitely. Volumes kept modest (~25–180
-  likes/teaser).
-- **D16. Korean slugs.** `getTeaserBySlug` matches both the raw and
-  `decodeURIComponent`-ed param so Hangul deep links resolve regardless of
-  how the client encodes them.
-- **D17. Ranking cron.** `GET|POST /api/cron/recompute-ranking` guarded by
-  `CRON_SECRET` (bearer or `?secret=`). `?rotatePrev=1` (daily 00:00)
-  snapshots `prev_rank`. `vercel.json` schedules both; pg_cron equivalents
-  are in `0004_ranking.sql`.
-- **D18. Comment likes** persist via `comment_likes` (added
-  `/api/comments/[id]/like` + `toggleCommentLike`).
+- **D24. 티저 상세 = 라우트 페이지 + 시트 연출.** `/film/work/[id]`는 딥링크 가능한 독립 라우트이며, 블러 처리된 커버 배경 위로 시트가 스프링 애니메이션으로 올라옵니다(모바일: 하단 시트, PC: 중앙 카드). 닫기는 히스토리가 있으면 뒤로, 없으면 `/film`.
+- **D25. 크로스링크.** 영화 → 원작 웹툰(5편 연결: 붉은 징조·달이 정한 연·재회 알고리즘·오늘도 택배·백야 다이어리), 웹툰 정보 탭 → AI 영화 티저. 둘 다 `useWorldNav`로 월드 커튼 전환을 거칩니다.
+- **D26. 점수 구성 & 흥행 수요 지수.** 랭킹 가중치(공유×4 · 저장×3 · 댓글×2 · 좋아요×1)는 웹툰 랭킹 안내 시트와 동일. ‘흥행 수요 지수’는 가중 점수의 로그 스케일에 순위 보정을 한 시연용 지표(0~99).
+- **D27. 피드 재생.** 영상 파일이 없으므로 화면에 보이는 항목이 자동 ‘재생 상태’(진행 바)가 되고, 탭하면 일시정지. `public/videos/cover_fm_XX.mp4`를 넣으면 실제로 재생됩니다.
+- **D28. 펀딩 실동작.** 참여 금액(1만/2만/5만/직접입력, 최소 1만)을 고르면 세션 동안 모금액·참여자 수·달성률에 즉시 반영되고 MY ‘펀딩’ 카운트가 올라갑니다. 오픈 예정 펀딩 2건(알림 신청 토스트) 추가.
+- **D29. 컬렉션 라우트.** 브랜드 타일·장르 로우의 ‘전체보기’가 막히지 않도록 `/film/collection/[slug]`(new · jimovie · awards · SF · 스릴러 · 로맨스 · 판타지) 추가.
+- **D30. 스모크 테스트.** `npm run smoke` — 26개 라우트 × 모바일/PC에서 콘솔 에러·4xx/5xx를 검사(개발 서버 실행 중일 때).
 
----
+## Phase 4 — 폴리시 & QA
 
-## Phase 3 — 창작 & 심사
+- **D31. 라이트 모드 QA.** 라이트 모드에서 홈 히어로가 흰색으로 페이드되어 흰 글자가 묻히던 문제 수정 — 히어로 스크림은 테마와 무관하게 항상 어둡게, 페이지 색으로의 페이드는 텍스트 아래 영역에서만.
+- **D32. README_IMAGES.md 자동 생성.** `scripts/gen-assets.mjs`가 dev/build 때마다 교체 가이드 + 작품별 커버/영상/컷 보유 현황 표를 다시 씁니다. `public/videos`, `public/cuts`는 빈 폴더로 준비(.gitkeep).
+- **D33. 검증.** `npm run smoke` 26개 라우트 × 2뷰포트 무오류, `npm run build` 286페이지 무경고, ESLint 무경고. 미리보기 BM 4연속 결제(잔액 부족 → 충전 → 결제)를 Playwright로 실동작 검증.
+- **D34. Vercel.** 환경변수 불필요. `vercel.json`은 프레임워크 지정만 남기고 이전 앱의 크론 설정 제거. `.vercel/`이 이전 CONPICKS 프로젝트에 연결되어 있을 수 있어 README에 `vercel link` 안내.
 
-- **D19. Upload duration is checked twice.** Client reads `HTMLVideoElement.
-  duration` from the picked file and blocks "다음" outside 90–240s; the
-  server re-validates in `submitTeaser` against `app_settings`
-  (`TEASER_MIN/MAX_DURATION_SEC`). Nothing about the limit is hard-coded.
-- **D20. Mock upload.** In `mock` video mode the wizard shows a simulated
-  progress bar and `POST /api/video/upload-url` returns a sample playback
-  URL; poster/thumbnail default to deterministic `picsum` URLs seeded by
-  the title (real poster upload is a Phase-later polish). `cloudflare` /
-  `supabase` providers return real direct-upload targets.
-- **D21. Review auto-publish.** `decideReview` recomputes status on every
-  decision: ≥1 reject → `rejected`; approvals ≥ `REVIEW_APPROVALS_REQUIRED`
-  → `published` + `published_at` set + creator notified + stats initialised;
-  otherwise `in_review`. Decisions are upserted per `(teaser, reviewer)` so
-  the same reviewer can't stack approvals — reaching the threshold needs
-  distinct reviewers (admins count).
-- **D22. Notifications** are generated in the data layer:
-  `review_approved` / `review_rejected` (decideReview), `comment` (addComment,
-  not for self), `rank_enter` (recomputeRanking, on first entry into Top 10),
-  `funding` (pledge). Read/consume via `GET|POST /api/my/notifications`; the
-  MY-tab UI lands in Phase 4.
-- **D23. Reviewer console** is its own route tree (`/reviewer`) with its own
-  chrome + a role gate in `layout.tsx` (reviewer|admin), mirroring `/admin`.
+## Phase 5 — 실제 이미지 자료 반영
 
----
+- **D35. 권리 확인.** 제공된 웹툰 커버 26종 · 웹툰 원고 21컷(「대환영」 1화) · AI 영화 포스터 18종은 지시서 7장의 “실존 작품 이미지 금지” 규칙과 충돌하므로 적용 전 확인을 요청했고, 대표가 **사용 권리 확보 완료 · 공개 배포 승인**으로 답했습니다(2026-09-28). 이에 따라 7장 규칙을 이 자료들에 한해 해제합니다.
+- **D36. 웹툰 카탈로그 재구성.** 커버 26종에 맞춰 작품 24 → 31편(정식 24 · 리그 7)으로 재구성. 영화와 크로스링크된 5편(역병: 붉은 징조 · 달이 정한 연 · 재회 알고리즘 · 오늘도 택배 · 백야 다이어리)은 유지하고, 커버는 해당 AI 영화 키 아트를 사용. **작가명 · 줄거리 · 지표는 시연용 목데이터**이며 실제 작품 정보(공식 작가명 · 시놉시스)로 교체가 필요합니다. 예외: 「대환영」은 원고에 표기된 대로 **마영신** 크레딧.
+- **D37. 「대환영」이 시연 대표작.** 기존 ‘골목 끝 심야식당’(wt_04) 자리를 대체. 커버는 원고의 BIG PHANTOM 패널 + 손글씨 로고로 합성. 1화는 원고 21컷 전체, 2화 이후는 7컷 창으로 순환(시연용). 실제 원고가 있는 작품은 내레이션·말풍선을 덧씌우지 않습니다(텍스트가 원고에 포함).
+- **D38. 커버 비율 3:5.** 제공 커버(약 0.59)에 맞춰 웹툰 카드 비율을 3:4 → 3:5로 변경(카카오웹툰과 동일한 세로형). 커버에 타이틀 로고가 들어 있으므로 카드의 제목 오버레이는 숨기고, 로고가 없는 키 아트 5종(`coverTitle: false`)만 오버레이 유지. 히어로·작품홈 상단은 커버를 위쪽 기준으로 잘라 아트 속 로고와 페이지 타이틀이 겹치지 않게 했습니다.
+- **D39. 실제 커버 기반 컷·썸네일.** 원고가 없는 작품의 뷰어 컷과 회차 썸네일은 절차적 SVG 대신 **커버 아트를 시드별로 줌·프레이밍한 컷**으로 생성 → 작품마다 그림체가 일관됩니다. (커버 해상도 ≈520px라 확대 폭은 1.04~1.34배로 제한.)
+- **D40. 세로 포스터 레터박스.** 16:9 슬롯(영화 카드 · Top10 · 피드 · 티저 플레이어)에 세로 포스터가 들어가면 블러 배경 + 포스터 전체를 보여주는 레터박스로 표시(애플TV 스타일). `gen-assets`가 PNG/JPEG 헤더에서 해상도를 읽어 매니페스트에 기록합니다.
+- **D41. AI 영화 17편 추가.** 포스터 18종 중 ‘재난소녀’ 2종은 같은 작품으로 보고 하나만 커버로 사용(다른 하나는 `fm_30_alt.png`로 보관). 시즌1 37편으로 재랭킹, 상위 3편(빌보드)은 가로 키 아트 작품 유지. **크리에이터명은 ‘{작품명} 제작팀’ 형태의 플레이스홀더**이며, 포스터의 영화제·플랫폼 로고는 원본 그대로입니다.
+- **D42. 월드 스위처 버그 수정.** 모바일 바와 PC GNB가 같은 `layoutId`를 공유해 PC에서 캡슐이 사라지던 문제를 인스턴스별 id로 해결.
 
-## Phase 4 — 커뮤니티 & MY
+## Phase 6 — 이미지 출처 분리 (웹툰 ↔ 영화)
 
-- **D24. Post categories are role-gated on write.** `공지` → admin only,
-  `크리에이터 라운지` → creator/admin only (enforced in `POST /api/posts` and
-  hidden in `WriteForm`). `전체` is a list filter, never a stored value.
-- **D25. Teaser attach ("너 이거 봤어?")** — `WriteForm` has a debounced
-  search against `GET /api/teasers?q=`; the chosen teaser id is stored in
-  `posts.attached_teaser_id` and rendered as an embedded card (thumbnail +
-  live rank) in the list and detail.
-- **D26. MY is one server page, `?tab=` switched.** Data-bearing tabs
-  (saved / liked / comments / funding / works / notifications) render on the
-  server; only the profile-edit dialog and settings toggles are client. The
-  7-day/30-day trend graph in 내 작품 is stubbed with a text line (charting
-  lib deferred — not in the locked stack).
-- **D27. Markdown-lite** community bodies are rendered as pre-wrapped plain
-  text for now (no MD parser in the locked stack); the field name and
-  `WriteForm` hint keep the contract for a later `react-markdown` swap.
-- **D28. creator→viewer** downgrade blocked while any `published` teaser
-  exists (`switchToViewer`), per spec §2.0.
-
----
-
-## Phase 5 — 관리자 & 펀딩
-
-- **D29. Admin is its own route tree** (`/admin/*`) with a sidebar layout +
-  `role === "admin"` gate. Sections: dashboard, 작품관리 (status / 지무비 리뷰
-  URL), 시즌관리 (create / activate / close-with-snapshot / winner), 랭킹설정
-  (weights + "지금 재계산"), 펀딩관리 (campaign CRUD + status flow), 정산
-  (revenue → share% → auto payouts → mark-paid → CSV), 심사위원, 커뮤니티
-  (report queue + hide/pin), 유저 (role + ban).
-- **D30. Season close** freezes the ranking (`recomputeRanking`), writes an
-  immutable `ranking_snapshots` row, and sets `winner_teaser_id` to rank #1.
-- **D31. Settlement math.** `generatePayouts(campaign, sharePct)` = pool
-  `floor(totalRevenue · pct/100)`, split pro-rata by pledge amount across
-  non-refunded pledges. Payouts are regenerated (not appended) on each run.
-  CSV export is client-side (`Blob`).
-- **D32. Pledge = intent, not payment.** `POST /api/funding/pledge` creates a
-  `pending` pledge and bumps `raised_krw` immediately (MVP: admin confirms
-  deposit → `confirmed`). Toss Payments is interface-only for now.
-- **D33. Revenue-share legal caveat** is surfaced in the UI (campaign detail
-  page) and carried in `funding_campaigns.type` + seed terms — the
-  reward/revenue-share split lets the legal review be isolated later.
-- **D34. E2E.** Playwright, chromium, 3 specs (`e2e/`), run serially against
-  the dev server in seed mode: (a) upload→2-approval→publish, (b)
-  reactions→recompute→rank rises, (c) pledge→settlement→payout in MY. All
-  green. `npm run e2e`.
-- **D35. `GET /api/home`** added (spec §7) returning the row bundle;
-  page-level `revalidate = 60`.
-
----
-
-## Post-launch — 브랜딩 & 커버 아트
-
-- **D36. Real brand assets.** `Conpicks_favicon.png` → `app/icon.png` +
-  `app/apple-icon.png` (Next file-based metadata icons; old
-  `app/favicon.ico` removed). `Main_Conpicks_logo.png` →
-  `public/brand/conpicks-logo.png`; `<Logo>` now renders that image via
-  `next/image` and callers pass a height class (`h-5`…`h-12`) instead of a
-  text size. PWA manifest icon → `public/pwa-icon.png`.
-- **D37. Teaser covers.** 24 supplied stills (`public/covers/poster-1..12`,
-  `thumb-1..12`) replace the picsum placeholders. `lib/data/seed.ts` `TITLES`
-  is rewritten so every teaser's title / logline / genre matches its cover
-  (e.g. THE GLITCH→"더 글리치", GOOD & EVIL→"선과 악", DISEASE X→"디지즈 X",
-  무명·시간을 넘어·역병:붉은 징조·한복 입은 남자·달이 정한 연 keep their
-  on-poster titles). Each teaser uses one image for both `poster_url` (2:3)
-  and `thumbnail_url` (16:9); `object-cover` crops the off-orientation.
-  Genre spread still covers all 8 home rows. Community seed posts + review
-  seed rows updated to the new titles.
+- **D43. 폴더 기준 분리.** 대표 요청에 따라 **웹툰 월드는 `webtoon covers` 폴더 이미지만, 영화 월드는 `ai영화 covers` 폴더 이미지만** 사용합니다. `public/covers`에는 웹툰 커버 26장 + 영화 포스터 17장만 남습니다.
+  - 영화 키 아트를 커버로 쓰던 웹툰 5편(역병: 붉은 징조 · 달이 정한 연 · 재회 알고리즘 · 오늘도 택배 · 백야 다이어리) 제거 → 웹툰 26편(정식 19 · 리그 7).
+  - 이전 프로젝트 AI 티저 아트 24편 제거 → 영화 17편(재난소녀 포스터 2종 중 1종 사용). 영화 id는 순위순으로 `fm_01`~`fm_17`로 재부여. 원본은 `legacy/conpicks-v1/public/`과 대표 폴더에 그대로 있습니다.
+- **D44. 크로스링크 기능 제거.** 짝이 되는 원작 웹툰이 사라져 영화 상세의 ‘원작 웹툰’ 카드와 웹툰 정보 탭의 ‘AI 영화 티저’ 카드를 제거(대표 결정). D12·D25의 크로스링크 항목은 폐기. 월드 전환 커튼은 상단 스위처에서 계속 사용합니다.
+- **D45. 영화 월드 재구성.** 시즌 1위·펀딩 캠페인 = 조선의 아이돌, 오픈 예정 펀딩 = Eddington · 재난소녀. 프리시즌이 사라져 ‘수상작’ 타일은 포스터에 영화제 로렐이 있는 2편(Eddington · ANT AND BAIT)을 ‘영화제 수상작’으로 묶습니다. 랭킹의 시즌 칩은 데이터가 있는 시즌만 표시. 장르 로우는 스릴러 · 드라마 · 코미디 · SF.
+- **D46. 세로 포스터 빌보드.** 영화 포스터가 모두 세로형이라 빌보드를 재설계 — 모바일은 상단 기준 풀블리드 포스터, PC는 블러 배경 + 오른쪽 플로팅 포스터.
+- **D47. 지무비 PICK 유지.** 제거된 5편에 있던 리뷰를 대신해 무당기협 · 성녀는 북부 대공의 딸이 되었습니다 · 묵향 다크레이디에 리뷰 목데이터 추가, 누적 조회수는 자동 계산.

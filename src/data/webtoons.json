@@ -1,0 +1,1366 @@
+[
+  {
+    "id": "wt_01",
+    "title": "북부 대공",
+    "tagline": "얼어붙은 북부의 주인, 그의 품에서만 잠들 수 있는 저주받은 영애",
+    "writer": "한겨울",
+    "artist": "스튜디오 설원",
+    "author": "한겨울 · 스튜디오 설원",
+    "publisher": "CNPX 스튜디오",
+    "genre": "로판",
+    "genreKey": "rofan",
+    "rankGenre": "로판",
+    "badges": [
+      "기다무",
+      "UP"
+    ],
+    "ageRating": "15세",
+    "rating": 9.87,
+    "views": "412.8만",
+    "likes": "38.2만",
+    "subscribers": "51.6만",
+    "weekday": "목",
+    "weekdays": [
+      "월",
+      "목"
+    ],
+    "status": "ongoing",
+    "themeColor": "#5A2E38",
+    "keywords": [
+      "북부대공",
+      "계약관계",
+      "저주",
+      "집착남주"
+    ],
+    "synopsis": "잠들면 악몽 속에서 죽음을 반복하는 저주에 걸린 영애 엘리샤.\n유일하게 그 악몽이 멈추는 곳은 북부 대공 카일런의 곁뿐이다.\n\"내 침실에 머무는 대가는 1년, 그 뒤엔 조용히 떠나라.\"\n하지만 약속한 1년이 끝나갈수록, 떠나지 못하게 붙잡는 쪽은 대공이었다.",
+    "cast": [
+      "엘리샤",
+      "카일런"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 382000,
+      "comments": 49660,
+      "shares": 137520,
+      "saves": 221560
+    },
+    "rankChange": 0,
+    "jimovieReview": {
+      "views": "210만",
+      "title": "이 웹툰, 영화로 나오면 무조건 봅니다",
+      "duration": "14:22",
+      "date": "26.09.12"
+    },
+    "ipStatus": "review",
+    "ipStage": 3,
+    "episodeCount": 94,
+    "isNew": false
+  },
+  {
+    "id": "wt_02",
+    "title": "템빨",
+    "tagline": "아이템 하나로 인생 역전, 레전드 클래스를 손에 넣은 만년 하위 랭커",
+    "writer": "신무한",
+    "artist": "아크웍스",
+    "author": "신무한 · 아크웍스",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지",
+    "genreKey": "action",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "연재무료",
+      "UP"
+    ],
+    "ageRating": "12세",
+    "rating": 9.91,
+    "views": "388.1만",
+    "likes": "31.4만",
+    "subscribers": "42.4만",
+    "weekday": "월",
+    "weekdays": [
+      "월"
+    ],
+    "status": "ongoing",
+    "themeColor": "#C2552B",
+    "keywords": [
+      "게임판타지",
+      "먼치킨",
+      "사이다",
+      "성장물"
+    ],
+    "synopsis": "가상현실 게임 속 만년 하위 랭커 강태오.\n우연히 손에 넣은 전설의 대장장이 클래스가 모든 것을 바꿔 놓는다.\n스킬은 없고 능력치도 바닥, 믿을 건 오직 직접 두드려 만든 장비뿐.\n아이템 빨로 시작해 세계 랭킹 1위까지, 템빨의 전설이 시작된다.",
+    "cast": [
+      "태오",
+      "세라"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 314000,
+      "comments": 40820,
+      "shares": 113040,
+      "saves": 182120
+    },
+    "rankChange": 2,
+    "jimovieReview": {
+      "views": "184만",
+      "title": "게임 판타지의 교과서, 1화부터 사이다",
+      "duration": "11:08",
+      "date": "26.09.03"
+    },
+    "ipStatus": "review",
+    "ipStage": 3,
+    "episodeCount": 71,
+    "isNew": false
+  },
+  {
+    "id": "wt_03",
+    "title": "황제와 비밀 연애 중인데 나는 그걸 몰라",
+    "tagline": "내 연애 상담을 해주던 기사님, 알고 보니 이 나라 황제였다",
+    "writer": "달보미",
+    "artist": "스튜디오 로즈",
+    "author": "달보미 · 스튜디오 로즈",
+    "publisher": "CNPX 스튜디오",
+    "genre": "로판",
+    "genreKey": "rofan",
+    "rankGenre": "로맨스",
+    "badges": [
+      "연재무료",
+      "신작"
+    ],
+    "ageRating": "12세",
+    "rating": 9.78,
+    "views": "96.4만",
+    "likes": "8.8만",
+    "subscribers": "11.9만",
+    "weekday": "토",
+    "weekdays": [
+      "수",
+      "토"
+    ],
+    "status": "ongoing",
+    "themeColor": "#2B3351",
+    "keywords": [
+      "로맨틱코미디",
+      "신분숨김",
+      "쌍방삽질",
+      "달달"
+    ],
+    "synopsis": "궁정 시녀 루아나에겐 매일 밤 연애 고민을 들어주는 무뚝뚝한 근위 기사가 있다.\n\"황제 폐하는 분명 무서운 분이겠죠?\" \"...그럴지도.\"\n그녀만 모르는 사실 하나, 그 기사가 바로 황제 본인이라는 것.\n나라 전체가 아는 비밀 연애를, 당사자만 모른다.",
+    "cast": [
+      "루아나",
+      "레온"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 88000,
+      "comments": 11440,
+      "shares": 31680,
+      "saves": 51040
+    },
+    "rankChange": "NEW",
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 12,
+    "isNew": true
+  },
+  {
+    "id": "wt_04",
+    "title": "대환영",
+    "tagline": "간판은 BIG PHANTOM, 단골들은 '대환영'이라 부르는 작은 술집",
+    "writer": "마영신",
+    "artist": "마영신",
+    "author": "마영신",
+    "publisher": "마영신",
+    "genre": "드라마",
+    "genreKey": "healing",
+    "rankGenre": "판타지 드라마",
+    "badges": [
+      "연재무료",
+      "UP"
+    ],
+    "ageRating": "15세",
+    "rating": 9.94,
+    "views": "20.3만",
+    "likes": "1.4만",
+    "subscribers": "1.9만",
+    "weekday": "토",
+    "weekdays": [
+      "월",
+      "토"
+    ],
+    "status": "ongoing",
+    "themeColor": "#E8962E",
+    "keywords": [
+      "따뜻한",
+      "술집",
+      "일러스트레이터",
+      "아날로그"
+    ],
+    "synopsis": "지도 앱에도 나오지 않는 골목 끝, 장사에 관심 없는 사장님이 지키는 작은 술집.\n간판은 BIG PHANTOM이지만, 단골들에겐 '대환영'이라 불린다.\n그림을 그리는 사람들이 모여드는 이 가게에 AI 시대의 파도가 밀려온다.\n손으로 그리는 사람들의, 아날로그의 힘에 대한 이야기.",
+    "cast": [
+      "사장님",
+      "서영"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 14000,
+      "comments": 1820,
+      "shares": 5040,
+      "saves": 8120
+    },
+    "rankChange": 5,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 8,
+    "isNew": true
+  },
+  {
+    "id": "wt_05",
+    "title": "무당기협",
+    "tagline": "무당파 최약체 제자, 협객의 길을 걷다",
+    "writer": "청운",
+    "artist": "무영도",
+    "author": "청운 · 무영도",
+    "publisher": "CNPX 스튜디오",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "15세",
+    "rating": 9.82,
+    "views": "301.5만",
+    "likes": "24.9만",
+    "subscribers": "33.6만",
+    "weekday": "금",
+    "weekdays": [
+      "화",
+      "금"
+    ],
+    "status": "ongoing",
+    "themeColor": "#6B5A45",
+    "keywords": [
+      "정통무협",
+      "협객",
+      "성장",
+      "사제관계"
+    ],
+    "synopsis": "무당산에서 가장 느린 검을 가진 제자 진무령.\n사형들이 모두 떠난 뒤 홀로 남아 매일 같은 초식만 만 번씩 휘둘렀다.\n그 느린 검이 강호에 처음 내려선 날, 누구도 그 검을 피하지 못했다.\n무당의 이름으로 협을 행하는 사내의 이야기.",
+    "cast": [
+      "무령",
+      "소소"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 249000,
+      "comments": 32370,
+      "shares": 89640,
+      "saves": 144420
+    },
+    "rankChange": -1,
+    "jimovieReview": {
+      "views": "121만",
+      "title": "정통 무협의 부활, 이 작화 실화입니까",
+      "duration": "12:51",
+      "date": "26.07.30"
+    },
+    "ipStatus": "review",
+    "ipStage": 2,
+    "episodeCount": 128,
+    "isNew": false
+  },
+  {
+    "id": "wt_11",
+    "title": "천재 궁수의 스트리밍",
+    "tagline": "게이트 방송 1위, 화살 한 발로 S급을 잡는 천재 궁수",
+    "writer": "활시위",
+    "artist": "아크웍스",
+    "author": "활시위 · 아크웍스",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지",
+    "genreKey": "action",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "기다무",
+      "UP"
+    ],
+    "ageRating": "15세",
+    "rating": 9.8,
+    "views": "256.8만",
+    "likes": "21.2만",
+    "subscribers": "28.6만",
+    "weekday": "목",
+    "weekdays": [
+      "월",
+      "목"
+    ],
+    "status": "ongoing",
+    "themeColor": "#2A3F8A",
+    "keywords": [
+      "헌터물",
+      "인방",
+      "궁수",
+      "먼치킨"
+    ],
+    "synopsis": "게이트가 열리고 헌터 방송이 최고 인기 콘텐츠가 된 세상.\n구독자 12명의 무명 스트리머 한결은 방송 도중 각성해 '천재 궁수'가 된다.\n화살 한 발에 조회수 100만, 두 발에 랭킹 100위.\n오늘도 그는 채팅창을 켜 둔 채 S급 게이트로 들어간다.",
+    "cast": [
+      "한결",
+      "유리"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 212000,
+      "comments": 27560,
+      "shares": 76320,
+      "saves": 122960
+    },
+    "rankChange": 1,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 104,
+    "isNew": false
+  },
+  {
+    "id": "wt_12",
+    "title": "성녀는 북부 대공의 딸이 되었습니다",
+    "tagline": "버려진 성녀, 차가운 북부 대공의 막내딸로 다시 태어나다",
+    "writer": "눈꽃",
+    "artist": "스튜디오 설원",
+    "author": "눈꽃 · 스튜디오 설원",
+    "publisher": "CNPX 스튜디오",
+    "genre": "로판",
+    "genreKey": "rofan",
+    "rankGenre": "로판",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "전체",
+    "rating": 9.73,
+    "views": "231.4만",
+    "likes": "18.8만",
+    "subscribers": "25.4만",
+    "weekday": "일",
+    "weekdays": [
+      "목",
+      "일"
+    ],
+    "status": "ongoing",
+    "themeColor": "#73B1E7",
+    "keywords": [
+      "육아물",
+      "힐링",
+      "가족애",
+      "성녀"
+    ],
+    "synopsis": "신전에 이용당하다 버려진 성녀 아스텔.\n눈을 뜨니 북부 대공가의 다섯 살 막내딸이 되어 있다.\n무뚝뚝한 아버지와 오빠들, 얼음처럼 차가운 성.\n작은 성녀의 손끝에서 북부에 처음으로 봄이 피어나기 시작한다.",
+    "cast": [
+      "아스텔",
+      "대공"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 188000,
+      "comments": 24440,
+      "shares": 67680,
+      "saves": 109040
+    },
+    "rankChange": -3,
+    "jimovieReview": {
+      "views": "76만",
+      "title": "육아물 싫어하던 제가 정주행했습니다",
+      "duration": "10:12",
+      "date": "26.06.18"
+    },
+    "ipStatus": "review",
+    "ipStage": 2,
+    "episodeCount": 77,
+    "isNew": false
+  },
+  {
+    "id": "wt_13",
+    "title": "학사검전",
+    "tagline": "붓을 쥐던 손으로 검을 들다, 서생의 무림행",
+    "writer": "묵객",
+    "artist": "그린노트",
+    "author": "묵객 · 그린노트",
+    "publisher": "CNPX 스튜디오",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "연재무료"
+    ],
+    "ageRating": "12세",
+    "rating": 9.85,
+    "views": "118.3만",
+    "likes": "10.9만",
+    "subscribers": "14.7만",
+    "weekday": "토",
+    "weekdays": [
+      "화",
+      "토"
+    ],
+    "status": "ongoing",
+    "themeColor": "#6E8CB2",
+    "keywords": [
+      "서생무협",
+      "두뇌파",
+      "성장",
+      "정통무협"
+    ],
+    "synopsis": "과거 시험에만 매달리던 가난한 서생 백서하.\n낙방한 날 밤, 서고 깊숙한 곳에서 붓글씨로 쓰인 검보 한 권을 발견한다.\n글자 한 자 한 자가 초식이 되고, 문장이 검로가 된다.\n학사의 검이 강호의 판을 뒤집는다.",
+    "cast": [
+      "서하",
+      "연희"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 109000,
+      "comments": 14170,
+      "shares": 39240,
+      "saves": 63220
+    },
+    "rankChange": 4,
+    "jimovieReview": {
+      "views": "58만",
+      "title": "붓으로 싸우는 무협, 이런 건 처음 봅니다",
+      "duration": "08:33",
+      "date": "26.09.20"
+    },
+    "ipStatus": "review",
+    "ipStage": 2,
+    "episodeCount": 39,
+    "isNew": false
+  },
+  {
+    "id": "wt_14",
+    "title": "남주들과 외딴섬에 갇혀버렸다",
+    "tagline": "원작 남주 셋과 무인도 표류, 살아남을 수 있을까",
+    "writer": "파도소리",
+    "artist": "핑크리본",
+    "author": "파도소리 · 핑크리본",
+    "publisher": "CNPX 스튜디오",
+    "genre": "로판",
+    "genreKey": "rofan",
+    "rankGenre": "로맨스",
+    "badges": [
+      "연재무료",
+      "신작"
+    ],
+    "ageRating": "12세",
+    "rating": 9.79,
+    "views": "88.6만",
+    "likes": "9.7만",
+    "subscribers": "13.1만",
+    "weekday": "일",
+    "weekdays": [
+      "수",
+      "일"
+    ],
+    "status": "ongoing",
+    "themeColor": "#E9B293",
+    "keywords": [
+      "빙의",
+      "역하렘",
+      "생존로맨스",
+      "코미디"
+    ],
+    "synopsis": "로맨스 판타지 소설 속 조연에 빙의한 지 사흘째, 배가 난파했다.\n눈을 뜬 곳은 무인도, 옆에는 원작 남주 셋이 쓰러져 있다.\n황태자, 공작, 기사단장. 셋 다 불 피우는 법도 모른다.\n살아남으려면, 이 남자들을 먹여 살려야 한다.",
+    "cast": [
+      "리엔",
+      "카시안"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 97000,
+      "comments": 12610,
+      "shares": 34920,
+      "saves": 56260
+    },
+    "rankChange": "NEW",
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 15,
+    "isNew": true
+  },
+  {
+    "id": "wt_15",
+    "title": "갓 오브 블랙필드",
+    "tagline": "전장의 신, 현대 서울로 돌아오다",
+    "writer": "철검",
+    "artist": "스튜디오 흑백",
+    "author": "철검 · 스튜디오 흑백",
+    "publisher": "CNPX 스튜디오",
+    "genre": "액션",
+    "genreKey": "action",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "연재무료"
+    ],
+    "ageRating": "15세",
+    "rating": 9.9,
+    "views": "204.7만",
+    "likes": "20.3만",
+    "subscribers": "27.4만",
+    "weekday": "완결",
+    "weekdays": [
+      "완결"
+    ],
+    "status": "completed",
+    "themeColor": "#3A3326",
+    "keywords": [
+      "현대액션",
+      "용병",
+      "귀환",
+      "사이다"
+    ],
+    "synopsis": "해외 전장에서 '블랙필드의 신'이라 불리던 용병 강찬.\n죽음의 순간 눈을 뜬 곳은 서울, 고등학생의 몸이었다.\n조용히 살고 싶었지만 세상은 그를 가만두지 않는다.\n전장의 신이 지키는 평범한 일상.",
+    "cast": [
+      "강찬",
+      "미라"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 203000,
+      "comments": 26390,
+      "shares": 73080,
+      "saves": 117740
+    },
+    "rankChange": 0,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 120,
+    "isNew": false
+  },
+  {
+    "id": "wt_16",
+    "title": "관존 이강진",
+    "tagline": "무림의 법, 관(官)의 이름으로 심판하다",
+    "writer": "흑룡",
+    "artist": "무영도",
+    "author": "흑룡 · 무영도",
+    "publisher": "CNPX 스튜디오",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "15세",
+    "rating": 9.77,
+    "views": "176.2만",
+    "likes": "14.6만",
+    "subscribers": "19.7만",
+    "weekday": "토",
+    "weekdays": [
+      "토"
+    ],
+    "status": "ongoing",
+    "themeColor": "#8E2F9A",
+    "keywords": [
+      "관무협",
+      "권력",
+      "복수",
+      "카리스마"
+    ],
+    "synopsis": "무림과 관이 서로를 넘보지 않던 시대.\n황궁 금군의 말단 이강진은 무림맹의 음모로 가문을 잃는다.\n그는 칼 대신 관인(官印)을 쥐고 무림으로 돌아온다.\n무림의 법 위에 서는 단 한 사람, 관존의 탄생.",
+    "cast": [
+      "강진",
+      "설하"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 146000,
+      "comments": 18980,
+      "shares": 52560,
+      "saves": 84680
+    },
+    "rankChange": -2,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 91,
+    "isNew": false
+  },
+  {
+    "id": "wt_17",
+    "title": "묵향 다크레이디",
+    "tagline": "마교 최강의 여인, 이계에서 다시 검을 들다",
+    "writer": "묵월",
+    "artist": "스튜디오 루나",
+    "author": "묵월 · 스튜디오 루나",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지",
+    "genreKey": "fantasy",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "연재무료"
+    ],
+    "ageRating": "15세",
+    "rating": 9.81,
+    "views": "289.0만",
+    "likes": "26.1만",
+    "subscribers": "35.2만",
+    "weekday": "완결",
+    "weekdays": [
+      "완결"
+    ],
+    "status": "completed",
+    "themeColor": "#8C4B6E",
+    "keywords": [
+      "이계진입",
+      "무협판타지",
+      "여성서사",
+      "먼치킨"
+    ],
+    "synopsis": "마교의 전설로 불리던 흑염의 검후.\n최후의 결전에서 눈을 뜬 곳은 마법과 귀족이 지배하는 이계였다.\n낯선 세계에서 그녀를 '다크레이디'라 부르기 시작한다.\n무공으로 마법을 베는 여인의 두 번째 전설.",
+    "cast": [
+      "흑염",
+      "리안"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 261000,
+      "comments": 33930,
+      "shares": 93960,
+      "saves": 151380
+    },
+    "rankChange": 0,
+    "jimovieReview": {
+      "views": "97만",
+      "title": "무협과 판타지의 가장 완벽한 결합",
+      "duration": "09:47",
+      "date": "26.08.02"
+    },
+    "ipStatus": "review",
+    "ipStage": 2,
+    "episodeCount": 110,
+    "isNew": false
+  },
+  {
+    "id": "wt_18",
+    "title": "의원, 다시 살다",
+    "tagline": "역병을 막지 못한 어의, 스무 해 전으로 돌아가다",
+    "writer": "서담",
+    "artist": "홍월",
+    "author": "서담 · 홍월",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지 드라마",
+    "genreKey": "drama",
+    "rankGenre": "판타지 드라마",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "12세",
+    "rating": 9.71,
+    "views": "142.6만",
+    "likes": "12.4만",
+    "subscribers": "16.7만",
+    "weekday": "금",
+    "weekdays": [
+      "금"
+    ],
+    "status": "ongoing",
+    "themeColor": "#5E7F86",
+    "keywords": [
+      "회귀",
+      "사극",
+      "의학",
+      "휴먼드라마"
+    ],
+    "synopsis": "도성을 휩쓴 역병 앞에서 무력했던 어의 허준명.\n마지막 환자를 떠나보낸 밤, 스무 해 전 의원 견습생 시절로 돌아간다.\n이번엔 안다. 역병이 어디서 시작되는지, 누가 약재를 빼돌리는지.\n한 사람의 의원이 나라의 운명을 고쳐 쓴다.",
+    "cast": [
+      "준명",
+      "소화"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 124000,
+      "comments": 16120,
+      "shares": 44640,
+      "saves": 71920
+    },
+    "rankChange": -1,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 63,
+    "isNew": false
+  },
+  {
+    "id": "wt_19",
+    "title": "영웅, 회귀하다",
+    "tagline": "세계를 구하고 버려진 영웅, 이번엔 나를 위해 싸운다",
+    "writer": "류진",
+    "artist": "아크웍스",
+    "author": "류진 · 아크웍스",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지",
+    "genreKey": "action",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "15세",
+    "rating": 9.83,
+    "views": "198.2만",
+    "likes": "19.1만",
+    "subscribers": "25.8만",
+    "weekday": "금",
+    "weekdays": [
+      "화",
+      "금"
+    ],
+    "status": "ongoing",
+    "themeColor": "#6B5530",
+    "keywords": [
+      "회귀",
+      "복수",
+      "먼치킨",
+      "다크판타지"
+    ],
+    "synopsis": "마왕을 쓰러뜨린 영웅 레온하르트를 기다린 건 동료들의 배신이었다.\n죽음의 순간, 그는 모험을 떠나기 전날로 돌아온다.\n이번 생의 목표는 단 하나, 다시는 누구에게도 이용당하지 않는 것.\n영웅의 두 번째 여정은 복수에서 시작된다.",
+    "cast": [
+      "레온",
+      "이리스"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 191000,
+      "comments": 24830,
+      "shares": 68760,
+      "saves": 110780
+    },
+    "rankChange": 3,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 86,
+    "isNew": false
+  },
+  {
+    "id": "wt_20",
+    "title": "픽 미 업!",
+    "tagline": "가챠 게임 속 최하급 영웅, 마스터의 손에서 전설이 되다",
+    "writer": "가챠요정",
+    "artist": "픽셀무드",
+    "author": "가챠요정 · 픽셀무드",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지",
+    "genreKey": "action",
+    "rankGenre": "판타지 드라마",
+    "badges": [
+      "연재무료"
+    ],
+    "ageRating": "12세",
+    "rating": 9.76,
+    "views": "167.9만",
+    "likes": "17.3만",
+    "subscribers": "23.4만",
+    "weekday": "수",
+    "weekdays": [
+      "수"
+    ],
+    "status": "ongoing",
+    "themeColor": "#2F2B4E",
+    "keywords": [
+      "게임빙의",
+      "전략",
+      "성장",
+      "팀플레이"
+    ],
+    "synopsis": "랭킹 1위 게이머 한시우가 눈을 뜬 곳은 자신이 하던 가챠 게임 속.\n그것도 아무도 뽑지 않는 1성 영웅의 몸으로.\n\"날 뽑은 마스터는 반드시 1위로 만들어 준다.\"\n최하급 영웅이 이끄는 최약체 팀의 반란.",
+    "cast": [
+      "시우",
+      "한나"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 173000,
+      "comments": 22490,
+      "shares": 62280,
+      "saves": 100340
+    },
+    "rankChange": 0,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 47,
+    "isNew": false
+  },
+  {
+    "id": "wt_21",
+    "title": "환생자의 스트리밍",
+    "tagline": "천 번 환생한 남자, 이번 생은 방송으로 산다",
+    "writer": "윤회",
+    "artist": "노와르",
+    "author": "윤회 · 노와르",
+    "publisher": "CNPX 스튜디오",
+    "genre": "판타지",
+    "genreKey": "fantasy",
+    "rankGenre": "판타지 드라마",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "15세",
+    "rating": 9.72,
+    "views": "131.4만",
+    "likes": "12.4만",
+    "subscribers": "16.7만",
+    "weekday": "일",
+    "weekdays": [
+      "일"
+    ],
+    "status": "ongoing",
+    "themeColor": "#6A1410",
+    "keywords": [
+      "환생",
+      "인방",
+      "다크판타지",
+      "미스터리"
+    ],
+    "synopsis": "천 번의 삶을 기억하는 남자 하윤.\n이번 생의 직업은 공포 체험 스트리머다.\n시청자들은 연출이라 믿지만, 그가 찾아가는 곳마다 진짜 괴이가 기다린다.\n전생의 기억으로 괴이를 쓰러뜨리는 방송, 오늘도 생방송 시작.",
+    "cast": [
+      "하윤",
+      "담비"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 124000,
+      "comments": 16120,
+      "shares": 44640,
+      "saves": 71920
+    },
+    "rankChange": -1,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 52,
+    "isNew": false
+  },
+  {
+    "id": "wt_22",
+    "title": "은해상단 막내아들",
+    "tagline": "천하제일 상단의 막내, 돈과 검으로 강호를 산다",
+    "writer": "금전",
+    "artist": "스튜디오 흑백",
+    "author": "금전 · 스튜디오 흑백",
+    "publisher": "CNPX 스튜디오",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "연재무료"
+    ],
+    "ageRating": "12세",
+    "rating": 9.74,
+    "views": "152.0만",
+    "likes": "13.5만",
+    "subscribers": "18.2만",
+    "weekday": "목",
+    "weekdays": [
+      "목"
+    ],
+    "status": "ongoing",
+    "themeColor": "#8A5A2B",
+    "keywords": [
+      "상단무협",
+      "경영",
+      "먼치킨",
+      "코믹"
+    ],
+    "synopsis": "천하의 돈이 모인다는 은해상단의 막내아들 은소운.\n무공은 삼류, 장사 수완은 일류.\n\"검으로 못 이기면, 사면 되지.\"\n돈으로 문파를 사고 계약서로 고수를 부리는 상인 무협.",
+    "cast": [
+      "소운",
+      "홍련"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 135000,
+      "comments": 17550,
+      "shares": 48600,
+      "saves": 78300
+    },
+    "rankChange": 1,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 66,
+    "isNew": false
+  },
+  {
+    "id": "wt_23",
+    "title": "남궁세가 천재 외손자",
+    "tagline": "검가의 외손자로 태어난 천재, 세가를 다시 일으키다",
+    "writer": "검향",
+    "artist": "그린노트",
+    "author": "검향 · 그린노트",
+    "publisher": "CNPX 스튜디오",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "기다무"
+    ],
+    "ageRating": "15세",
+    "rating": 9.75,
+    "views": "128.7만",
+    "likes": "11.8만",
+    "subscribers": "15.9만",
+    "weekday": "수",
+    "weekdays": [
+      "수"
+    ],
+    "status": "ongoing",
+    "themeColor": "#2E6F71",
+    "keywords": [
+      "세가물",
+      "천재",
+      "가문재건",
+      "성장"
+    ],
+    "synopsis": "몰락해가는 남궁세가에 외손자 남궁현이 찾아온다.\n외가의 피를 이어받았다는 이유로 멸시받던 소년.\n그러나 그는 세가의 검법을 한 번 보고 모두 익혀버린 천재였다.\n무너진 검가를 다시 세우는 외손자의 이야기.",
+    "cast": [
+      "현",
+      "유화"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 118000,
+      "comments": 15340,
+      "shares": 42480,
+      "saves": 68440
+    },
+    "rankChange": 2,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 58,
+    "isNew": false
+  },
+  {
+    "id": "wt_24",
+    "title": "재활용 머학생",
+    "tagline": "환경학과 신입생의 좌충우돌 캠퍼스 일상",
+    "writer": "재활용",
+    "artist": "재활용",
+    "author": "재활용",
+    "publisher": "CNPX 스튜디오",
+    "genre": "학원/일상",
+    "genreKey": "daily",
+    "rankGenre": "학원/판타지",
+    "badges": [
+      "연재무료",
+      "신작"
+    ],
+    "ageRating": "전체",
+    "rating": 9.69,
+    "views": "48.3만",
+    "likes": "5.2만",
+    "subscribers": "7.0만",
+    "weekday": "수",
+    "weekdays": [
+      "수"
+    ],
+    "status": "ongoing",
+    "themeColor": "#D9CBA8",
+    "keywords": [
+      "캠퍼스",
+      "일상툰",
+      "공감",
+      "고양이"
+    ],
+    "synopsis": "환경학과 신입생 머학생은 분리수거에 진심이다.\n동아리방 쓰레기통 앞에서 선배와 싸우고, 학식 용기를 씻어 모은다.\n그런 그녀를 따라다니는 캠퍼스 고양이 한 마리.\n작고 사소해서 더 웃긴, 대학 새내기 생활.",
+    "cast": [
+      "머학생",
+      "고양이"
+    ],
+    "league": "official",
+    "leagueProgress": 100,
+    "stats": {
+      "likes": 52000,
+      "comments": 6760,
+      "shares": 18720,
+      "saves": 30160
+    },
+    "rankChange": "NEW",
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 18,
+    "isNew": true
+  },
+  {
+    "id": "wt_25",
+    "title": "랭커를 위한 바른 생활 안내서",
+    "tagline": "은퇴한 1위 랭커, 신입 길드원의 생활 지도를 맡다",
+    "writer": "선생님",
+    "artist": "퇴근요정",
+    "author": "선생님 · 퇴근요정",
+    "publisher": "크리에이터 팀 '바른생활'",
+    "genre": "판타지",
+    "genreKey": "fantasy",
+    "rankGenre": "판타지 드라마",
+    "badges": [
+      "UP"
+    ],
+    "ageRating": "12세",
+    "rating": 9.53,
+    "views": "18.7만",
+    "likes": "2.1만",
+    "subscribers": "2.8만",
+    "weekday": "월",
+    "weekdays": [
+      "월"
+    ],
+    "status": "ongoing",
+    "themeColor": "#4F3E8E",
+    "keywords": [
+      "게임판타지",
+      "힐링",
+      "선후배",
+      "성장"
+    ],
+    "synopsis": "전설로 남은 전 1위 랭커 서하린은 조용한 은퇴를 원했다.\n그런데 길드 마스터가 떠맡긴 일은 문제아 신입들의 생활 지도.\n밥 굶는 탱커, 싸움만 거는 딜러, 길 잃는 힐러.\n랭커가 알려주는 게임보다 어려운 '바른 생활'.",
+    "cast": [
+      "하린",
+      "로이"
+    ],
+    "league": "league",
+    "leagueProgress": 78,
+    "stats": {
+      "likes": 21000,
+      "comments": 2730,
+      "shares": 7560,
+      "saves": 12180
+    },
+    "rankChange": 3,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 14,
+    "isNew": true
+  },
+  {
+    "id": "wt_26",
+    "title": "너에게 빼앗을 왕관",
+    "tagline": "약혼자에게 빼앗긴 왕관, 이번엔 내가 빼앗는다",
+    "writer": "블랙티",
+    "artist": "스튜디오 로즈",
+    "author": "블랙티 · 스튜디오 로즈",
+    "publisher": "크리에이터 팀 '로즈가든'",
+    "genre": "로판",
+    "genreKey": "rofan",
+    "rankGenre": "로판",
+    "badges": [],
+    "ageRating": "15세",
+    "rating": 9.48,
+    "views": "13.4만",
+    "likes": "1.6만",
+    "subscribers": "2.2만",
+    "weekday": "화",
+    "weekdays": [
+      "화"
+    ],
+    "status": "ongoing",
+    "themeColor": "#716FAC",
+    "keywords": [
+      "복수극",
+      "회귀",
+      "궁중암투",
+      "걸크러시"
+    ],
+    "synopsis": "황태자비가 되기 하루 전, 약혼자와 여동생에게 모든 것을 빼앗긴 로제.\n처형대 위에서 눈을 뜨자 3년 전으로 돌아와 있다.\n이번엔 왕관을 받지 않는다. 빼앗는다.\n그리고 그녀의 계획에, 폐위된 황자가 손을 내민다.",
+    "cast": [
+      "로제",
+      "아델"
+    ],
+    "league": "league",
+    "leagueProgress": 71,
+    "stats": {
+      "likes": 16000,
+      "comments": 2080,
+      "shares": 5760,
+      "saves": 9280
+    },
+    "rankChange": 2,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 10,
+    "isNew": true
+  },
+  {
+    "id": "wt_27",
+    "title": "무림에 떨어진 현대인",
+    "tagline": "퇴근길 지하철에서 눈 뜨니 무림 한복판",
+    "writer": "사축",
+    "artist": "사축",
+    "author": "사축",
+    "publisher": "크리에이터 팀 '야근클럽'",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [
+      "UP"
+    ],
+    "ageRating": "15세",
+    "rating": 9.41,
+    "views": "15.2만",
+    "likes": "1.8만",
+    "subscribers": "2.4만",
+    "weekday": "월",
+    "weekdays": [
+      "월"
+    ],
+    "status": "ongoing",
+    "themeColor": "#2F4A48",
+    "keywords": [
+      "차원이동",
+      "현대지식",
+      "코믹무협",
+      "생존"
+    ],
+    "synopsis": "야근 후 지하철에서 잠든 대리 문수, 눈을 뜨니 객잔 바닥이다.\n무공은커녕 팔굽혀펴기 열 개도 못 하는 몸.\n그가 가진 무기는 엑셀과 보고서, 그리고 현대의 상식뿐.\n\"여기 업무 프로세스부터 뜯어고치죠.\"",
+    "cast": [
+      "문수",
+      "청아"
+    ],
+    "league": "league",
+    "leagueProgress": 64,
+    "stats": {
+      "likes": 18000,
+      "comments": 2340,
+      "shares": 6480,
+      "saves": 10440
+    },
+    "rankChange": 1,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 11,
+    "isNew": true
+  },
+  {
+    "id": "wt_28",
+    "title": "던전 견문록",
+    "tagline": "던전의 모든 것을 기록하는 소년, 그 기록이 무기가 된다",
+    "writer": "새벽세시",
+    "artist": "새벽세시",
+    "author": "새벽세시",
+    "publisher": "크리에이터 팀 '새벽세시'",
+    "genre": "판타지",
+    "genreKey": "fantasy",
+    "rankGenre": "판타지 드라마",
+    "badges": [],
+    "ageRating": "15세",
+    "rating": 9.62,
+    "views": "11.9만",
+    "likes": "1.5만",
+    "subscribers": "2.0만",
+    "weekday": "목",
+    "weekdays": [
+      "목"
+    ],
+    "status": "ongoing",
+    "themeColor": "#B70113",
+    "keywords": [
+      "다크판타지",
+      "던전",
+      "기록자",
+      "미스터리"
+    ],
+    "synopsis": "던전에서 돌아온 사람이 없다는 붉은 탑.\n소년 이안은 그 안에서 본 모든 것을 수첩에 적는다.\n기록된 괴물은 약점을 드러내고, 기록된 함정은 힘을 잃는다.\n아무도 돌아오지 못한 던전의 첫 번째 견문록.",
+    "cast": [
+      "이안",
+      "루"
+    ],
+    "league": "league",
+    "leagueProgress": 57,
+    "stats": {
+      "likes": 15000,
+      "comments": 1950,
+      "shares": 5400,
+      "saves": 8700
+    },
+    "rankChange": -1,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 9,
+    "isNew": true
+  },
+  {
+    "id": "wt_29",
+    "title": "푸른 미명 끝에서",
+    "tagline": "새벽이 오기 전, 너를 구하러 가겠다",
+    "writer": "해무",
+    "artist": "노와르",
+    "author": "해무 · 노와르",
+    "publisher": "크리에이터 팀 '해무'",
+    "genre": "로맨스",
+    "genreKey": "romance",
+    "rankGenre": "로맨스",
+    "badges": [
+      "UP"
+    ],
+    "ageRating": "15세",
+    "rating": 9.57,
+    "views": "16.8만",
+    "likes": "1.9만",
+    "subscribers": "2.6만",
+    "weekday": "월",
+    "weekdays": [
+      "월"
+    ],
+    "status": "ongoing",
+    "themeColor": "#2E3651",
+    "keywords": [
+      "다크로맨스",
+      "구원서사",
+      "애절",
+      "판타지"
+    ],
+    "synopsis": "해가 뜨지 않는 나라에서, 새벽을 부르는 제물로 선택된 소녀 이연.\n그녀를 지키던 호위 기사 하겸은 의식 전날 밤 그녀를 데리고 달아난다.\n푸른 미명이 끝나기 전까지, 둘에게 남은 시간은 단 사흘.\n세상과 한 사람 중 하나만 구할 수 있다면.",
+    "cast": [
+      "이연",
+      "하겸"
+    ],
+    "league": "league",
+    "leagueProgress": 49,
+    "stats": {
+      "likes": 19000,
+      "comments": 2470,
+      "shares": 6840,
+      "saves": 11020
+    },
+    "rankChange": 0,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 13,
+    "isNew": true
+  },
+  {
+    "id": "wt_30",
+    "title": "검을 든 꽃",
+    "tagline": "꽃이라 불리던 공녀, 검을 들고 전장에 서다",
+    "writer": "달콤살벌",
+    "artist": "달콤살벌",
+    "author": "달콤살벌",
+    "publisher": "크리에이터 팀 '핑크리본'",
+    "genre": "로판",
+    "genreKey": "rofan",
+    "rankGenre": "로판",
+    "badges": [],
+    "ageRating": "15세",
+    "rating": 9.44,
+    "views": "13.1만",
+    "likes": "1.6만",
+    "subscribers": "2.2만",
+    "weekday": "화",
+    "weekdays": [
+      "화"
+    ],
+    "status": "ongoing",
+    "themeColor": "#C97FA8",
+    "keywords": [
+      "여기사",
+      "걸크러시",
+      "로맨스판타지",
+      "성장"
+    ],
+    "synopsis": "사교계의 꽃이라 불리던 공녀 세레나.\n오라버니가 전사한 날, 그녀는 드레스를 벗고 갑옷을 입는다.\n\"꽃도 가시가 있다는 걸 보여드리죠.\"\n얼음의 기사단장과 함께 전장에 핀 한 송이 꽃.",
+    "cast": [
+      "세레나",
+      "에단"
+    ],
+    "league": "league",
+    "leagueProgress": 44,
+    "stats": {
+      "likes": 16000,
+      "comments": 2080,
+      "shares": 5760,
+      "saves": 9280
+    },
+    "rankChange": 2,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 10,
+    "isNew": true
+  },
+  {
+    "id": "wt_31",
+    "title": "로그인 무림",
+    "tagline": "무협 게임에 로그인했더니, 로그아웃이 안 된다",
+    "writer": "짜장무협",
+    "artist": "짜장무협",
+    "author": "짜장무협",
+    "publisher": "크리에이터 팀 '강호식당'",
+    "genre": "무협",
+    "genreKey": "murim",
+    "rankGenre": "액션/무협",
+    "badges": [],
+    "ageRating": "12세",
+    "rating": 9.36,
+    "views": "9.8만",
+    "likes": "1.1만",
+    "subscribers": "1.5만",
+    "weekday": "수",
+    "weekdays": [
+      "수"
+    ],
+    "status": "ongoing",
+    "themeColor": "#8A4A1A",
+    "keywords": [
+      "게임무협",
+      "갇힘",
+      "생존",
+      "코믹"
+    ],
+    "synopsis": "신작 무협 VR 게임 베타 테스터로 뽑힌 도현.\n접속하자마자 로그아웃 버튼이 사라졌다.\n게임 속 죽음은 현실의 죽음, 퀘스트 보상은 진짜 내공.\n살아서 로그아웃하기 위한 무림 공략이 시작된다.",
+    "cast": [
+      "도현",
+      "매화"
+    ],
+    "league": "league",
+    "leagueProgress": 38,
+    "stats": {
+      "likes": 11000,
+      "comments": 1430,
+      "shares": 3960,
+      "saves": 6380
+    },
+    "rankChange": -2,
+    "jimovieReview": null,
+    "ipStatus": "none",
+    "ipStage": 1,
+    "episodeCount": 8,
+    "isNew": true
+  }
+]
