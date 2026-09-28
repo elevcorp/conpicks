@@ -1,15 +1,15 @@
 {
-  "name": "conpicks",
+  "name": "cnpx-mockup",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/gen-assets.mjs",
     "dev": "next dev --turbopack",
+    "prebuild": "node scripts/gen-assets.mjs",
     "build": "next build --turbopack",
+    "gen:data": "node scripts/gen-data.mjs",
     "start": "next start",
-    "lint": "eslint",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "e2e": "playwright test"
+    "lint": "eslint"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

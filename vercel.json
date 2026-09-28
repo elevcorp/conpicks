@@ -1,6 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "crons": [
-    { "path": "/api/cron/recompute-ranking?rotatePrev=1", "schedule": "0 0 * * *" }
-  ]
+  "framework": "nextjs"
 }
