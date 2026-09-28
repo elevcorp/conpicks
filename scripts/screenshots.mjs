@@ -17,8 +17,11 @@ mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
 for (const [name, opts] of Object.entries(VIEWPORTS)) {
   const ctx = await browser.newContext({ ...opts, locale: "ko-KR" });
-  // Skip the once-per-session splash.
-  await ctx.addInitScript(() => sessionStorage.setItem("cnpx-splash", "1"));
+  // Skip the once-per-session splash; THEME=light captures light mode.
+  await ctx.addInitScript((theme) => {
+    sessionStorage.setItem("cnpx-splash", "1");
+    localStorage.setItem("cnpx-theme", JSON.stringify({ state: { theme }, version: 0 }));
+  }, process.env.THEME === "light" ? "light" : "dark");
   const page = await ctx.newPage();
   for (const route of ROUTES) {
     await page.goto(base + route, { waitUntil: "networkidle" });

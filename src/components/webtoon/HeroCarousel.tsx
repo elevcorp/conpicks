@@ -61,8 +61,9 @@ export function HeroCarousel({ works }: { works: Webtoon[] }) {
             <WorkCover work={w} srcKey={heroKey} className="absolute inset-0 md:hidden" sizes="100vw" priority={i === 0} />
             <WorkCover work={w} srcKey={heroKey} variant="wide" className="absolute inset-0 hidden md:block" sizes="100vw" priority={i === 0} />
           </VideoOrCover>
-          <div className="absolute inset-0 bg-gradient-to-t from-bg via-black/25 to-black/30 md:bg-gradient-to-r md:from-black/85 md:via-black/35 md:to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-bg to-transparent" />
+          {/* always-dark scrim behind the white type (light mode included) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/30 md:bg-gradient-to-r md:from-black/85 md:via-black/35 md:to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-bg to-transparent md:h-16" />
         </motion.div>
       </AnimatePresence>
 
@@ -84,7 +85,7 @@ export function HeroCarousel({ works }: { works: Webtoon[] }) {
         </div>
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 pb-9 md:bottom-auto md:top-0 md:flex md:h-full md:items-center md:pb-0 md:pt-10">
+      <div className="absolute inset-x-0 bottom-0 pb-12 md:bottom-auto md:top-0 md:flex md:h-full md:items-center md:pb-0 md:pt-10">
         <div className="mx-auto w-full max-w-[1200px] px-5 md:px-6">
           <AnimatePresence mode="wait">
             <motion.div
@@ -152,7 +153,7 @@ export function HeroCarousel({ works }: { works: Webtoon[] }) {
       <button
         onClick={() => setMuted((m) => !m)}
         aria-label={muted ? "소리 켜기" : "음소거"}
-        className="absolute bottom-8 right-4 grid size-10 place-items-center rounded-full bg-black/40 text-white ring-1 ring-white/25 backdrop-blur transition hover:bg-black/60 md:bottom-10 md:right-[max(24px,calc(50vw-600px+24px))]"
+        className="absolute bottom-11 right-4 grid size-10 place-items-center rounded-full bg-black/40 text-white ring-1 ring-white/25 backdrop-blur transition hover:bg-black/60 md:bottom-10 md:right-[max(24px,calc(50vw-600px+24px))]"
       >
         {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
       </button>

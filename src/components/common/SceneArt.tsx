@@ -356,7 +356,6 @@ function Figure({ W, H, ink, glow, big }: { W: number; H: number; ink: string; g
       />
       <rect x={cx - 6 * s} y={headY + headR - 4 * s} width={12 * s} height={20 * s} fill={ink} />
       <ellipse cx={cx} cy={headY} rx={headR * 0.9} ry={headR} fill={ink} />
-      <path d={`M${cx - headR * 0.9},${headY} a${headR * 0.9},${headR} 0 0 1 ${headR * 1.8},0`} stroke={glow} strokeOpacity={0.5} strokeWidth={1.2 * s} fill="none" />
     </g>
   );
 }
