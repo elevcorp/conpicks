@@ -37,7 +37,6 @@ export interface Webtoon {
   jimovieReview: { views: string; title: string; duration: string; date: string } | null;
   ipStatus: "none" | "review" | "confirmed";
   ipStage: number;
-  filmId?: string;
   episodeCount: number;
   isNew: boolean;
   /** false when the cover art doesn't carry a legible title (cards overlay it). Default: true for real covers. */
@@ -91,7 +90,6 @@ export interface Film {
   award?: string;
   stats: FilmStats;
   jimovieReview: { views: string; title: string; duration: string } | null;
-  originWebtoonId: string | null;
   tool: string;
   funding?: boolean;
 }

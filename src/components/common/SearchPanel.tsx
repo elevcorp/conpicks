@@ -9,7 +9,7 @@ import { EmptyState } from "./EmptyState";
 import { films, webtoons } from "@/lib/catalog";
 import { cn } from "@/lib/cn";
 
-const POPULAR = ["템빨", "북부 대공", "대환영", "회귀", "무협", "역병", "스트리밍", "로판", "지무비", "Eddington"];
+const POPULAR = ["템빨", "북부 대공", "대환영", "회귀", "무협", "조선의 아이돌", "스트리밍", "로판", "지무비", "Eddington"];
 
 export function SearchPanel() {
   const [q, setQ] = useState("");

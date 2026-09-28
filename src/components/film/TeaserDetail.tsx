@@ -3,18 +3,17 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Play, Heart, MessageCircle, Share2, Bookmark, Sparkles, BookOpen, ArrowRight, HandCoins, Send, Cpu } from "lucide-react";
-import { FilmCover, WorkCover } from "@/components/common/Covers";
+import { X, Play, Heart, MessageCircle, Share2, Bookmark, Sparkles, ArrowRight, HandCoins, Send, Cpu } from "lucide-react";
+import { FilmCover } from "@/components/common/Covers";
 import { VideoOrCover } from "@/components/common/VideoOrCover";
 import { RankDelta } from "@/components/common/RankDelta";
-import { useWorldNav } from "@/components/common/useWorldNav";
 import { useRequireLogin } from "@/components/common/LoginSheet";
 import { TeaserCard } from "./TeaserCards";
 import { useUser } from "@/store/user";
 import { useUI } from "@/store/ui";
 import { compact, won } from "@/lib/format";
 import { cn } from "@/lib/cn";
-import type { Film, FilmComment, Webtoon } from "@/lib/types";
+import type { Film, FilmComment } from "@/lib/types";
 
 // Same weights as the webtoon ranking info sheet.
 const WEIGHTS = [
@@ -24,9 +23,8 @@ const WEIGHTS = [
   { k: "comments", label: "댓글", w: 2, color: "#2fc49a" },
 ] as const;
 
-export function TeaserDetail({ film, origin, comments, similar }: { film: Film; origin?: Webtoon; comments: FilmComment[]; similar: Film[] }) {
+export function TeaserDetail({ film, comments, similar }: { film: Film; comments: FilmComment[]; similar: Film[] }) {
   const router = useRouter();
-  const go = useWorldNav();
   const [playing, setPlaying] = useState(false);
   const [draft, setDraft] = useState("");
   const [mine, setMine] = useState<FilmComment[]>([]);
@@ -172,33 +170,6 @@ export function TeaserDetail({ film, origin, comments, similar }: { film: Film; 
               ))}
             </div>
           </section>
-
-          {/* origin webtoon — the IP pipeline cross-link */}
-          {origin && (
-            <section>
-              <p className="mb-2.5 flex items-center gap-1.5 text-[15px] font-bold">
-                <BookOpen size={16} className="text-[#7db3ff]" /> 원작 웹툰
-                <span className="text-[12px] font-medium text-fg-3">웹툰 → AI 영화, 하나의 IP 파이프라인</span>
-              </p>
-              <button
-                onClick={() => go(`/work/${origin.id}`)}
-                className="group flex w-full items-center gap-4 rounded-2xl p-3 text-left ring-1 ring-white/10 transition hover:ring-brand/60"
-                style={{ background: `linear-gradient(110deg, ${origin.themeColor}55, rgba(255,255,255,0.04) 70%)` }}
-              >
-                <div className="relative aspect-[3/5] w-[76px] shrink-0 overflow-hidden rounded-lg shadow-lg">
-                  <WorkCover work={origin} className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" sizes="80px" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="text-[11.5px] font-bold text-[#7db3ff]">CNPX 웹툰 · {origin.league === "official" ? "정식 연재" : "신작 리그"}</p>
-                  <p className="truncate text-[17px] font-extrabold">{origin.title}</p>
-                  <p className="truncate text-[12.5px] text-fg-2">{origin.author} · ★ {origin.rating.toFixed(2)} · 조회 {origin.views}</p>
-                  <p className="mt-1.5 flex items-center gap-1 text-[13px] font-bold">
-                    웹툰 월드에서 원작 보기 <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
-                  </p>
-                </div>
-              </button>
-            </section>
-          )}
 
           {/* jimovie */}
           {film.jimovieReview && (

@@ -226,16 +226,6 @@ const FIRST_EPISODES = {
     ],
     dialogues: ["1년 동안 내 아내가 되어라.", "그럼... 저주는요?", "내가 가져가 주지. 대가는 그걸로 충분하다.", "좋아요. 계약하죠."],
   },
-  wt_06: {
-    title: "붉은 깃털",
-    narrations: [
-      "정조 14년 겨울, 은곡 마을에 첫눈이 내렸다.",
-      "눈 위에 붉은 깃털 하나가 떨어져 있었다.",
-      "사흘째 되던 밤, 그 집의 불이 꺼졌다.",
-      "연화는 사라진 이들의 발자국을 따라 숲으로 들어갔다.",
-    ],
-    dialogues: ["깃털이 떨어진 집은... 다음 차례예요.", "관아에선 역병이라 했소.", "역병은 발자국을 남기지 않아요.", "의녀, 더는 들어가지 마시오."],
-  },
 };
 
 // ---------------------------------------------------------------- episodes
@@ -369,7 +359,7 @@ write("comments.json", comments);
 
 // ---------------------------------------------------------------- rankings
 const byId = Object.fromEntries(webtoons.map((w) => [w.id, w]));
-const OFFICIAL_ORDER = ["wt_01", "wt_06", "wt_02", "wt_05", "wt_07", "wt_11", "wt_17", "wt_19", "wt_09", "wt_12", "wt_15", "wt_08", "wt_20", "wt_16", "wt_22", "wt_04", "wt_13", "wt_10", "wt_18", "wt_21", "wt_23", "wt_03", "wt_14", "wt_24"];
+const OFFICIAL_ORDER = ["wt_01", "wt_02", "wt_05", "wt_11", "wt_17", "wt_19", "wt_12", "wt_15", "wt_20", "wt_16", "wt_22", "wt_04", "wt_13", "wt_18", "wt_21", "wt_23", "wt_03", "wt_14", "wt_24"];
 const LEAGUE_ORDER = webtoons.filter((w) => w.league === "league").sort((a, b) => b.leagueProgress - a.leagueProgress).map((w) => w.id);
 const entry = (id, i) => ({ id, rank: i + 1, change: byId[id].rankChange });
 const GENRE_CHIPS = ["판타지 드라마", "로맨스", "학원/판타지", "로판", "액션/무협"];
@@ -390,9 +380,9 @@ const rankings = {
     "10대 남자": ["wt_02", "wt_11", "wt_20", "wt_19", "wt_05"],
     "10대 여자": ["wt_03", "wt_14", "wt_12", "wt_01", "wt_24"],
     "20대 남자": ["wt_02", "wt_19", "wt_15", "wt_21", "wt_11"],
-    "20대 여자": ["wt_01", "wt_07", "wt_03", "wt_04", "wt_12"],
-    "30대 남자": ["wt_05", "wt_16", "wt_17", "wt_22", "wt_06"],
-    "30대 여자": ["wt_04", "wt_01", "wt_18", "wt_12", "wt_08"],
+    "20대 여자": ["wt_01", "wt_03", "wt_12", "wt_04", "wt_14"],
+    "30대 남자": ["wt_05", "wt_16", "wt_17", "wt_22", "wt_13"],
+    "30대 여자": ["wt_04", "wt_01", "wt_18", "wt_12", "wt_17"],
   },
   film: {
     season1: films.filter((f) => f.season === 1).sort((a, b) => a.rank - b.rank).map((f) => ({ id: f.id, rank: f.rank, change: f.rankChange })),
@@ -429,7 +419,7 @@ for (const f of films) {
 const notifications = [
   { id: "n1", type: "update", title: "'북부 대공' 95화가 업데이트됐어요", body: "기다리면 무료 · 미리보기로 지금 바로 감상하세요", time: "방금 전", href: "/work/wt_01" },
   { id: "n2", type: "rank", title: "관심 작품 '대환영'이 랭킹 16위로 ▲5 상승", body: "실시간 랭킹을 확인해 보세요", time: "1시간 전", href: "/ranking" },
-  { id: "n3", type: "funding", title: "'역병: 붉은 징조' 펀딩 74% 달성", body: "마감까지 D-12, 1,847명이 참여 중이에요", time: "3시간 전", href: "/film/funding" },
+  { id: "n3", type: "funding", title: "'조선의 아이돌' 펀딩 74% 달성", body: "마감까지 D-12, 1,847명이 참여 중이에요", time: "3시간 전", href: "/film/funding" },
   { id: "n4", type: "review", title: "지무비 리뷰 공개: 학사검전", body: "리뷰 영상과 함께 작품을 정주행해 보세요", time: "어제", href: "/work/wt_13" },
   { id: "n5", type: "league", title: "신작 리그 '랭커를 위한 바른 생활 안내서' 승격까지 78%", body: "대중의 선택이 정식 연재를 결정합니다", time: "2일 전", href: "/league" },
   { id: "n6", type: "notice", title: "2026년 12월 CNPX 정식 오픈 안내", body: "시연 버전입니다. 결제·업로드는 정식 오픈 시 제공됩니다.", time: "5일 전", href: "/my" },

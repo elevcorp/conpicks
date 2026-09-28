@@ -89,9 +89,15 @@ export function FundingPage({ c, film, upcoming }: { c: Campaign; film: Film; up
 
       <section className="glass overflow-hidden rounded-3xl">
         <div className="relative aspect-[16/9] md:aspect-[21/8]">
-          <FilmCover film={film} className="absolute inset-0" sizes="1080px" priority />
+          <FilmCover film={film} portraitFit="blur" className="absolute inset-0" sizes="1080px" priority />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d1126] via-[#0d1126]/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 p-5 md:p-8">
+          {/* poster sits right, clear of the campaign title */}
+          <div className="absolute inset-y-0 right-4 flex items-center md:right-10">
+            <div className="relative aspect-[2/3] h-[84%] overflow-hidden rounded-xl shadow-[0_24px_60px_rgba(0,0,0,0.6)] ring-1 ring-white/15">
+              <FilmCover film={film} variant="poster" className="absolute inset-0" sizes="300px" priority />
+            </div>
+          </div>
+          <div className="absolute bottom-0 left-0 max-w-[62%] p-5 md:max-w-[70%] md:p-8">
             <span className="flex w-fit items-center gap-1 rounded-full bg-brand px-2.5 py-1 text-[12px] font-bold text-white">
               <Trophy size={13} /> {c.subtitle}
             </span>

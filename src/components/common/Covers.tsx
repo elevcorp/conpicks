@@ -22,14 +22,15 @@ export function WorkCover({ work, variant = "poster", showTitle, className, size
   );
 }
 
-export function FilmCover({ film, variant = "wide", showTitle, className, sizes, priority, srcKey, portraitFit }: {
+export function FilmCover({ film, variant = "wide", showTitle, className, sizes, priority, srcKey, portraitFit, focus }: {
   film: Pick<Film, "id" | "title">;
   variant?: ArtVariant; showTitle?: boolean; className?: string; sizes?: string; priority?: boolean; srcKey?: string; portraitFit?: Fit;
+  focus?: string;
 }) {
   const tone = FILM_TONES[parseInt(film.id.slice(3), 10) % FILM_TONES.length];
   return (
     <PlaceholderCover id={film.id} title={film.title} genre="film" theme={tone} variant={variant}
       showTitle={showTitle} className={className} sizes={sizes ?? "(max-width: 768px) 70vw, 360px"} priority={priority} srcKey={srcKey}
-      portraitFit={portraitFit} />
+      portraitFit={portraitFit} focus={focus} />
   );
 }

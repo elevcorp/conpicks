@@ -4,14 +4,13 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ChevronDown, ChevronRight, Clock, Play, Heart, Share2, Bookmark, MessageCircle, Check, Ticket, ArrowUpDown, ArrowUp, Film, Sparkles,
+  ChevronDown, Clock, Play, Heart, Share2, Bookmark, MessageCircle, Check, Ticket, ArrowUpDown, ArrowUp, Sparkles,
 } from "lucide-react";
 import { Badge } from "@/components/common/Badge";
-import { WorkCover, FilmCover } from "@/components/common/Covers";
+import { WorkCover } from "@/components/common/Covers";
 import { SceneArt } from "@/components/common/SceneArt";
 import { RankDelta } from "@/components/common/RankDelta";
 import { Sheet } from "@/components/common/Sheet";
-import { useWorldNav } from "@/components/common/useWorldNav";
 import { useRequireLogin } from "@/components/common/LoginSheet";
 import { CoverCrop, EpisodeReader, pagesForEpisode } from "./EpisodeReader";
 import { useUser, isUnlocked } from "@/store/user";
@@ -19,7 +18,7 @@ import { useUI, demoToast } from "@/store/ui";
 import { coverSrc } from "@/lib/assets";
 import { compact, won } from "@/lib/format";
 import { cn } from "@/lib/cn";
-import type { Episode, EpisodeSummary, Film as FilmT, RankEntry, Webtoon } from "@/lib/types";
+import type { Episode, EpisodeSummary, RankEntry, Webtoon } from "@/lib/types";
 
 /* ------------------------------------------------------------------ 첫 화 보기 */
 export function FirstTab({ work, episode, next }: { work: Webtoon; episode: Episode; next?: EpisodeSummary }) {
@@ -155,11 +154,10 @@ export function EpisodesTab({ work, episodes }: { work: Webtoon; episodes: Episo
 /* ------------------------------------------------------------------ 정보 */
 const IP_STEPS = ["연재중", "지무비 리뷰", "영상화 검토", "AI영화 제작"];
 
-export function InfoTab({ work, others, othersLabel, rank, film }: {
-  work: Webtoon; others: Webtoon[]; othersLabel: string; rank?: RankEntry; film?: FilmT;
+export function InfoTab({ work, others, othersLabel, rank }: {
+  work: Webtoon; others: Webtoon[]; othersLabel: string; rank?: RankEntry;
 }) {
   const [review, setReview] = useState(false);
-  const go = useWorldNav();
 
   useEffect(() => {
     if (window.location.hash === "#review") {
@@ -285,24 +283,6 @@ export function InfoTab({ work, others, othersLabel, rank, film }: {
               <p className="line-clamp-2 text-[15px] font-bold">[지무비] {work.jimovieReview.title}</p>
               <p className="mt-1 text-[12.5px] text-white/60">리뷰 조회수 {work.jimovieReview.views}회 · {work.jimovieReview.date}</p>
             </div>
-          </button>
-        </section>
-      )}
-
-      {/* 영화 월드 크로스링크 */}
-      {film && (
-        <section>
-          <h3 className="mb-2.5 text-[16px] font-bold">이 작품의 AI 영화 티저</h3>
-          <button onClick={() => go(`/film/work/${film.id}`)} className="group flex w-full items-center gap-3 overflow-hidden rounded-2xl bg-[#0A0D1C] p-3 text-left text-white ring-1 ring-white/10">
-            <div className="relative aspect-video w-[140px] shrink-0 overflow-hidden rounded-lg">
-              <FilmCover film={film} className="absolute inset-0 transition-transform duration-500 group-hover:scale-110" sizes="140px" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="flex items-center gap-1 text-[11px] font-bold text-[#7db3ff]"><Film size={12} /> AI 영화 월드 · 시즌{film.season} {film.rank}위</p>
-              <p className="mt-0.5 truncate text-[15px] font-bold">{film.title}</p>
-              <p className="mt-0.5 text-[12px] text-white/60">{film.runtime} · 좋아요 {compact(film.stats.likes)}</p>
-            </div>
-            <ChevronRight size={20} className="text-white/50" />
           </button>
         </section>
       )}

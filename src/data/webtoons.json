@@ -266,299 +266,16 @@
       "saves": 144420
     },
     "rankChange": -1,
-    "jimovieReview": null,
-    "ipStatus": "none",
-    "ipStage": 1,
-    "episodeCount": 128,
-    "isNew": false
-  },
-  {
-    "id": "wt_06",
-    "title": "역병: 붉은 징조",
-    "tagline": "눈 내리는 조선의 마을, 붉은 깃털이 떨어진 집마다 사람이 사라진다",
-    "writer": "서담",
-    "artist": "홍월",
-    "author": "서담 · 홍월",
-    "publisher": "CNPX 스튜디오",
-    "genre": "스릴러",
-    "genreKey": "thriller",
-    "rankGenre": "판타지 드라마",
-    "badges": [
-      "기다무"
-    ],
-    "ageRating": "15세",
-    "rating": 9.89,
-    "views": "356.7만",
-    "likes": "29.8만",
-    "subscribers": "41.0만",
-    "weekday": "금",
-    "weekdays": [
-      "금"
-    ],
-    "status": "ongoing",
-    "themeColor": "#6B1414",
-    "keywords": [
-      "사극스릴러",
-      "역병",
-      "미스터리",
-      "여성서사"
-    ],
-    "synopsis": "정조 14년 겨울, 함경도 산골 마을 은곡에 붉은 깃털이 내리기 시작한다.\n깃털이 떨어진 집에서는 사흘 안에 사람이 사라지고, 관아는 역병이라 선언한다.\n마을의 유일한 의녀 연화만이 사라진 이들이 남긴 발자국을 좇는다.\n그 끝에서 그녀가 마주한 것은 역병보다 오래된 저주였다.",
-    "cast": [
-      "연화",
-      "무진"
-    ],
-    "league": "official",
-    "leagueProgress": 100,
-    "stats": {
-      "likes": 298000,
-      "comments": 41200,
-      "shares": 132000,
-      "saves": 188000
-    },
-    "rankChange": 1,
     "jimovieReview": {
-      "views": "256만",
-      "title": "K-사극 스릴러의 새로운 기준, 벌써 영화화 확정?",
-      "duration": "16:40",
-      "date": "26.08.21"
-    },
-    "ipStatus": "confirmed",
-    "ipStage": 4,
-    "filmId": "fm_01",
-    "episodeCount": 63,
-    "isNew": false,
-    "coverTitle": false
-  },
-  {
-    "id": "wt_07",
-    "title": "달이 정한 연(緣)",
-    "tagline": "달이 짝지어 준 두 사람, 서로의 이름을 부르면 사라진다",
-    "writer": "이월",
-    "artist": "스튜디오 백야",
-    "author": "이월 · 스튜디오 백야",
-    "publisher": "스튜디오 백야",
-    "genre": "로판",
-    "genreKey": "rofan",
-    "rankGenre": "로판",
-    "badges": [
-      "기다무",
-      "UP"
-    ],
-    "ageRating": "15세",
-    "rating": 9.84,
-    "views": "274.3만",
-    "likes": "22.6만",
-    "subscribers": "33.5만",
-    "weekday": "일",
-    "weekdays": [
-      "월",
-      "일"
-    ],
-    "status": "ongoing",
-    "themeColor": "#5B2A7A",
-    "keywords": [
-      "동양풍",
-      "운명",
-      "애절",
-      "궁중로맨스"
-    ],
-    "synopsis": "월국(月國)에서는 보름달이 뜨는 밤, 달이 정한 두 사람의 손목에 붉은 실이 새겨진다.\n황제의 검 무현과 역적의 딸 서연, 결코 이어져서는 안 될 두 사람에게 실이 나타났다.\n서로의 이름을 부르는 순간 한 사람이 사라진다는 전설과 함께.\n부를 수 없는 이름을 품은 채, 두 사람의 운명이 시작된다.",
-    "cast": [
-      "서연",
-      "무현"
-    ],
-    "league": "official",
-    "leagueProgress": 100,
-    "stats": {
-      "likes": 226000,
-      "comments": 28400,
-      "shares": 97000,
-      "saves": 131000
-    },
-    "rankChange": -2,
-    "jimovieReview": {
-      "views": "132만",
-      "title": "눈물 버튼 주의, 올해 가장 아름다운 동양풍 로판",
+      "views": "121만",
+      "title": "정통 무협의 부활, 이 작화 실화입니까",
       "duration": "12:51",
       "date": "26.07.30"
     },
-    "ipStatus": "confirmed",
-    "ipStage": 4,
-    "filmId": "fm_02",
-    "episodeCount": 58,
-    "isNew": false,
-    "coverTitle": false
-  },
-  {
-    "id": "wt_08",
-    "title": "재회 알고리즘",
-    "tagline": "죽은 연인을 큐브에 복원해 주는 스타트업, 그 첫 번째 고객",
-    "writer": "정하람",
-    "artist": "픽셀무드",
-    "author": "정하람 · 픽셀무드",
-    "publisher": "픽셀무드",
-    "genre": "로맨스",
-    "genreKey": "sfromance",
-    "rankGenre": "로맨스",
-    "badges": [
-      "연재무료"
-    ],
-    "ageRating": "15세",
-    "rating": 9.76,
-    "views": "198.2만",
-    "likes": "17.3만",
-    "subscribers": "26.4만",
-    "weekday": "목",
-    "weekdays": [
-      "목"
-    ],
-    "status": "ongoing",
-    "themeColor": "#E68FB0",
-    "keywords": [
-      "SF로맨스",
-      "상실",
-      "AI",
-      "재회"
-    ],
-    "synopsis": "1년 전 사고로 연인 지후를 잃은 채이.\n손바닥만 한 큐브에 고인의 기억을 복원해 준다는 스타트업 '리유니온'의 베타 테스터가 된다.\n큐브 속 지후는 완벽했다. 그녀가 몰랐던 비밀까지 기억하고 있다는 점만 빼면.",
-    "cast": [
-      "채이",
-      "지후"
-    ],
-    "league": "official",
-    "leagueProgress": 100,
-    "stats": {
-      "likes": 173000,
-      "comments": 21900,
-      "shares": 88000,
-      "saves": 104000
-    },
-    "rankChange": 3,
-    "jimovieReview": {
-      "views": "97만",
-      "title": "블랙미러 좋아하면 이 웹툰 꼭 보세요",
-      "duration": "09:47",
-      "date": "26.08.02"
-    },
-    "ipStatus": "confirmed",
-    "ipStage": 4,
-    "filmId": "fm_03",
-    "episodeCount": 47,
-    "isNew": false,
-    "coverTitle": false
-  },
-  {
-    "id": "wt_09",
-    "title": "오늘도 택배",
-    "tagline": "택배 회사 최고 배송왕은, 사실 카피바라였다",
-    "writer": "누룽지",
-    "artist": "누룽지",
-    "author": "누룽지",
-    "publisher": "CNPX 스튜디오",
-    "genre": "일상",
-    "genreKey": "daily",
-    "rankGenre": "판타지 드라마",
-    "badges": [
-      "연재무료"
-    ],
-    "ageRating": "전체",
-    "rating": 9.93,
-    "views": "167.9만",
-    "likes": "19.1만",
-    "subscribers": "22.8만",
-    "weekday": "수",
-    "weekdays": [
-      "수"
-    ],
-    "status": "ongoing",
-    "themeColor": "#8A8F4A",
-    "keywords": [
-      "힐링",
-      "동물",
-      "개그",
-      "직장인공감"
-    ],
-    "synopsis": "'빠른택배' 성수지점 3년 연속 배송왕 김카피 기사님.\n무표정, 무소음, 무사고. 고객 만족도 100%.\n단 한 가지 비밀이 있다면, 그가 카피바라라는 것.\n오늘도 그는 조용히, 느긋하게, 그러나 누구보다 정확하게 마음을 배달한다.",
-    "cast": [
-      "카피",
-      "팀장님"
-    ],
-    "league": "official",
-    "leagueProgress": 100,
-    "stats": {
-      "likes": 191000,
-      "comments": 26700,
-      "shares": 156000,
-      "saves": 97000
-    },
-    "rankChange": 0,
-    "jimovieReview": null,
-    "ipStatus": "confirmed",
-    "ipStage": 4,
-    "filmId": "fm_07",
-    "episodeCount": 86,
-    "isNew": false,
-    "coverTitle": false
-  },
-  {
-    "id": "wt_10",
-    "title": "백야 다이어리",
-    "tagline": "해가 지지 않는 도시에서, 잠들지 못하는 형사",
-    "writer": "강진",
-    "artist": "노와르",
-    "author": "강진 · 노와르",
-    "publisher": "노와르",
-    "genre": "스릴러",
-    "genreKey": "thriller",
-    "rankGenre": "판타지 드라마",
-    "badges": [
-      "기다무"
-    ],
-    "ageRating": "19세",
-    "rating": 9.71,
-    "views": "142.6만",
-    "likes": "12.4만",
-    "subscribers": "19.9만",
-    "weekday": "금",
-    "weekdays": [
-      "화",
-      "금"
-    ],
-    "status": "ongoing",
-    "themeColor": "#2E3036",
-    "keywords": [
-      "형사물",
-      "연쇄살인",
-      "불면증",
-      "반전"
-    ],
-    "synopsis": "백야가 두 달째 이어지는 북부 신도시 해랑.\n불면증에 시달리는 강력계 형사 윤재는 매일 밤 일기를 쓴다.\n그런데 연쇄살인 현장마다, 그가 기억하지 못하는 자신의 일기장이 한 장씩 놓여 있다.",
-    "cast": [
-      "윤재",
-      "하경"
-    ],
-    "league": "official",
-    "leagueProgress": 100,
-    "stats": {
-      "likes": 124000,
-      "comments": 17300,
-      "shares": 51000,
-      "saves": 83000
-    },
-    "rankChange": -1,
-    "jimovieReview": {
-      "views": "76만",
-      "title": "결말 예측 불가, 한국형 노르딕 누아르",
-      "duration": "10:12",
-      "date": "26.06.18"
-    },
-    "ipStatus": "confirmed",
-    "ipStage": 4,
-    "filmId": "fm_08",
-    "episodeCount": 52,
-    "isNew": false,
-    "coverTitle": false
+    "ipStatus": "review",
+    "ipStage": 2,
+    "episodeCount": 128,
+    "isNew": false
   },
   {
     "id": "wt_11",
@@ -659,9 +376,14 @@
       "saves": 109040
     },
     "rankChange": -3,
-    "jimovieReview": null,
-    "ipStatus": "none",
-    "ipStage": 1,
+    "jimovieReview": {
+      "views": "76만",
+      "title": "육아물 싫어하던 제가 정주행했습니다",
+      "duration": "10:12",
+      "date": "26.06.18"
+    },
+    "ipStatus": "review",
+    "ipStage": 2,
     "episodeCount": 77,
     "isNew": false
   },
@@ -922,7 +644,12 @@
       "saves": 151380
     },
     "rankChange": 0,
-    "jimovieReview": null,
+    "jimovieReview": {
+      "views": "97만",
+      "title": "무협과 판타지의 가장 완벽한 결합",
+      "duration": "09:47",
+      "date": "26.08.02"
+    },
     "ipStatus": "review",
     "ipStage": 2,
     "episodeCount": 110,

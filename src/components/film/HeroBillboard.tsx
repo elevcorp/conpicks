@@ -57,13 +57,35 @@ export function HeroBillboard({ films }: { films: Film[] }) {
           }}
         >
           <VideoOrCover name={heroKey} muted={muted} alt={i % 2 === 1} className="absolute inset-0">
-            <FilmCover film={f} srcKey={heroKey} className="absolute inset-0" sizes="100vw" priority={i === 0} />
+            {/* mobile: full-bleed poster; desktop: blurred wash (sharp poster floats on the right) */}
+            <FilmCover film={f} srcKey={heroKey} variant="poster" focus="50% 12%" className="absolute inset-0 md:hidden" sizes="100vw" priority={i === 0} />
+            <FilmCover film={f} srcKey={heroKey} portraitFit="blur" className="absolute inset-0 hidden md:block" sizes="100vw" priority={i === 0} />
           </VideoOrCover>
         </motion.div>
       </AnimatePresence>
       {/* cinematic vignette */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0A0D1C] via-[#0A0D1C]/30 to-black/40" />
       <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-[#0A0D1C]/90 via-[#0A0D1C]/30 to-transparent md:block" />
+      {/* mobile: bury the poster's own title band under our type */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-[#0A0D1C] via-[#0A0D1C]/85 to-transparent md:hidden" />
+
+      {/* desktop floating poster */}
+      <div className="pointer-events-none absolute inset-0 hidden md:block">
+        <div className="mx-auto flex h-full max-w-[1200px] items-center justify-end px-6 pt-12">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={f.id}
+              initial={{ opacity: 0, y: 24, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.7 }}
+              className="float-y relative aspect-[2/3] h-[min(62vh,540px)] overflow-hidden rounded-2xl shadow-[0_40px_100px_rgba(0,0,0,0.7),0_0_60px_rgba(49,130,246,0.18)] ring-1 ring-white/15"
+            >
+              <FilmCover film={f} variant="poster" className="absolute inset-0" sizes="400px" priority={i === 0} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
 
       <div className="absolute inset-x-0 bottom-0 pb-8 md:pb-16">
         <div className="mx-auto max-w-[1200px] px-5 md:px-6">
@@ -113,7 +135,7 @@ export function HeroBillboard({ films }: { films: Film[] }) {
       <button
         onClick={() => setMuted((m) => !m)}
         aria-label={muted ? "소리 켜기" : "음소거"}
-        className="absolute bottom-9 right-4 grid size-10 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur md:bottom-16 md:right-[max(24px,calc(50vw-600px+24px))]"
+        className="absolute bottom-9 right-4 grid size-10 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur md:bottom-16 md:right-[max(420px,calc(50vw-600px+420px))]"
       >
         {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
       </button>

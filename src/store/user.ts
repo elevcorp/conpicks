@@ -71,12 +71,12 @@ export const useUser = create<UserState>()((set, get) => ({
     set((s) => ({
       loggedIn: true,
       // Seed a lived-in library for the demo account (keeps anything already done this session).
-      saved: Array.from(new Set([...s.saved, "wt_01", "wt_04", "wt_07", "wt_13", "wt_09"])),
-      liked: Array.from(new Set([...s.liked, "wt_01", "wt_06"])),
+      saved: Array.from(new Set([...s.saved, "wt_01", "wt_04", "wt_12", "wt_13", "wt_14"])),
+      liked: Array.from(new Set([...s.liked, "wt_01", "wt_02"])),
       recent: s.recent.length
         ? s.recent
         : [
-            { id: "wt_06", ep: 12 },
+            { id: "wt_05", ep: 12 },
             { id: "wt_02", ep: 34 },
             { id: "wt_04", ep: 2 },
             { id: "wt_11", ep: 58 },

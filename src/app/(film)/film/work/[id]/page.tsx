@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { TeaserDetail } from "@/components/film/TeaserDetail";
-import { films, getFilm, getFilmComments, getWebtoon } from "@/lib/data";
+import { films, getFilm, getFilmComments } from "@/lib/data";
 
 export const dynamicParams = false;
 export const generateStaticParams = () => films.map((f) => ({ id: f.id }));
@@ -18,7 +18,6 @@ export default async function TeaserPage({ params }: { params: Promise<{ id: str
   return (
     <TeaserDetail
       film={film}
-      origin={film.originWebtoonId ? getWebtoon(film.originWebtoonId) : undefined}
       comments={getFilmComments(id)}
       similar={similar}
     />

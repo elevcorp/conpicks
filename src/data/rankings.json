@@ -8,118 +8,93 @@
     "change": 0
    },
    {
-    "id": "wt_06",
-    "rank": 2,
-    "change": 1
-   },
-   {
     "id": "wt_02",
-    "rank": 3,
+    "rank": 2,
     "change": 2
    },
    {
     "id": "wt_05",
-    "rank": 4,
+    "rank": 3,
     "change": -1
    },
    {
-    "id": "wt_07",
-    "rank": 5,
-    "change": -2
-   },
-   {
     "id": "wt_11",
-    "rank": 6,
+    "rank": 4,
     "change": 1
    },
    {
     "id": "wt_17",
-    "rank": 7,
+    "rank": 5,
     "change": 0
    },
    {
     "id": "wt_19",
-    "rank": 8,
+    "rank": 6,
     "change": 3
    },
    {
-    "id": "wt_09",
-    "rank": 9,
-    "change": 0
-   },
-   {
     "id": "wt_12",
-    "rank": 10,
+    "rank": 7,
     "change": -3
    },
    {
     "id": "wt_15",
-    "rank": 11,
+    "rank": 8,
     "change": 0
    },
    {
-    "id": "wt_08",
-    "rank": 12,
-    "change": 3
-   },
-   {
     "id": "wt_20",
-    "rank": 13,
+    "rank": 9,
     "change": 0
    },
    {
     "id": "wt_16",
-    "rank": 14,
+    "rank": 10,
     "change": -2
    },
    {
     "id": "wt_22",
-    "rank": 15,
+    "rank": 11,
     "change": 1
    },
    {
     "id": "wt_04",
-    "rank": 16,
+    "rank": 12,
     "change": 5
    },
    {
     "id": "wt_13",
-    "rank": 17,
+    "rank": 13,
     "change": 4
    },
    {
-    "id": "wt_10",
-    "rank": 18,
-    "change": -1
-   },
-   {
     "id": "wt_18",
-    "rank": 19,
+    "rank": 14,
     "change": -1
    },
    {
     "id": "wt_21",
-    "rank": 20,
+    "rank": 15,
     "change": -1
    },
    {
     "id": "wt_23",
-    "rank": 21,
+    "rank": 16,
     "change": 2
    },
    {
     "id": "wt_03",
-    "rank": 22,
+    "rank": 17,
     "change": "NEW"
    },
    {
     "id": "wt_14",
-    "rank": 23,
+    "rank": 18,
     "change": "NEW"
    },
    {
     "id": "wt_24",
-    "rank": 24,
+    "rank": 19,
     "change": "NEW"
    }
   ],
@@ -163,70 +138,50 @@
   "byGenre": {
    "판타지 드라마": [
     {
-     "id": "wt_06",
-     "rank": 1,
-     "change": 1
-    },
-    {
-     "id": "wt_09",
-     "rank": 2,
-     "change": 0
-    },
-    {
      "id": "wt_20",
-     "rank": 3,
+     "rank": 1,
      "change": 0
     },
     {
      "id": "wt_04",
-     "rank": 4,
+     "rank": 2,
      "change": 5
     },
     {
-     "id": "wt_10",
-     "rank": 5,
-     "change": -1
-    },
-    {
      "id": "wt_18",
-     "rank": 6,
+     "rank": 3,
      "change": -1
     },
     {
      "id": "wt_21",
-     "rank": 7,
+     "rank": 4,
      "change": -1
     },
     {
      "id": "wt_25",
-     "rank": 8,
+     "rank": 5,
      "change": 3
     },
     {
      "id": "wt_28",
-     "rank": 9,
+     "rank": 6,
      "change": -1
     }
    ],
    "로맨스": [
     {
-     "id": "wt_08",
-     "rank": 1,
-     "change": 3
-    },
-    {
      "id": "wt_03",
-     "rank": 2,
+     "rank": 1,
      "change": "NEW"
     },
     {
      "id": "wt_14",
-     "rank": 3,
+     "rank": 2,
      "change": "NEW"
     },
     {
      "id": "wt_29",
-     "rank": 4,
+     "rank": 3,
      "change": 0
     }
    ],
@@ -244,23 +199,18 @@
      "change": 0
     },
     {
-     "id": "wt_07",
-     "rank": 2,
-     "change": -2
-    },
-    {
      "id": "wt_12",
-     "rank": 3,
+     "rank": 2,
      "change": -3
     },
     {
      "id": "wt_26",
-     "rank": 4,
+     "rank": 3,
      "change": 2
     },
     {
      "id": "wt_30",
-     "rank": 5,
+     "rank": 4,
      "change": 2
     }
    ],
@@ -352,24 +302,24 @@
   ],
   "20대 여자": [
    "wt_01",
-   "wt_07",
    "wt_03",
+   "wt_12",
    "wt_04",
-   "wt_12"
+   "wt_14"
   ],
   "30대 남자": [
    "wt_05",
    "wt_16",
    "wt_17",
    "wt_22",
-   "wt_06"
+   "wt_13"
   ],
   "30대 여자": [
    "wt_04",
    "wt_01",
    "wt_18",
    "wt_12",
-   "wt_08"
+   "wt_17"
   ]
  },
  "film": {
@@ -390,19 +340,19 @@
     "change": -1
    },
    {
-    "id": "fm_25",
+    "id": "fm_04",
     "rank": 4,
     "change": 2
    },
    {
-    "id": "fm_04",
+    "id": "fm_05",
     "rank": 5,
-    "change": 2
+    "change": "NEW"
    },
    {
-    "id": "fm_26",
+    "id": "fm_06",
     "rank": 6,
-    "change": 3
+    "change": 1
    },
    {
     "id": "fm_07",
@@ -410,177 +360,56 @@
     "change": 3
    },
    {
-    "id": "fm_05",
-    "rank": 8,
-    "change": 0
-   },
-   {
-    "id": "fm_27",
-    "rank": 9,
-    "change": 1
-   },
-   {
-    "id": "fm_06",
-    "rank": 10,
-    "change": 3
-   },
-   {
-    "id": "fm_28",
-    "rank": 11,
-    "change": "NEW"
-   },
-   {
     "id": "fm_08",
-    "rank": 12,
+    "rank": 8,
     "change": -2
    },
    {
-    "id": "fm_29",
-    "rank": 13,
-    "change": 2
-   },
-   {
     "id": "fm_09",
-    "rank": 14,
-    "change": -1
-   },
-   {
-    "id": "fm_30",
-    "rank": 15,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_10",
-    "rank": 16,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_32",
-    "rank": 17,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_31",
-    "rank": 18,
-    "change": -1
-   },
-   {
-    "id": "fm_11",
-    "rank": 19,
-    "change": 1
-   },
-   {
-    "id": "fm_36",
-    "rank": 20,
+    "rank": 9,
     "change": 4
    },
    {
-    "id": "fm_12",
-    "rank": 21,
-    "change": -3
+    "id": "fm_10",
+    "rank": 10,
+    "change": "NEW"
    },
    {
-    "id": "fm_40",
-    "rank": 22,
+    "id": "fm_11",
+    "rank": 11,
     "change": 2
+   },
+   {
+    "id": "fm_12",
+    "rank": 12,
+    "change": -1
    },
    {
     "id": "fm_13",
-    "rank": 23,
-    "change": 2
-   },
-   {
-    "id": "fm_35",
-    "rank": 24,
+    "rank": 13,
     "change": "NEW"
-   },
-   {
-    "id": "fm_37",
-    "rank": 25,
-    "change": 1
    },
    {
     "id": "fm_14",
-    "rank": 26,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_41",
-    "rank": 27,
+    "rank": 14,
     "change": "NEW"
    },
    {
     "id": "fm_15",
-    "rank": 28,
-    "change": -1
-   },
-   {
-    "id": "fm_38",
-    "rank": 29,
-    "change": "NEW"
-   },
-   {
-    "id": "fm_16",
-    "rank": 30,
+    "rank": 15,
     "change": 0
    },
    {
-    "id": "fm_39",
-    "rank": 31,
+    "id": "fm_16",
+    "rank": 16,
     "change": -2
    },
    {
     "id": "fm_17",
-    "rank": 32,
-    "change": 4
-   },
-   {
-    "id": "fm_33",
-    "rank": 33,
-    "change": 0
-   },
-   {
-    "id": "fm_18",
-    "rank": 34,
-    "change": -2
-   },
-   {
-    "id": "fm_34",
-    "rank": 35,
+    "rank": 17,
     "change": 1
-   },
-   {
-    "id": "fm_19",
-    "rank": 36,
-    "change": 1
-   },
-   {
-    "id": "fm_20",
-    "rank": 37,
-    "change": "NEW"
    }
   ],
-  "season0": [
-   {
-    "id": "fm_21",
-    "rank": 1,
-    "change": 0
-   },
-   {
-    "id": "fm_22",
-    "rank": 2,
-    "change": 0
-   },
-   {
-    "id": "fm_23",
-    "rank": 3,
-    "change": 0
-   },
-   {
-    "id": "fm_24",
-    "rank": 4,
-    "change": 0
-   }
-  ]
+  "season0": []
  }
 }

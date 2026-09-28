@@ -17,41 +17,11 @@
     "fm_15.png",
     "fm_16.png",
     "fm_17.png",
-    "fm_18.png",
-    "fm_19.png",
-    "fm_20.png",
-    "fm_21.png",
-    "fm_22.png",
-    "fm_23.png",
-    "fm_24.png",
-    "fm_25.png",
-    "fm_26.png",
-    "fm_27.png",
-    "fm_28.png",
-    "fm_29.png",
-    "fm_30.png",
-    "fm_30_alt.png",
-    "fm_31.png",
-    "fm_32.png",
-    "fm_33.png",
-    "fm_34.png",
-    "fm_35.png",
-    "fm_36.png",
-    "fm_37.png",
-    "fm_38.png",
-    "fm_39.png",
-    "fm_40.png",
-    "fm_41.png",
     "wt_01.png",
     "wt_02.png",
     "wt_03.png",
     "wt_04.png",
     "wt_05.png",
-    "wt_06.png",
-    "wt_07.png",
-    "wt_08.png",
-    "wt_09.png",
-    "wt_10.png",
     "wt_11.png",
     "wt_12.png",
     "wt_13.png",
@@ -100,170 +70,70 @@
   ],
   "sizes": {
     "covers/fm_01.png": [
-      614,
-      340
-    ],
-    "covers/fm_02.png": [
-      612,
-      334
-    ],
-    "covers/fm_03.png": [
-      610,
-      340
-    ],
-    "covers/fm_04.png": [
-      604,
-      334
-    ],
-    "covers/fm_05.png": [
-      606,
-      334
-    ],
-    "covers/fm_06.png": [
-      602,
-      324
-    ],
-    "covers/fm_07.png": [
-      420,
-      756
-    ],
-    "covers/fm_08.png": [
-      352,
-      646
-    ],
-    "covers/fm_09.png": [
-      504,
-      760
-    ],
-    "covers/fm_10.png": [
-      602,
-      326
-    ],
-    "covers/fm_11.png": [
-      604,
-      334
-    ],
-    "covers/fm_12.png": [
-      600,
-      328
-    ],
-    "covers/fm_13.png": [
-      414,
-      750
-    ],
-    "covers/fm_14.png": [
-      504,
-      762
-    ],
-    "covers/fm_15.png": [
-      502,
-      756
-    ],
-    "covers/fm_16.png": [
-      506,
-      762
-    ],
-    "covers/fm_17.png": [
-      504,
-      758
-    ],
-    "covers/fm_18.png": [
-      526,
-      300
-    ],
-    "covers/fm_19.png": [
-      418,
-      754
-    ],
-    "covers/fm_20.png": [
-      612,
-      340
-    ],
-    "covers/fm_21.png": [
-      498,
-      760
-    ],
-    "covers/fm_22.png": [
-      502,
-      758
-    ],
-    "covers/fm_23.png": [
-      504,
-      762
-    ],
-    "covers/fm_24.png": [
-      608,
-      330
-    ],
-    "covers/fm_25.png": [
-      434,
-      652
-    ],
-    "covers/fm_26.png": [
       440,
       650
     ],
-    "covers/fm_27.png": [
+    "covers/fm_02.png": [
+      434,
+      652
+    ],
+    "covers/fm_03.png": [
+      430,
+      648
+    ],
+    "covers/fm_04.png": [
+      432,
+      650
+    ],
+    "covers/fm_05.png": [
+      428,
+      648
+    ],
+    "covers/fm_06.png": [
       426,
       646
     ],
-    "covers/fm_28.png": [
-      428,
-      648
-    ],
-    "covers/fm_29.png": [
-      432,
+    "covers/fm_07.png": [
+      430,
       650
     ],
-    "covers/fm_30.png": [
-      430,
-      648
-    ],
-    "covers/fm_30_alt.png": [
-      430,
-      648
-    ],
-    "covers/fm_31.png": [
+    "covers/fm_08.png": [
       434,
       650
     ],
-    "covers/fm_32.png": [
+    "covers/fm_09.png": [
       430,
       650
     ],
-    "covers/fm_33.png": [
+    "covers/fm_10.png": [
+      428,
+      652
+    ],
+    "covers/fm_11.png": [
+      432,
+      652
+    ],
+    "covers/fm_12.png": [
+      430,
+      648
+    ],
+    "covers/fm_13.png": [
+      428,
+      644
+    ],
+    "covers/fm_14.png": [
       430,
       644
     ],
-    "covers/fm_34.png": [
+    "covers/fm_15.png": [
       428,
       646
     ],
-    "covers/fm_35.png": [
-      428,
-      652
-    ],
-    "covers/fm_36.png": [
-      430,
-      650
-    ],
-    "covers/fm_37.png": [
-      430,
-      648
-    ],
-    "covers/fm_38.png": [
-      428,
-      644
-    ],
-    "covers/fm_39.png": [
+    "covers/fm_16.png": [
       434,
       652
     ],
-    "covers/fm_40.png": [
-      432,
-      652
-    ],
-    "covers/fm_41.png": [
+    "covers/fm_17.png": [
       430,
       644
     ],
@@ -286,26 +156,6 @@
     "covers/wt_05.png": [
       526,
       888
-    ],
-    "covers/wt_06.png": [
-      614,
-      340
-    ],
-    "covers/wt_07.png": [
-      612,
-      334
-    ],
-    "covers/wt_08.png": [
-      610,
-      340
-    ],
-    "covers/wt_09.png": [
-      420,
-      756
-    ],
-    "covers/wt_10.png": [
-      352,
-      646
     ],
     "covers/wt_11.png": [
       392,

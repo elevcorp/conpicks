@@ -32,7 +32,7 @@ export function FilmRanking({ s1, s0 }: { s1: Row[]; s0: Row[] }) {
       </div>
 
       <div className="mt-5 flex gap-2">
-        {SEASONS.map((s) => (
+        {SEASONS.filter((s) => (s.k === 1 ? s1 : s0).length > 0).map((s) => (
           <button key={s.k} onClick={() => setSeason(s.k)} className={cn("h-9 rounded-full px-4 text-[14px] font-semibold transition-colors", season === s.k ? "bg-white text-[#0A0D1C]" : "bg-white/10 text-fg-2")}>
             {s.label}
           </button>

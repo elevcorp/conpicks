@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { WorkDetail } from "@/components/webtoon/WorkDetail";
-import { getComments, getFilm, getWebtoon, rankOf, webtoons } from "@/lib/data";
+import { getComments, getWebtoon, rankOf, webtoons } from "@/lib/data";
 import { getEpisode, getEpisodeSummaries } from "@/lib/episodes";
 
 export const dynamicParams = false;
@@ -30,7 +30,6 @@ export default async function WorkPage({ params }: { params: Promise<{ id: strin
       others={[...others, ...filler]}
       othersLabel={sameCreator.length ? "작가의 다른 작품" : "이 작품과 비슷한 작품"}
       rank={rankOf(id)}
-      film={work.filmId ? getFilm(work.filmId) : undefined}
     />
   );
 }

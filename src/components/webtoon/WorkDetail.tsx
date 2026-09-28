@@ -17,7 +17,7 @@ import { useUser } from "@/store/user";
 import { useUI, demoToast } from "@/store/ui";
 import { workThemeVars } from "@/lib/color";
 import { cn } from "@/lib/cn";
-import type { Comment, Episode, EpisodeSummary, Film, RankEntry, Webtoon } from "@/lib/types";
+import type { Comment, Episode, EpisodeSummary, RankEntry, Webtoon } from "@/lib/types";
 
 const TABS = [
   { key: "first", label: "첫 화 보기" },
@@ -36,7 +36,6 @@ export interface WorkDetailProps {
   others: Webtoon[];
   othersLabel: string;
   rank?: RankEntry;
-  film?: Film;
 }
 
 /** Kakao-style work home with per-work dynamic theme color. */
@@ -173,7 +172,7 @@ export function WorkDetail(props: WorkDetailProps) {
           <motion.div key={tab} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }} className="min-h-[70vh] pb-24 md:pb-10">
             {tab === "first" && <FirstTab work={work} episode={first} next={nextOfFirst} />}
             {tab === "episodes" && <EpisodesTab work={work} episodes={episodes} />}
-            {tab === "info" && <InfoTab work={work} others={props.others} othersLabel={props.othersLabel} rank={props.rank} film={props.film} />}
+            {tab === "info" && <InfoTab work={work} others={props.others} othersLabel={props.othersLabel} rank={props.rank} />}
             {tab === "ticket" && <TicketTab work={work} />}
             {tab === "comments" && (
               <div className="px-4 pb-10 md:px-0">

@@ -10,6 +10,7 @@ export default function WebtoonHome() {
   const top3 = ranking.slice(0, 3).map((r) => r.work);
   const newWorks = webtoons.filter((w) => w.isNew);
   const jimovie = webtoons.filter((w) => w.jimovieReview);
+  const jimovieTotal = jimovie.reduce((a, w) => a + parseFloat(w.jimovieReview!.views), 0).toLocaleString("ko-KR");
   const byGenre = (keys: string[]) => ranking.map((r) => r.work).filter((w) => keys.includes(w.genreKey));
   const ageGroups = Object.fromEntries(Object.entries(rankings.ageGender).map(([k, ids]) => [k, ids.map((id) => getWebtoon(id)!)]));
 
@@ -27,7 +28,7 @@ export default function WebtoonHome() {
           <NewWorksRow works={newWorks} />
         </section>
         <section>
-          <SectionHeader title={<>지무비 <span className="text-brand">PICK</span></>} sub="지무비가 직접 리뷰한 작품 · 누적 리뷰 조회수 1,013만" />
+          <SectionHeader title={<>지무비 <span className="text-brand">PICK</span></>} sub={`지무비가 직접 리뷰한 작품 · 누적 리뷰 조회수 ${jimovieTotal}만`} />
           <CardRow works={jimovie} reviewBadge hrefSuffix="?tab=info#review" />
         </section>
         <section>

@@ -10,16 +10,16 @@ import { filmRanking, films, funding, getFilm } from "@/lib/data";
 export const metadata = { title: "AI 영화" };
 
 const GENRE_ROWS = [
-  { g: "SF", title: "SF · 미래를 먼저 본 티저" },
   { g: "스릴러", title: "숨 막히는 스릴러" },
-  { g: "로맨스", title: "로맨스" },
-  { g: "판타지", title: "판타지" },
+  { g: "드라마", title: "드라마 · 여운이 남는 2분" },
+  { g: "코미디", title: "코미디" },
+  { g: "SF", title: "SF · 미래를 먼저 본 티저" },
 ];
 
 export default function FilmHome() {
   const season = filmRanking(1).map((r) => r.film);
   const top3 = season.slice(0, 3);
-  const fresh = Array.from(new Set([...season.filter((f) => f.rankChange === "NEW"), ...season.slice(24)]));
+  const fresh = Array.from(new Set([...season.filter((f) => f.rankChange === "NEW"), ...season.slice(12)]));
   const fundFilm = getFilm(funding.campaign.filmId)!;
 
   return (
